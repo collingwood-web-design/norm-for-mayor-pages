@@ -1,0 +1,141 @@
+/*
+ * ==========================================================================
+ * 05-pages.css — Page-specific overrides
+ * ==========================================================================
+ *
+ * PURPOSE:
+ *   Styles that apply to ONE page only. Add a body class per page
+ *   (e.g. class="page-donations") and scope rules here.
+ *
+ * TIP:
+ *   Keep shared styles in 04-components.css. Only put truly unique
+ *   layout/visual tweaks in this file.
+ * ==========================================================================
+ */
+
+/* -----------------------------------------------------------------------
+ * HOME (index.html)
+ * ----------------------------------------------------------------------- */
+.page-home .section--hero {
+  /* TODO: Set hero background when final photography is chosen.
+   * Reference asset: assets/images/photos/norm-mayor-hero.jpg */
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+/* -----------------------------------------------------------------------
+ * DONATIONS (donations.html)
+ * Legacy page: Ontario campaign finance rules + contact info + donate CTA
+ * ----------------------------------------------------------------------- */
+.page-donations .section--hero {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+.page-donations .donations-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-donations .donations-rules h2 {
+  color: var(--color-gold);
+  margin-top: 2rem;
+}
+
+.page-donations .donations-rules h2:first-child {
+  margin-top: 0;
+}
+
+.page-donations .donate-cta {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.page-donations .donate-cta img {
+  margin-inline: auto;
+  max-width: 300px; /* matches legacy DONATE-300PX-in-box.png */
+}
+
+/* External link to Ontario campaign financing info — on legacy donations page */
+.page-donations .external-resource {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(253, 213, 79, 0.1);
+  border-left: 4px solid var(--color-gold);
+}
+
+/* -----------------------------------------------------------------------
+ * EXPERIENCE (experience.html)
+ * ----------------------------------------------------------------------- */
+.page-experience .timeline {
+  /* TODO: Build timeline component when content is finalized */
+  list-style: none;
+  padding: 0;
+}
+
+/* -----------------------------------------------------------------------
+ * PRIORITIES (priorities.html)
+ * ----------------------------------------------------------------------- */
+.page-priorities .priority-card {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--color-bg-content);
+  border-left: 4px solid var(--color-gold);
+}
+
+/* -----------------------------------------------------------------------
+ * FAQ (faq.html)
+ * ----------------------------------------------------------------------- */
+.page-faq details {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--color-bg-content);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.page-faq summary {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  color: var(--color-navy);
+}
+
+.page-faq details[open] summary {
+  color: var(--color-gold);
+  margin-bottom: 0.75rem;
+}
+
+/* -----------------------------------------------------------------------
+ * ACTIVITIES (activities.html) — legacy "Norm's Activities"
+ * ----------------------------------------------------------------------- */
+.page-activities .activity-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .page-activities .activity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .page-activities .activity-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* -----------------------------------------------------------------------
+ * PRIVACY POLICY (privacy-policy.html)
+ * ----------------------------------------------------------------------- */
+.page-privacy .legal-content h2 {
+  margin-top: 2rem;
+  font-size: var(--font-size-h3);
+}
+
+.page-privacy .legal-content h2:first-child {
+  margin-top: 0;
+}

@@ -1,0 +1,126 @@
+/*
+ * ==========================================================================
+ * 03-layout.css — Page shell, grid, section wrappers
+ * ==========================================================================
+ *
+ * PURPOSE:
+ *   Structural layout only. Maps loosely to legacy Divi concepts:
+ *     .et_pb_section  → .section
+ *     .et_pb_row       → .container / .row
+ *     .et_pb_column    → .col-* (simplified for static HTML)
+ *
+ * NOTE FOR DEVS:
+ *   Legacy site used Divi's 1080px row width at 80% on smaller screens.
+ *   We use max-width + horizontal padding for simpler responsive behavior.
+ * ==========================================================================
+ */
+
+/* Outer page shell — header, main, and footer are siblings; only <main> changes per page */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chrome regions — never shrink when main content is short */
+.site-header,
+.site-footer,
+.land-acknowledgement {
+  flex-shrink: 0;
+}
+
+/* Main content grows to push footer down */
+main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Standard content width — mirrors legacy .et_pb_row max-width: 1080px */
+.container {
+  width: 100%;
+  max-width: var(--layout-max-width);
+  margin-inline: auto;
+  padding-inline: var(--layout-gutter);
+}
+
+/* Narrow column for legal/donation copy */
+.container--narrow {
+  max-width: var(--layout-narrow);
+}
+
+/* -----------------------------------------------------------------------
+ * SECTIONS
+ * -----------------------------------------------------------------------
+ * .section--dark   : navy background (like legacy header areas)
+ * .section--light  : white content panels on navy page bg
+ * .section--hero   : full-width hero with background image support
+ * ----------------------------------------------------------------------- */
+.section {
+  padding-block: var(--section-padding-y);
+}
+
+.section--light {
+  background-color: var(--color-bg-content);
+}
+
+.section--dark {
+  background-color: var(--color-navy);
+  color: var(--color-text-on-dark);
+}
+
+.section--dark h1,
+.section--dark h2,
+.section--dark h3 {
+  color: var(--color-gold);
+}
+
+/* Hero — placeholder for homepage banner; add background-image in page HTML or CSS */
+.section--hero {
+  position: relative;
+  padding-block: 4rem;
+  background-color: var(--color-navy);
+  background-size: cover;
+  background-position: center;
+  color: var(--color-text-on-dark);
+  text-align: center;
+}
+
+/* Inner pages — consistent title band below nav (only <main> content differs) */
+.section--page-head {
+  background-color: var(--color-navy);
+  color: var(--color-text-on-dark);
+  text-align: center;
+  padding-block: 2.5rem;
+  min-height: 9rem;
+  display: flex;
+  align-items: center;
+}
+
+.section--page-head h1 {
+  color: var(--color-gold);
+  margin: 0;
+  width: 100%;
+}
+
+/* Simple two-column grid for content + sidebar/image layouts */
+.row {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .row--2col {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .row--sidebar {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Full-bleed utility — breaks out of container when nested */
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
