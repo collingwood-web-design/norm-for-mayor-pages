@@ -1,54 +1,45 @@
 /*
  * ==========================================================================
- * 01-variables.css — Design tokens for Norm Sandberg campaign site
+ * 01-variables.css — Design tokens (2026 mockup — June 2025 homepage)
  * ==========================================================================
  *
- * PURPOSE:
- *   Single source of truth for colors, typography, spacing, and breakpoints.
- *   Design tokens sourced from the 2022 campaign site audit (see docs/LEGACY-EXTRACTION.md).
- *   This project is static HTML/CSS — not WordPress.
- *
- * HOW TO USE:
- *   Reference tokens as var(--color-navy) etc. Never hard-code hex values
- *   in component files unless you are adding a one-off exception (document why).
- *
- * LEGACY SOURCE:
- *   Divi Theme Customizer + et-critical-inline-css on the old homepage.
- *   See docs/LEGACY-EXTRACTION.md for full audit notes.
+ * NOTE: Colors below match the NEW mockup, not the 2022 WordPress site.
+ * Legacy values are documented in docs/LEGACY-EXTRACTION.md.
  * ==========================================================================
  */
 
 :root {
   /* -----------------------------------------------------------------------
-   * BRAND COLORS (extracted from 2022 site)
-   * -----------------------------------------------------------------------
-   * Navy:     Header, footer, page background on old site (#201d70 / #201d6c)
-   * Gold:     Primary accent — links, active nav, buttons, headings in footer
-   * White:    Nav text on dark backgrounds
-   * Lavender: Footer social icon color on old site
-   * Teal:     Link hover on widgets (Divi default, used sparingly)
+   * BRAND COLORS — 2026 mockup palette
    * ----------------------------------------------------------------------- */
-  --color-navy: #201d70;
-  --color-navy-alt: #201d6c;       /* body.custom-background on legacy site */
-  --color-navy-dropdown: #000000;    /* legacy nav flyout background */
-  --color-gold: #fdd54f;             /* primary brand accent */
-  --color-gold-hover: #f5c832;       /* suggested hover — not on legacy site */
+  --color-navy: #1c1a5e;
+  --color-navy-dark: #14124a;
+  --color-navy-alt: #1c1a5e;
+  --color-navy-dropdown: #0f0e30;
+  --color-gold: #f5c518;
+  --color-gold-hover: #e0b310;
   --color-white: #ffffff;
-  --color-text: #666666;             /* legacy body copy on light sections */
-  --color-text-dark: #333333;
+  --color-text: #5a5a6e;
+  --color-text-dark: #2a2a3a;
   --color-text-on-dark: #ffffff;
-  --color-text-muted-on-dark: rgba(255, 255, 255, 0.6);
-  --color-lavender: #c9c9f1;         /* legacy footer social icons */
-  --color-teal-hover: #82c0c7;       /* legacy widget link hover */
+  --color-text-muted-on-dark: rgba(255, 255, 255, 0.72);
+  --color-purple: #3d348b;
+  --color-purple-dark: #2e2669;
+  --color-gray-light: #eceef3;
+  --color-gray-section: #f3f4f8;
+  --color-gray-border: #d8dae3;
+
+  /* Homepage hero PNG — top-edge backdrop (matches image left field) */
+  --color-hero-backdrop: #05058c;
 
   /* Semantic aliases — use these in components when meaning matters */
-  --color-bg-page: var(--color-navy-alt);
+  --color-bg-page: var(--color-white);
   --color-bg-header: var(--color-navy);
-  --color-bg-footer: var(--color-navy);
+  --color-bg-footer: var(--color-navy-dark);
   --color-bg-content: var(--color-white);
   --color-accent: var(--color-gold);
-  --color-link: var(--color-gold);
-  --color-link-hover: var(--color-gold-hover);
+  --color-link: var(--color-navy);
+  --color-link-hover: var(--color-gold);
 
   /* -----------------------------------------------------------------------
    * TYPOGRAPHY (extracted from legacy site)
@@ -80,17 +71,21 @@
    * Legacy Divi max content width: 1080px (.et_pb_row)
    * Legacy section padding: 54px vertical at 1350px+ viewport
    * ----------------------------------------------------------------------- */
-  --layout-max-width: 1080px;
+  --layout-max-width: 1200px;
   --layout-narrow: 720px;            /* for donation/legal text columns */
-  --layout-gutter: 1.5rem;
-  --section-padding-y: 3.375rem;     /* ~54px — matches legacy section padding */
-  --header-height: 80px;             /* legacy fixed nav offset */
+  --layout-gutter: clamp(1rem, 4vw, 2rem);
+  --section-padding-y: clamp(3rem, 6vw, 5rem);
+  --header-height: 64px;
+  --grid-gap: clamp(1rem, 3vw, 2rem);
+  --grid-gap-sm: clamp(0.75rem, 2vw, 1.25rem);
 
   /* -----------------------------------------------------------------------
    * BORDERS, SHADOWS, TRANSITIONS
    * ----------------------------------------------------------------------- */
-  --border-radius-sm: 0;             /* legacy buttons used border-radius: 0 */
-  --border-radius-md: 4px;
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 20px;
+  --border-radius-pill: 999px;
   --shadow-header: 0 1px 0 rgba(0, 0, 0, 0.1);
   --shadow-dropdown: 0 2px 5px rgba(0, 0, 0, 0.1);
   --transition-fast: 0.2s ease;
@@ -101,6 +96,8 @@
    * -----------------------------------------------------------------------
    * Legacy Divi breakpoints: 980px (tablet), 767px (mobile toolbar)
    * ----------------------------------------------------------------------- */
+  --bp-desktop: 1200px;
   --bp-tablet: 980px;
   --bp-mobile: 767px;
+  --bp-mobile-sm: 480px;
 }

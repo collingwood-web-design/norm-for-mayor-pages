@@ -1,0 +1,33 @@
+<!--
+  Priority icons  Heroicons 2 Solid (2424), single filled set.
+  Usage: <svg class="icon-priority" aria-hidden="true"><use href="assets/icons/priority-icons.svg#priority-home"/></svg>
+-->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+  <symbol id="priority-home" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" />
+  </symbol>
+
+  <symbol id="priority-parking" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z" />
+  </symbol>
+
+  <symbol id="priority-infrastructure" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M7,14V10.91C6.28,10.58 5.61,10.18 5,9.71V14H7M5,18H3V16H1V14H3V7H5V8.43C6.8,10 9.27,11 12,11C14.73,11 17.2,10 19,8.43V7H21V14H23V16H21V18H19V16H5V18M17,10.91V14H19V9.71C18.39,10.18 17.72,10.58 17,10.91M16,14V11.32C15.36,11.55 14.69,11.72 14,11.84V14H16M13,14V11.96L12,12L11,11.96V14H13M10,14V11.84C9.31,11.72 8.64,11.55 8,11.32V14H10Z" />
+  </symbol>
+
+  <symbol id="priority-fiscal" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M7,15H9C9,16.08 10.37,17 12,17C13.63,17 15,16.08 15,15C15,13.9 13.96,13.5 11.76,12.97C9.64,12.44 7,11.78 7,9C7,7.21 8.47,5.69 10.5,5.18V3H13.5V5.18C15.53,5.69 17,7.21 17,9H15C15,7.92 13.63,7 12,7C10.37,7 9,7.92 9,9C9,10.1 10.04,10.5 12.24,11.03C14.36,11.56 17,12.22 17,15C17,16.79 15.53,18.31 13.5,18.82V21H10.5V18.82C8.47,18.31 7,16.79 7,15Z" />
+  </symbol>
+
+  <symbol id="priority-growth" viewBox="0 0 256 256" fill="currentColor">
+    <path d="M244,56v64a12,12,0,0,1-24,0V85l-75.51,75.52a12,12,0,0,1-17,0L96,129,32.49,192.49a12,12,0,0,1-17-17l72-72a12,12,0,0,1,17,0L136,135l67-67H168a12,12,0,0,1,0-24h64A12,12,0,0,1,244,56Z" />
+  </symbol>
+
+  <symbol id="priority-downtown" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M3 21H21V19H3M5 21V7L12 3L19 7V21H17V11H15V21H13V11H11V21H9V11H7V21H5Z" />
+  </symbol>
+
+  <symbol id="priority-leadership" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M16 11C17.66 11 19 9.66 19 8S17.66 5 16 5 13 6.34 13 8 14.34 11 16 11M8 11C9.66 11 11 9.66 11 8S9.66 5 8 5 5 6.34 5 8 6.34 11 8 11M8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13M16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z" />
+  </symbol>
+</svg>

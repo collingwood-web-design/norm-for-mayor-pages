@@ -1,0 +1,7 @@
+# https://normformayor.ca — Norm Sandberg for Mayor of Collingwood, Ontario
+# Secondary domain norm4mayor.ca redirects to normformayor.ca at DNS/registrar level.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://normformayor.ca/sitemap.xml

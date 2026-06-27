@@ -15,24 +15,16 @@
  * ==========================================================================
  */
 
-/* Outer page shell — header, main, and footer are siblings; only <main> changes per page */
+/* Outer page wrapper — sits inside <body> after skip-link */
 .page-wrapper {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Chrome regions — never shrink when main content is short */
-.site-header,
-.site-footer,
-.land-acknowledgement {
-  flex-shrink: 0;
-}
-
 /* Main content grows to push footer down */
 main {
   flex: 1;
-  min-width: 0;
 }
 
 /* Standard content width — mirrors legacy .et_pb_row max-width: 1080px */
@@ -85,23 +77,6 @@ main {
   text-align: center;
 }
 
-/* Inner pages — consistent title band below nav (only <main> content differs) */
-.section--page-head {
-  background-color: var(--color-navy);
-  color: var(--color-text-on-dark);
-  text-align: center;
-  padding-block: 2.5rem;
-  min-height: 9rem;
-  display: flex;
-  align-items: center;
-}
-
-.section--page-head h1 {
-  color: var(--color-gold);
-  margin: 0;
-  width: 100%;
-}
-
 /* Simple two-column grid for content + sidebar/image layouts */
 .row {
   display: grid;
@@ -123,4 +98,105 @@ main {
 .full-bleed {
   width: 100vw;
   margin-left: calc(50% - 50vw);
+}
+
+/* -----------------------------------------------------------------------
+ * RESPONSIVE GRID SYSTEM
+ * Use .grid as base; add modifier for column count at desktop.
+ * Columns auto-collapse at tablet/mobile breakpoints.
+ * ----------------------------------------------------------------------- */
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.grid--gap-sm {
+  gap: var(--grid-gap-sm);
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+.grid--4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--5 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid--5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .grid--5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Split layout: content + sidebar (stacks on mobile) */
+.split {
+  display: grid;
+  gap: var(--grid-gap);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .split--video {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .split--ack {
+    grid-template-columns: auto 1fr;
+    gap: 1.75rem;
+  }
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-navy);
+  margin: 0 0 2.5rem;
+}
+
+.section--gray {
+  background-color: var(--color-gray-light);
 }

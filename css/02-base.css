@@ -18,10 +18,6 @@
 
 html {
   scroll-behavior: smooth;
-  /* Reserve scrollbar space so layout width stays stable between short/long pages */
-  scrollbar-gutter: stable;
-  /* Anchor links (#contact) land below sticky header */
-  scroll-padding-top: var(--header-height);
   /* Prevent horizontal scroll from full-bleed sections */
   overflow-x: hidden;
 }
@@ -59,8 +55,8 @@ a {
   transition: color var(--transition-fast);
 }
 
-a:hover,
-a:focus-visible {
+a:not(.btn):not(.brand-logo):not(.priorities-jump__link):hover,
+a:not(.btn):not(.brand-logo):not(.priorities-jump__link):focus-visible {
   color: var(--color-link-hover);
 }
 

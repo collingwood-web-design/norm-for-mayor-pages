@@ -4,22 +4,21 @@
     <!--
       =======================================================================
       PAGE: Donations (donations.html)
-      Static site — HTML/CSS/JS on GitHub Pages (no WordPress)
+      LEGACY URL: https://goto.network/norm4mayor/donations/
       BODY CLASS: page-donations
       NOTE: Ontario municipal campaign finance rules must stay accurate — verify
             with clerk / legal before publishing updated election year limits.
-      2022 content reference: docs/LEGACY-EXTRACTION.md
       =======================================================================
     -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="description" content="Support Norm Sandberg's campaign for Mayor of Collingwood. Ontario municipal campaign finance rules and how to contribute." />
     <title>Donate | Norm Sandberg for Mayor of Collingwood, Ontario</title>
-    <meta
-      name="description"
-      content="Support Norm Sandberg's campaign for Mayor of Collingwood, Ontario. Ontario municipal campaign finance rules, contribution limits, and how to donate. Election October 26, 2026."
-    />
-    <meta name="author" content="Norm Sandberg" />
+    <link rel="icon" href="assets/images/icons/favicon-32.png" sizes="32x32" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <meta name="author" content="Norm Sandberg" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://normformayor.ca/donations.html" />
 
@@ -35,21 +34,18 @@
     <meta property="og:locale" content="en_CA" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Donate | Norm Sandberg for Mayor of Collingwood, Ontario" />
-    <meta
-      property="og:description"
-      content="Support Norm Sandberg's campaign for Mayor of Collingwood. Ontario campaign finance rules and donation information."
-    />
+    <meta property="og:description" content="Support Norm Sandberg's campaign for Mayor of Collingwood. Ontario municipal campaign finance rules and how to contribute." />
     <meta property="og:url" content="https://normformayor.ca/donations.html" />
-    <meta property="og:image" content="https://normformayor.ca/assets/images/brand/donate-button.png" />
-    <meta property="og:image:alt" content="Donate to Norm Sandberg's campaign for Mayor of Collingwood" />
+    <meta property="og:image" content="https://normformayor.ca/assets/images/photos/Norm%20Sandberg%20Home%20-Hero.png" />
+    <meta property="og:image:alt" content="Norm Sandberg - candidate for Mayor of Collingwood, Ontario" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Donate | Norm Sandberg for Mayor of Collingwood" />
-    <meta name="twitter:description" content="How to contribute to Norm Sandberg's Collingwood mayoral campaign." />
-    <meta name="twitter:image" content="https://normformayor.ca/assets/images/brand/donate-button.png" />
+    <meta name="twitter:title" content="Donate | Norm Sandberg for Mayor of Collingwood, Ontario" />
+    <meta name="twitter:description" content="Support Norm Sandberg's campaign for Mayor of Collingwood. Ontario municipal campaign finance rules and how to contribute." />
+    <meta name="twitter:image" content="https://normformayor.ca/assets/images/photos/Norm%20Sandberg%20Home%20-Hero.png" />
+    <meta name="twitter:image:alt" content="Norm Sandberg - candidate for Mayor of Collingwood, Ontario" />
 
-    <meta name="theme-color" content="#1a1a1a" />
-    <link rel="icon" href="assets/images/icons/favicon-32.png" sizes="32x32" />
+    <meta name="theme-color" content="#201d70" />
     <link rel="apple-touch-icon" href="assets/images/icons/favicon-192.png" />
 
     <script type="application/ld+json">
@@ -60,59 +56,90 @@
             "@type": "WebPage",
             "@id": "https://normformayor.ca/donations.html#webpage",
             "url": "https://normformayor.ca/donations.html",
-            "name": "Donate | Norm Sandberg for Mayor",
-            "description": "How to contribute to Norm Sandberg's campaign for Mayor of Collingwood, Ontario.",
+            "name": "Donate | Norm Sandberg for Mayor of Collingwood, Ontario",
+            "description": "Support Norm Sandberg's campaign for Mayor of Collingwood. Ontario municipal campaign finance rules and how to contribute.",
             "inLanguage": "en-CA",
-            "isPartOf": { "@id": "https://normformayor.ca/#website" },
-            "about": { "@id": "https://normformayor.ca/#campaign" },
-            "breadcrumb": { "@id": "https://normformayor.ca/donations.html#breadcrumb" }
+            "isPartOf": {
+              "@id": "https://normformayor.ca/#website"
+            },
+            "about": {
+              "@id": "https://normformayor.ca/#person"
+            },
+            "breadcrumb": {
+              "@id": "https://normformayor.ca/donations.html#breadcrumb"
+            }
           },
           {
             "@type": "BreadcrumbList",
             "@id": "https://normformayor.ca/donations.html#breadcrumb",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://normformayor.ca/" },
-              { "@type": "ListItem", "position": 2, "name": "Donations", "item": "https://normformayor.ca/donations.html" }
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://normformayor.ca/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Donations",
+                "item": "https://normformayor.ca/donations.html"
+              }
             ]
           },
           {
-            "@type": "DonateAction",
-            "agent": { "@id": "https://normformayor.ca/#person" },
-            "recipient": { "@id": "https://normformayor.ca/#campaign" },
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "mailto:norm@normformayor.ca?subject=Campaign%20Donation",
-              "actionPlatform": [
-                "http://schema.org/DesktopWebPlatform",
-                "http://schema.org/MobileWebPlatform"
-              ]
+            "@type": "Person",
+            "@id": "https://normformayor.ca/#person",
+            "name": "Norm Sandberg",
+            "givenName": "Norm",
+            "familyName": "Sandberg",
+            "jobTitle": "Mayoral Candidate",
+            "email": "norm@normformayor.ca",
+            "telephone": "+1-705-445-8384",
+            "url": "https://normformayor.ca/",
+            "image": "https://normformayor.ca/assets/images/photos/Norm%20Sandberg%20Home%20-Hero.png",
+            "sameAs": [
+              "https://www.facebook.com/MayorNorm"
+            ],
+            "homeLocation": {
+              "@type": "Place",
+              "name": "Collingwood, Ontario, Canada",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Collingwood",
+                "addressRegion": "ON",
+                "addressCountry": "CA"
+              }
+            },
+            "seeks": {
+              "@type": "EmployeeRole",
+              "roleName": "Mayor",
+              "namedPosition": {
+                "@type": "Organization",
+                "name": "Town of Collingwood"
+              }
             }
           }
         ]
       }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="page-donations" itemscope itemtype="https://schema.org/WebPage">
     <meta itemprop="name" content="Donate | Norm Sandberg for Mayor of Collingwood, Ontario" />
+    <meta itemprop="description" content="Support Norm Sandberg's campaign for Mayor of Collingwood. Ontario municipal campaign finance rules and how to contribute." />
     <link itemprop="url" href="https://normformayor.ca/donations.html" />
     <meta itemprop="inLanguage" content="en-CA" />
-
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="page-wrapper">
-      <!-- START HEADER (sync with _snippets/header.html) -->
-      <header class="site-header" id="site-header" itemscope itemtype="https://schema.org/WPHeader">
-        <div class="container site-header__inner" itemscope itemtype="https://schema.org/Organization">
-          <meta itemprop="name" content="Norm Sandberg for Mayor" />
-          <link itemprop="url" href="https://normformayor.ca/" />
-          <a class="site-header__logo" href="index.html" aria-label="Norm Sandberg — Home" itemprop="url">
-            <img src="assets/images/brand/norm-logo-yellow.svg" alt="Norm Sandberg — For Mayor of Collingwood, Ontario" width="200" height="130" itemprop="logo" />
+      <!-- Header: copy from _snippets/header.html — set DONATIONS as active -->
+      <header class="site-header" id="site-header">
+        <div class="container site-header__inner">
+          <a class="site-header__logo" href="index.html" aria-label="Norm Sandberg — Home">
+            <img src="assets/images/brand/norm-logo-yellow.svg" alt="Norm Sandberg" width="200" height="130" />
           </a>
-          <nav class="site-nav" id="site-nav" aria-label="Main navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-            <meta itemprop="name" content="Main navigation" />
+          <nav class="site-nav" id="site-nav" aria-label="Main navigation">
             <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-menu" id="site-nav-toggle">
               <span class="sr-only">Open menu</span> ☰
             </button>
@@ -128,40 +155,27 @@
         </div>
       </header>
 
-      <main id="main-content" itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/PoliticalCampaign">
-        <meta itemprop="name" content="Norm Sandberg for Mayor of Collingwood" />
-        <link itemprop="url" href="https://normformayor.ca/" />
-        <meta itemprop="startDate" content="2026-10-26" />
-        <div itemprop="candidate" itemscope itemtype="https://schema.org/Person">
-          <meta itemprop="givenName" content="Norm" />
-          <meta itemprop="familyName" content="Sandberg" />
-          <meta itemprop="name" content="Norm Sandberg" />
-          <meta itemprop="email" content="norm@normformayor.ca" />
-          <meta itemprop="telephone" content="+1-705-445-8384" />
-
+      <main id="main-content" itemprop="mainContentOfPage">
         <section class="section section--hero" aria-labelledby="donate-heading">
           <div class="container donations-intro">
             <p class="hero__eyebrow">DONATE</p>
-            <h1 class="hero__title" id="donate-heading" itemprop="alternateName">NORM SANDBERG</h1>
-            <p class="hero__subtitle">
-              For <strong itemprop="jobTitle">MAYOR</strong> of
-              <span itemprop="workLocation" itemscope itemtype="https://schema.org/Place">
-                <span itemprop="name">Collingwood, Ontario</span>
-              </span>
-            </p>
+            <h1 class="hero__title" id="donate-heading">NORM SANDBERG</h1>
+            <p class="hero__subtitle">For <strong>MAYOR</strong> of Collingwood, Ontario</p>
           </div>
         </section>
 
         <section class="section section--light">
           <div class="container container--narrow donations-rules content-block">
             <!--
-              Ontario finance rules below — verify limits for 2026 before launch.
-              TODO: Add donation method (cheque address, e-transfer, etc.)
+              CONTENT BELOW: ported from legacy donations page (2022).
+              TODO before launch:
+                - Confirm contribution limits for current election cycle
+                - Add actual donation method (cheque address, e-transfer, etc.)
+                - Replace donate CTA image/link when payment flow is ready
             -->
-            <div class="donate-cta" itemscope itemtype="https://schema.org/DonateAction">
-              <meta itemprop="name" content="Donate to Norm Sandberg for Mayor" />
-              <a href="mailto:norm@normformayor.ca?subject=Campaign%20Donation" itemprop="target">
-                <img src="assets/images/brand/donate-button.png" alt="Donate to Norm Sandberg's campaign" width="300" height="137" itemprop="image" />
+            <div class="donate-cta">
+              <a href="mailto:norm@normformayor.ca?subject=Campaign%20Donation" itemprop="email">
+                <img src="assets/images/brand/donate-button.png" alt="Donate to Norm Sandberg's campaign" width="300" height="137" />
               </a>
             </div>
 
@@ -224,8 +238,7 @@
             </p>
 
             <h2>Thank you</h2>
-            <p itemscope itemtype="https://schema.org/ContactPoint" itemprop="contactPoint">
-              <meta itemprop="contactType" content="donations" />
+            <p>
               To donate or for questions, contact Norm:<br />
               Tel: <a href="tel:+17054458384" itemprop="telephone">705-445-8384</a><br />
               Email: <a href="mailto:norm@normformayor.ca" itemprop="email">norm@normformayor.ca</a>
@@ -233,13 +246,11 @@
           </div>
         </section>
 
-        </div><!-- /candidate Person -->
-
         <!-- Contact form — same as homepage; consider extracting to partial later -->
         <section class="section section--light" id="contact" aria-labelledby="contact-heading">
           <div class="container container--narrow">
             <h2 id="contact-heading">Contact Norm</h2>
-            <form class="contact-form" id="contact-form" method="post">
+            <form class="contact-form" id="donations-contact-form" method="post">
               <div class="contact-form__row contact-form__row--2">
                 <div>
                   <label for="contact-first">First name</label>
@@ -273,83 +284,137 @@
         </section>
       </main>
 
-      <!-- START FOOTER (sync with _snippets/footer.html) -->
-      <footer class="site-footer" itemscope itemtype="https://schema.org/WPFooter">
-        <div class="container site-footer__grid">
-          <section aria-labelledby="footer-contact-heading" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
-            <meta itemprop="contactType" content="customer support" />
-            <meta itemprop="areaServed" content="Collingwood, Ontario, Canada" />
-            <meta itemprop="availableLanguage" content="English" />
-            <h3 id="footer-contact-heading">Contact Norm</h3>
-            <p itemscope itemtype="https://schema.org/Person">
-              <meta itemprop="name" content="Norm Sandberg" />
-              Tel: <a href="tel:+17054458384" itemprop="telephone">705-445-8384</a><br />
-              Email: <a href="mailto:norm@normformayor.ca" itemprop="email">norm@normformayor.ca</a>
-            </p>
-          </section>
-          <section aria-labelledby="footer-cta-heading">
-            <h3 id="footer-cta-heading">Get Involved</h3>
-            <p><a class="btn btn--primary" href="donations.html">Donate</a></p>
-            <p><a href="index.html#contact">Request a lawn sign</a></p>
-          </section>
-          <section aria-labelledby="footer-social-heading" itemscope itemtype="https://schema.org/Person">
-            <meta itemprop="name" content="Norm Sandberg" />
-            <link itemprop="url" href="https://normformayor.ca/" />
-            <h3 id="footer-social-heading">Follow Norm</h3>
-            <ul class="social-links">
-              <li><a href="https://www.facebook.com/MayorNorm" target="_blank" rel="noopener noreferrer" itemprop="sameAs">Facebook</a></li>
-              <li><a href="https://twitter.com/MayorNorm2022" target="_blank" rel="noopener noreferrer" itemprop="sameAs">X</a></li>
-              <li><a href="https://www.instagram.com/mayornorm2022/" target="_blank" rel="noopener noreferrer" itemprop="sameAs">Instagram</a></li>
-              <li><a href="https://www.linkedin.com/in/norman-sandberg-01496a7/" target="_blank" rel="noopener noreferrer" itemprop="sameAs">LinkedIn</a></li>
-            </ul>
-          </section>
+      <footer class="site-footer" id="footer-contact">
+        <div class="site-footer__main">
+          <div class="container site-footer__grid">
+            <section aria-labelledby="footer-contact-heading" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
+              <meta itemprop="contactType" content="customer support" />
+              <meta itemprop="areaServed" content="Collingwood, Ontario, Canada" />
+              <h2 class="site-footer__heading" id="footer-contact-heading">Contact Norm</h2>
+              <ul class="site-footer__contact-list">
+                <li>
+                  <svg class="site-footer__contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                  <a href="tel:+17054458384" itemprop="telephone">705-445-8384</a>
+                </li>
+                <li>
+                  <svg class="site-footer__contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                  <a href="mailto:norm@normformayor.ca" itemprop="email">norm@normformayor.ca</a>
+                </li>
+                <li>
+                  <svg class="site-footer__contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                  <span>Collingwood, Ontario</span>
+                </li>
+              </ul>
+              <ul class="social-links" aria-label="Social media" itemscope itemtype="https://schema.org/Person">
+                <meta itemprop="name" content="Norm Sandberg" />
+                <link itemprop="url" href="https://normformayor.ca/" />
+                <li>
+                  <a href="https://www.facebook.com/MayorNorm" target="_blank" rel="noopener noreferrer" aria-label="Facebook" itemprop="sameAs">
+                    <svg class="social-links__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/MayorNorm2022" target="_blank" rel="noopener noreferrer" aria-label="X" itemprop="sameAs">
+                    <svg class="social-links__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/mayornorm2022/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" itemprop="sameAs">
+                    <svg class="social-links__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="YouTube (placeholder)">
+                    <svg class="social-links__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/norman-sandberg-01496a7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" itemprop="sameAs">
+                    <svg class="social-links__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <a class="brand-logo brand-logo--footer" href="index.html" aria-label="Norm Sandberg for Mayor — Home">
+                <span class="brand-logo__elect">Elect</span>
+                <span class="brand-logo__name">Norm Sandberg</span>
+                <span class="brand-logo__tagline">4 Mayor of Collingwood</span>
+              </a>
+            </section>
+
+            <section aria-labelledby="footer-message-heading">
+              <h2 class="site-footer__heading" id="footer-message-heading">Send a Message</h2>
+              <form class="contact-form" id="contact-form" method="post">
+                <div class="form-field form-field--dark">
+                  <label for="footer-name">Name</label>
+                  <input type="text" id="footer-name" name="name" required autocomplete="name" />
+                </div>
+                <div class="form-field form-field--dark">
+                  <label for="footer-email">Email</label>
+                  <input type="email" id="footer-email" name="email" required autocomplete="email" />
+                </div>
+                <div class="form-field form-field--dark">
+                  <label for="footer-subject">Subject</label>
+                  <input type="text" id="footer-subject" name="subject" />
+                </div>
+                <div class="form-field form-field--dark">
+                  <label for="footer-message">Message</label>
+                  <textarea id="footer-message" name="message" rows="3" required></textarea>
+                </div>
+                <button class="btn btn--gold btn--block" type="submit">Send Message</button>
+              </form>
+            </section>
+
+            <section class="site-footer__brand-block" id="lawn-sign" aria-labelledby="footer-sign-heading">
+              <h2 class="site-footer__heading" id="footer-sign-heading">Request a Lawn Sign</h2>
+              <a class="btn btn--gold btn--block" href="#">Send Message</a>
+
+              <figure class="site-footer__portrait">
+                <img
+                  src="assets/LAWN%20SiGNS/mock%20up%20lawn%20sign.png"
+                  alt="Norm Sandberg for Mayor lawn sign"
+                  width="830"
+                  height="556"
+                  loading="lazy"
+                />
+              </figure>
+              <p class="site-footer__placeholder-note">This is a placeholder for final sign.</p>
+            </section>
+          </div>
         </div>
-        <nav class="site-footer__nav" aria-label="Footer navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-          <meta itemprop="name" content="Footer navigation" />
-          <ul class="site-footer__nav-list">
-              <li><a class="site-footer__nav-link" href="index.html">HOME</a></li>
-              <li><a class="site-footer__nav-link" href="experience.html">EXPERIENCE</a></li>
-              <li><a class="site-footer__nav-link site-footer__nav-link--active" href="donations.html">DONATIONS</a></li>
-              <li><a class="site-footer__nav-link" href="priorities.html">PRIORITIES</a></li>
-              <li><a class="site-footer__nav-link" href="faq.html">FAQ</a></li>
-              <li><a class="site-footer__nav-link" href="activities.html">NORM'S ACTIVITIES</a></li>
-          </ul>
-        </nav>
+
         <div class="site-footer__legal">
-          <p>
+          <p class="site-footer__legal-line">
+            <span class="site-footer__legal-cfo">Authorized by the CFO for the Norman Sandberg Campaign.</span>
+          </p>
+          <p class="site-footer__legal-line">
             <a href="privacy-policy.html">Privacy Policy</a>
             &nbsp;|&nbsp;
-            Copyright © <span id="footer-year"></span>
-            <span itemprop="copyrightHolder" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Norm Sandberg</span></span>
+            <a href="#">Campaign Disclosure</a>
+            &nbsp;|&nbsp;
+            Copyright © <span id="footer-year"></span> Norm Sandberg
+          </p>
+          <p class="site-footer__legal-line">
+            Designed &amp; Developed by
+            <a href="https://www.collingwoodwebdesign.com/" target="_blank" rel="noopener noreferrer">Collingwood Web Design</a>
           </p>
         </div>
       </footer>
-      <aside class="land-acknowledgement" aria-label="Land acknowledgement" itemscope itemtype="https://schema.org/Place">
-        <meta itemprop="name" content="Collingwood, Ontario — Traditional Territory" />
-        <div class="container">
-          <p itemprop="description">
-            We acknowledge that we are on Turtle Island in the Traditional Territory of the
-            Anishnaabek, Haudenosaunee, Ojibwe and others. We also acknowledge the Lake Simcoe –
-            Nottawasaga Treaty of 1818. As settlers, we are grateful for the opportunity to be here
-            and thank the generations of people who have taken care of this land for millennia. We
-            also recognize the contributions of Metis, Inuit and other Indigenous peoples have made
-            in shaping and strengthening our community, Ontario and Canada.
-          </p>
-          <p>
-            As we all share this land today, let us all remember and take inspiration from the spirit
-            and teachings of the Indigenous wampum of "The Dish With One Spoon", a thousand-year-old
-            treaty of sharing between Nations.
-          </p>
-          <p>
-            As settlers, this recognition of the contributions and historic importance of Indigenous
-            peoples must also be clearly reflected in our collective commitment to make the promises
-            and challenges of Truth and Reconciliation real in our communities, in particular, to bring
-            justice for the murdered and missing Indigenous women and girls across Canada.
-          </p>
-          <p class="photo-credit" itemprop="creditText">Photo credit: Dave West Photography</p>
-        </div>
-      </aside>
-      <!-- END FOOTER -->
     </div>
     <script src="js/main.js" defer></script>
   </body>

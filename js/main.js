@@ -8,7 +8,7 @@
  *   plain HTML cannot solve the problem.
  *
  * CURRENT FEATURES:
- *   1. Mobile navigation toggle
+ *   1. Mobile navigation toggle (auto-closes when a nav link is tapped)
  *   2. Dynamic copyright year in footer
  *   3. (Placeholder) Contact form — wire to Formspree/Netlify Forms later
  *
@@ -27,9 +27,30 @@
   var siteNav = document.getElementById("site-nav");
 
   if (navToggle && siteNav) {
+    function closeNav() {
+      siteNav.classList.remove("site-nav--open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+
     navToggle.addEventListener("click", function () {
       var isOpen = siteNav.classList.toggle("site-nav--open");
       navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    var navLinks = siteNav.querySelectorAll("#site-nav-menu a");
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", closeNav);
+    });
+  }
+
+  /* Subscribe form placeholder */
+  var subscribeForm = document.getElementById("subscribe-form");
+  if (subscribeForm) {
+    subscribeForm.addEventListener("submit", function (event) {
+      if (!subscribeForm.getAttribute("action") || subscribeForm.getAttribute("action") === "#") {
+        event.preventDefault();
+        alert("Newsletter signup is not yet connected. Add a mailing-list action URL before launch.");
+      }
     });
   }
 
@@ -49,13 +70,12 @@
    *   - Netlify Forms (if deploying via Netlify instead)
    *   - GitHub Pages + external serverless function
    *
-   * The 2022 WordPress site used Formidable Forms with inquiry types:
+   * Legacy site used WordPress Formidable with inquiry types:
    *   GENERAL INQUIRY | REQUEST A LAWN SIGN | DONATIONS | VOLUNTEER
    * ----------------------------------------------------------------------- */
-  var contactForm = document.getElementById("contact-form");
-  if (contactForm) {
+  var contactForms = document.querySelectorAll("#contact-form, #donations-contact-form");
+  contactForms.forEach(function (contactForm) {
     contactForm.addEventListener("submit", function (event) {
-      // Remove this block once a real action URL is configured
       if (!contactForm.getAttribute("action")) {
         event.preventDefault();
         alert(
@@ -63,5 +83,5 @@
         );
       }
     });
-  }
+  });
 })();

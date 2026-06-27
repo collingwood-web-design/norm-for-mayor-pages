@@ -2,65 +2,54 @@
 <html lang="en-CA">
   <head>
     <!--
-      =======================================================================
-      PAGE: Home (index.html)
-      Static site — HTML/CSS/JS on GitHub Pages (no WordPress)
-      BODY CLASS: page-home — scopes styles in css/05-pages.css
-      2022 content reference: docs/LEGACY-EXTRACTION.md
-      =======================================================================
+      PAGE: Home (index.html) — 2026 mockup layout (June 2025 design)
+      Responsive: CSS Grid collapses sections from desktop → tablet → mobile.
+      Placeholders: video, chat, gallery images, forms, external page links.
     -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Primary SEO -->
+    <!-- Required for YouTube embeds (Error 153 if missing / too strict) -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="description" content="Elect Norm Sandberg for Mayor of Collingwood, Ontario. Municipal election October 26, 2026. Experience, results, and leadership for our community." />
     <title>Norm Sandberg | For Mayor of Collingwood, Ontario (2026)</title>
-    <meta
-      name="description"
-      content="Elect Norm Sandberg for Mayor of Collingwood, Ontario. Municipal election October 26, 2026. Experience, integrity, and passion for our community."
+
+    <link rel="icon" href="assets/images/icons/favicon-32.png" sizes="32x32" />
+    <link rel="icon" href="assets/images/icons/favicon-192.png" sizes="192x192" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
     />
-    <meta name="author" content="Norm Sandberg" />
+        <meta name="author" content="Norm Sandberg" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://normformayor.ca/" />
 
-    <!-- Geographic / local relevance -->
     <meta name="geo.region" content="CA-ON" />
     <meta name="geo.placename" content="Collingwood" />
     <meta name="geo.position" content="44.5008;-80.2169" />
     <meta name="ICBM" content="44.5008, -80.2169" />
-
-    <!-- Campaign context -->
     <meta name="election-date" content="2026-10-26" />
     <meta name="political-office" content="Mayor" />
     <meta name="political-jurisdiction" content="Collingwood, Ontario, Canada" />
 
-    <!-- Open Graph -->
     <meta property="og:site_name" content="Norm Sandberg for Mayor" />
     <meta property="og:locale" content="en_CA" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Norm Sandberg | For Mayor of Collingwood, Ontario (2026)" />
-    <meta
-      property="og:description"
-      content="Elect Norm Sandberg for Mayor of Collingwood, Ontario. Municipal election October 26, 2026. Experience, integrity, and passion for our community."
-    />
+    <meta property="og:description" content="Elect Norm Sandberg for Mayor of Collingwood, Ontario. Municipal election October 26, 2026. Experience, results, and leadership for our community." />
     <meta property="og:url" content="https://normformayor.ca/" />
-    <meta property="og:image" content="https://normformayor.ca/assets/images/photos/norm-mayor-hero.jpg" />
-    <meta property="og:image:alt" content="Norm Sandberg — candidate for Mayor of Collingwood, Ontario" />
+    <meta property="og:image" content="https://normformayor.ca/assets/images/photos/Norm%20Sandberg%20Home%20-Hero.png" />
+    <meta property="og:image:alt" content="Norm Sandberg - candidate for Mayor of Collingwood, Ontario" />
 
-    <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Norm Sandberg | For Mayor of Collingwood, Ontario (2026)" />
-    <meta
-      name="twitter:description"
-      content="Elect Norm Sandberg for Mayor of Collingwood, Ontario. Municipal election October 26, 2026."
-    />
-    <meta name="twitter:image" content="https://normformayor.ca/assets/images/photos/norm-mayor-hero.jpg" />
-    <meta name="twitter:image:alt" content="Norm Sandberg — candidate for Mayor of Collingwood, Ontario" />
+    <meta name="twitter:description" content="Elect Norm Sandberg for Mayor of Collingwood, Ontario. Municipal election October 26, 2026. Experience, results, and leadership for our community." />
+    <meta name="twitter:image" content="https://normformayor.ca/assets/images/photos/Norm%20Sandberg%20Home%20-Hero.png" />
+    <meta name="twitter:image:alt" content="Norm Sandberg - candidate for Mayor of Collingwood, Ontario" />
 
-    <meta name="theme-color" content="#1a1a1a" />
-
-    <!-- Favicons -->
-    <link rel="icon" href="assets/images/icons/favicon-32.png" sizes="32x32" />
-    <link rel="icon" href="assets/images/icons/favicon-192.png" sizes="192x192" />
+    <meta name="theme-color" content="#201d70" />
     <link rel="apple-touch-icon" href="assets/images/icons/favicon-192.png" />
 
     <script type="application/ld+json">
@@ -72,9 +61,11 @@
             "@id": "https://normformayor.ca/#website",
             "url": "https://normformayor.ca/",
             "name": "Norm Sandberg for Mayor",
-            "description": "Official campaign website for Norm Sandberg, candidate for Mayor of Collingwood, Ontario. Municipal election October 26, 2026.",
+            "description": "Official campaign website for Norm Sandberg, candidate for Mayor of Collingwood, Ontario.",
             "inLanguage": "en-CA",
-            "publisher": { "@id": "https://normformayor.ca/#campaign" }
+            "publisher": {
+              "@id": "https://normformayor.ca/#campaign"
+            }
           },
           {
             "@type": "PoliticalCampaign",
@@ -87,7 +78,9 @@
               "@type": "AdministrativeArea",
               "name": "Collingwood, Ontario, Canada"
             },
-            "candidate": { "@id": "https://normformayor.ca/#person" }
+            "candidate": {
+              "@id": "https://normformayor.ca/#person"
+            }
           },
           {
             "@type": "Person",
@@ -99,7 +92,7 @@
             "email": "norm@normformayor.ca",
             "telephone": "+1-705-445-8384",
             "url": "https://normformayor.ca/",
-            "image": "https://normformayor.ca/assets/images/photos/norm-mayor-hero.jpg",
+            "image": "https://normformayor.ca/assets/images/photos/Norm%20Sandberg%20Home%20-Hero.png",
             "sameAs": [
               "https://www.facebook.com/MayorNorm",
               "https://twitter.com/MayorNorm2022",
@@ -148,355 +141,517 @@
       }
     </script>
 
-    <!-- Typography — Open Sans + Oswald (brand fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Master stylesheet — do not link partial CSS files individually -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <body class="page-home" itemscope itemtype="https://schema.org/WebPage">
     <meta itemprop="name" content="Norm Sandberg | For Mayor of Collingwood, Ontario (2026)" />
-    <meta
-      itemprop="description"
-      content="Elect Norm Sandberg for Mayor of Collingwood, Ontario. Municipal election October 26, 2026."
-    />
+    <meta itemprop="description" content="Elect Norm Sandberg for Mayor of Collingwood, Ontario. Municipal election October 26, 2026. Experience, results, and leadership for our community." />
     <link itemprop="url" href="https://normformayor.ca/" />
     <meta itemprop="inLanguage" content="en-CA" />
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- Priority icons sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none" aria-hidden="true">
+      <symbol id="priority-home" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22" />
+      </symbol>
+      <symbol id="priority-parking" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z" />
+      </symbol>
+      <symbol id="priority-infrastructure" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7,14V10.91C6.28,10.58 5.61,10.18 5,9.71V14H7M5,18H3V16H1V14H3V7H5V8.43C6.8,10 9.27,11 12,11C14.73,11 17.2,10 19,8.43V7H21V14H23V16H21V18H19V16H5V18M17,10.91V14H19V9.71C18.39,10.18 17.72,10.58 17,10.91M16,14V11.32C15.36,11.55 14.69,11.72 14,11.84V14H16M13,14V11.96L12,12L11,11.96V14H13M10,14V11.84C9.31,11.72 8.64,11.55 8,11.32V14H10Z" />
+      </symbol>
+      <symbol id="priority-fiscal" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7,15H9C9,16.08 10.37,17 12,17C13.63,17 15,16.08 15,15C15,13.9 13.96,13.5 11.76,12.97C9.64,12.44 7,11.78 7,9C7,7.21 8.47,5.69 10.5,5.18V3H13.5V5.18C15.53,5.69 17,7.21 17,9H15C15,7.92 13.63,7 12,7C10.37,7 9,7.92 9,9C9,10.1 10.04,10.5 12.24,11.03C14.36,11.56 17,12.22 17,15C17,16.79 15.53,18.31 13.5,18.82V21H10.5V18.82C8.47,18.31 7,16.79 7,15Z" />
+      </symbol>
+      <symbol id="priority-growth" viewBox="0 0 256 256" fill="currentColor">
+        <path d="M244,56v64a12,12,0,0,1-24,0V85l-75.51,75.52a12,12,0,0,1-17,0L96,129,32.49,192.49a12,12,0,0,1-17-17l72-72a12,12,0,0,1,17,0L136,135l67-67H168a12,12,0,0,1,0-24h64A12,12,0,0,1,244,56Z" />
+      </symbol>
+      <symbol id="priority-downtown" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 21H21V19H3M5 21V7L12 3L19 7V21H17V11H15V21H13V11H11V21H9V11H7V21H5Z" />
+      </symbol>
+      <symbol id="priority-leadership" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 11C17.66 11 19 9.66 19 8S17.66 5 16 5 13 6.34 13 8 14.34 11 16 11M8 11C9.66 11 11 9.66 11 8S9.66 5 8 5 5 6.34 5 8 6.34 11 8 11M8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13M16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z" />
+      </symbol>
+    </svg>
 
-  <div class="page-wrapper">
-    <!-- START HEADER (sync with _snippets/header.html) -->
-    <header class="site-header" id="site-header" itemscope itemtype="https://schema.org/WPHeader">
-      <div class="container site-header__inner" itemscope itemtype="https://schema.org/Organization">
+    <div class="page-wrapper">
+      <!-- HEADER -->
+      <header class="site-header" id="site-header" itemscope itemtype="https://schema.org/Organization">
         <meta itemprop="name" content="Norm Sandberg for Mayor" />
         <link itemprop="url" href="https://normformayor.ca/" />
-        <a class="site-header__logo" href="index.html" aria-label="Norm Sandberg — Home" itemprop="url">
-          <img
-            src="assets/images/brand/norm-logo-yellow.svg"
-            alt="Norm Sandberg — For Mayor of Collingwood, Ontario"
-            width="200"
-            height="130"
-            itemprop="logo"
-          />
-        </a>
-        <nav class="site-nav" id="site-nav" aria-label="Main navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-          <meta itemprop="name" content="Main navigation" />
-          <button
-            class="site-nav__toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="site-nav-menu"
-            id="site-nav-toggle"
-          >
-            <span class="sr-only">Open menu</span>
-            ☰
-          </button>
-          <ul class="site-nav__list" id="site-nav-menu">
-            <li><a class="site-nav__link site-nav__link--active" href="index.html">HOME</a></li>
-            <li><a class="site-nav__link" href="experience.html">EXPERIENCE</a></li>
-            <li><a class="site-nav__link" href="donations.html">DONATIONS</a></li>
-            <li><a class="site-nav__link" href="priorities.html">PRIORITIES</a></li>
-            <li><a class="site-nav__link" href="faq.html">FAQ</a></li>
-            <li><a class="site-nav__link" href="activities.html">NORM'S ACTIVITIES</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- END HEADER -->
+        <meta itemprop="email" content="norm@normformayor.ca" />
+        <div class="container site-header__inner">
+          <a class="brand-logo" href="index.html" itemprop="url" aria-label="Norm Sandberg for Mayor — Home">
+            <span class="brand-logo__elect">Elect</span>
+            <span class="brand-logo__name">Norm Sandberg</span>
+            <span class="brand-logo__tagline">4 Mayor of Collingwood</span>
+          </a>
 
-    <main
+          <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+            <ul class="site-nav__list" id="site-nav-menu">
+              <li><a class="site-nav__link site-nav__link--active" href="index.html">Home</a></li>
+              <li><a class="site-nav__link" href="priorities.html">Priorities</a></li>
+              <li><a class="site-nav__link" href="experience.html">About Norm</a></li>
+              <li><a class="site-nav__link" href="#">News</a></li>
+              <li><a class="site-nav__link" href="#dual-cta">Get Involved</a></li>
+              <li><a class="site-nav__link" href="#footer-contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="site-header__actions">
+            <a class="btn btn--gold btn--sm site-header__cta" href="ask-norm.html">
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/>
+              </svg>
+              Ask Norm
+            </a>
+
+            <button
+              class="site-nav__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="site-nav-menu"
+              id="site-nav-toggle"
+            >
+              <span class="sr-only">Open menu</span>
+              ☰
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main
       id="main-content"
       itemprop="mainContentOfPage"
       itemscope
       itemtype="https://schema.org/PoliticalCampaign"
     >
       <meta itemprop="name" content="Norm Sandberg for Mayor of Collingwood" />
-      <meta
-        itemprop="description"
-        content="Norm Sandberg is running for Mayor of Collingwood, Ontario in the October 26, 2026 municipal election."
-      />
+      <meta itemprop="description" content="Norm Sandberg is running for Mayor of Collingwood, Ontario in the October 26, 2026 municipal election." />
       <link itemprop="url" href="https://normformayor.ca/" />
       <meta itemprop="startDate" content="2026-10-26" />
-      <div itemprop="spatialCoverage" itemscope itemtype="https://schema.org/AdministrativeArea">
-        <meta itemprop="name" content="Collingwood, Ontario, Canada" />
-      </div>
-
       <div itemprop="candidate" itemscope itemtype="https://schema.org/Person">
         <meta itemprop="givenName" content="Norm" />
         <meta itemprop="familyName" content="Sandberg" />
         <meta itemprop="name" content="Norm Sandberg" />
         <link itemprop="url" href="https://normformayor.ca/" />
         <meta itemprop="jobTitle" content="Mayoral Candidate" />
-        <link itemprop="sameAs" href="https://www.facebook.com/MayorNorm" />
-        <link itemprop="sameAs" href="https://twitter.com/MayorNorm2022" />
-        <link itemprop="sameAs" href="https://www.instagram.com/mayornorm2022/" />
-        <link itemprop="sameAs" href="https://www.linkedin.com/in/norman-sandberg-01496a7/" />
-        <div itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <meta itemprop="name" content="Collingwood, Ontario, Canada" />
-          <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <meta itemprop="addressLocality" content="Collingwood" />
-            <meta itemprop="addressRegion" content="ON" />
-            <meta itemprop="addressCountry" content="CA" />
+        <!-- HERO -->
+        <section class="hero-home" aria-labelledby="hero-heading">
+          <div class="hero-home__media" aria-hidden="true">
+            <!-- TODO: Replace with final hero photography -->
+            <img
+              src="assets/images/photos/Norm%20Sandberg%20Home%20-Hero.png"
+              itemprop="image"
+              alt=""
+              width="2400"
+              height="1200"
+              fetchpriority="high"
+            />
           </div>
-        </div>
-        <div itemprop="seeks" itemscope itemtype="https://schema.org/EmployeeRole">
-          <meta itemprop="roleName" content="Mayor" />
-          <div itemprop="namedPosition" itemscope itemtype="https://schema.org/Organization">
-            <meta itemprop="name" content="Town of Collingwood" />
-          </div>
-        </div>
+          <div class="hero-home__overlay" aria-hidden="true"></div>
 
-      <!--
-        HERO SECTION
-        TODO: Confirm 2026 messaging (may differ from 2022 "ELECT" wording).
-        Background image: assets/images/photos/norm-mayor-hero.jpg
-      -->
-      <section class="section section--hero" aria-labelledby="hero-heading">
-        <div class="container">
-          <p class="hero__eyebrow">ELECT</p>
-          <h1 class="hero__title" id="hero-heading" itemprop="alternateName">NORM SANDBERG</h1>
-          <p class="hero__subtitle">
-            For <strong itemprop="jobTitle">MAYOR</strong> of
-            <span itemprop="workLocation" itemscope itemtype="https://schema.org/Place">
-              <span itemprop="name">Collingwood, Ontario</span>
-            </span>
-          </p>
-          <p class="hero__tagline">
-            <a href="experience.html">EXPERIENCE</a> • INTEGRITY • PASSION
-          </p>
-          <p style="margin-top: 2rem">
-            <a class="btn btn--solid" href="donations.html">Donate</a>
-          </p>
-        </div>
-      </section>
-
-      <!--
-        WHO IS NORM — refresh copy for 2026; verify family photo rights
-      -->
-      <section class="section section--light" aria-labelledby="who-is-norm-heading">
-        <div class="container">
-          <div class="row row--2col">
-            <div class="content-block">
-              <h2 id="who-is-norm-heading">Who is Norm?</h2>
-              <p>
-                Jan and I have lived in Collingwood for the entire 40 years of our marriage.
-                Having raised our children here, we are blessed with them being able to live,
-                work and raise our grandchildren here. I am committed to working towards the same
-                opportunities for all Collingwood residents.
-              </p>
-              <p>
-                Doing what's best for Collingwood and your families is my priority!
-                <img
-                  class="content-block__signature"
-                  src="assets/images/brand/norm-logo.png"
-                  alt=""
-                  width="168"
-                  height="109"
-                />
-              </p>
+          <div class="container hero-home__content">
+            <div>
+              <h1 class="hero-home__headline" id="hero-heading">
+                <span class="text-white">Experience Matters.</span>
+                <span class="text-white">Results Matter.</span>
+                <span class="text-gold">Collingwood Deserves Both.</span>
+              </h1>
+              <div class="hero-home__sub-wrap">
+                <p class="hero-home__sub">
+                  <span class="hero-home__sub-line">4 Terms on Collingwood Council.</span>
+                  <span class="hero-home__sub-line hero-home__sub-line--gold">A record of results.</span>
+                  <span class="hero-home__sub-line">Ready to lead.</span>
+                </p>
+              </div>
+              <div class="hero-home__actions">
+                <a class="btn btn--hero-ghost" href="priorities.html">
+                  <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+                  </svg>
+                  View Priorities
+                </a>
+                <a class="btn btn--hero-ghost" href="#lawn-sign" title="Request a lawn sign">
+                  <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                  </svg>
+                  Get a Lawn Sign
+                </a>
+                <a class="btn btn--gold" href="donations.html">
+                  <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                  Donate
+                </a>
+              </div>
             </div>
-            <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-              <!-- Legacy image: family.jpg -->
-              <img
-                src="assets/images/photos/family.jpg"
-                alt="Norm Sandberg with family in Collingwood, Ontario"
-                width="1200"
-                height="825"
-                loading="lazy"
-                itemprop="contentUrl"
-              />
-              <meta itemprop="caption" content="Norm Sandberg with family in Collingwood, Ontario" />
-            </figure>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!--
-        PRIORITIES PREVIEW — links to full priorities.html
-      -->
-      <section class="section section--dark" aria-labelledby="priorities-preview-heading">
-        <div class="container" itemprop="knowsAbout" itemscope itemtype="https://schema.org/ItemList">
-          <meta itemprop="name" content="Norm Sandberg's priorities for Collingwood" />
-          <h2 id="priorities-preview-heading">Priorities</h2>
-          <p itemprop="description">Affordable Housing • Responsible Reasonable Taxation • Prosperous Local Economy • Grain Terminals • General and Marine Hospital</p>
-          <p>
-            As your mayor I will set an example for mutual respect, trust, good communication,
-            understanding and honesty.
-          </p>
-          <p><a class="btn btn--primary" href="priorities.html">Read more</a></p>
-        </div>
-      </section>
+        <!-- TODO: Campaign video embed — add section here when new YouTube video is ready
+             See .video-feature / .video-embed styles in css/05-pages.css -->
 
-      </div><!-- /candidate Person -->
+        <!-- MY PRIORITIES -->
+        <section class="priorities-home" aria-labelledby="priorities-heading">
+          <div class="container">
+            <h2 class="section-title" id="priorities-heading">My Priorities</h2>
 
-      <div
-        itemprop="event"
-        itemscope
-        itemtype="https://schema.org/Event"
-        aria-hidden="true"
-        hidden
-      >
+            <div class="grid grid--5">
+              <a class="priority-card" href="priorities.html#housing">
+                <div class="priority-card__icon" aria-hidden="true">
+                  <svg class="icon-priority"><use href="#priority-home" /></svg>
+                </div>
+                <h3 class="priority-card__title">Housing That Works for Local Residents</h3>
+                <p class="priority-card__text">
+                  Attainable housing for working families, professionals, seniors, and local
+                  employees — without compromising neighbourhood character.
+                </p>
+              </a>
+
+              <a class="priority-card" href="priorities.html#infrastructure">
+                <div class="priority-card__icon" aria-hidden="true">
+                  <svg class="icon-priority"><use href="#priority-infrastructure" /></svg>
+                </div>
+                <h3 class="priority-card__title">Infrastructure Before Crisis</h3>
+                <p class="priority-card__text">
+                  Roads, water, recreation, and core services planned responsibly so growth never
+                  outpaces the town's capacity.
+                </p>
+              </a>
+
+              <a class="priority-card" href="priorities.html#downtown">
+                <div class="priority-card__icon" aria-hidden="true">
+                  <svg class="icon-priority"><use href="#priority-downtown" /></svg>
+                </div>
+                <h3 class="priority-card__title">A Stronger Downtown</h3>
+                <p class="priority-card__text">
+                  Parking, local business, accessibility, and vitality for Collingwood's historic
+                  downtown.
+                </p>
+              </a>
+
+              <a class="priority-card" href="priorities.html#fiscal">
+                <div class="priority-card__icon" aria-hidden="true">
+                  <svg class="icon-priority"><use href="#priority-fiscal" /></svg>
+                </div>
+                <h3 class="priority-card__title">Fiscal Responsibility and Accountability</h3>
+                <p class="priority-card__text">
+                  Disciplined budgets, transparent decisions, and spending focused on municipal
+                  priorities.
+                </p>
+              </a>
+
+              <a class="priority-card" href="priorities.html#leadership">
+                <div class="priority-card__icon" aria-hidden="true">
+                  <svg class="icon-priority"><use href="#priority-leadership" /></svg>
+                </div>
+                <h3 class="priority-card__title">Collaborative Leadership</h3>
+                <p class="priority-card__text">
+                  Working with residents, businesses, neighbours, and community partners to get
+                  things done.
+                </p>
+              </a>
+            </div>
+
+            <div class="priorities-home__cta">
+              <a class="btn btn--navy-reverse" href="priorities.html">View All Priorities</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- WHY NORM -->
+        <section class="why-norm section--gray" aria-labelledby="why-norm-heading">
+          <div class="container">
+            <div class="split split--video">
+              <div class="video-placeholder">
+                <!-- TODO: Replace with embedded video (YouTube/Vimeo) -->
+                <img
+                  src="assets/images/photos/family.jpg"
+                  alt=""
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                />
+                <button class="video-placeholder__play" type="button" disabled>
+                  <span class="video-placeholder__play-icon" aria-hidden="true">▶</span>
+                  <span class="video-placeholder__label">Watch Norm's Story</span>
+                </button>
+              </div>
+
+              <div>
+                <h2 class="why-norm__title" id="why-norm-heading">Why Norm?</h2>
+                <ul class="why-norm__list">
+                  <li>
+                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    Former Collingwood Councillor
+                  </li>
+                  <li>
+                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    Former President of the Association of Municipalities of Ontario
+                  </li>
+                  <li>
+                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    Former Chair of Ontario Small Urban Municipalities
+                  </li>
+                  <li>
+                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    Certified Engineering Technologist
+                  </li>
+                  <li>
+                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    Municipal infrastructure specialist
+                  </li>
+                  <li>
+                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    Community volunteer
+                  </li>
+                  <li>
+                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    More than three decades serving municipalities and helping communities plan, build, and grow responsibly
+                  </li>
+                </ul>
+                <a class="btn btn--outline-navy" href="experience.html">Learn More About Norm</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- OUR COMMUNITY — Instagram feed (last 4 posts); replace mockup grid when account is ready -->
+        <section class="community" aria-labelledby="community-heading">
+          <div class="container">
+            <h2 class="section-title" id="community-heading">Living and Working in Our Community</h2>
+
+            <!--
+              TODO: Replace .community__feed mockup with Instagram embed (last 4 images).
+              Options: Instagram Basic Display API, third-party widget, or manual embed blocks.
+            -->
+            <div class="community__feed" id="community-instagram">
+              <div class="community__post">
+                <img src="assets/images/photos/norm.jpg" alt="Norm Sandberg" width="320" height="320" loading="lazy" />
+              </div>
+              <div class="community__post">
+                <img src="assets/images/photos/family.jpg" alt="Norm with neighbours (placeholder)" width="320" height="320" loading="lazy" />
+              </div>
+              <div class="community__post">
+                <img src="assets/images/photos/norm%20at%20work.jpg" alt="Norm Sandberg at work" width="320" height="320" loading="lazy" />
+              </div>
+              <div class="community__post">
+                <img src="assets/images/photos/family.jpg" alt="On the campaign trail (placeholder)" width="320" height="320" loading="lazy" />
+              </div>
+            </div>
+            <p class="community__feed-note">Placeholder for Embedded Instagram feed</p>
+          </div>
+        </section>
+
+        <!-- LAND ACKNOWLEDGEMENT -->
+        <section class="land-ack section--gray" aria-labelledby="land-ack-heading">
+          <div class="container land-ack__inner">
+            <div class="land-ack__heading">
+              <div class="land-ack__icon" aria-hidden="true">
+                <img
+                  src="assets/icons/land%20acknowledgement%20icon.png"
+                  alt=""
+                  width="130"
+                  height="195"
+                  loading="lazy"
+                />
+              </div>
+              <h2 class="land-ack__title" id="land-ack-heading">Land Acknowledgement</h2>
+            </div>
+            <p class="land-ack__text">
+              We acknowledge that we are on Turtle Island in the Traditional Territory of the
+              Anishnaabek, Haudenosaunee, Ojibwe and others. We also acknowledge the Lake
+              Simcoe – Nottawasaga Treaty of 1818. As settlers, we are grateful for the
+              opportunity to be here and thank the generations of people who have taken care
+              of this land for millennia. We recognize the contributions of Métis, Inuit and
+              other Indigenous peoples in shaping and strengthening our community, Ontario and
+              Canada. Let us take inspiration from the spirit of "The Dish With One Spoon" —
+              sharing this land together and honouring our commitment to Truth and
+              Reconciliation.
+            </p>
+          </div>
+        </section>
+
+        <!-- DUAL CTA -->
+        <section class="dual-cta" id="dual-cta" aria-label="Get involved">
+          <div class="dual-cta__block dual-cta__block--navy">
+            <svg class="dual-cta__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <h2 class="dual-cta__title">Stay Informed</h2>
+            <p class="dual-cta__text">
+              Subscribe for campaign news, events, and updates. <!-- TODO: Connect newsletter -->
+            </p>
+            <form class="dual-cta__form" id="subscribe-form" action="#" method="post">
+              <label class="sr-only" for="subscribe-email">Email address</label>
+              <input type="email" id="subscribe-email" name="email" placeholder="Your email address" required />
+              <button class="btn btn--outline-navy btn--sm" type="submit">Subscribe</button>
+            </form>
+          </div>
+
+          <div class="dual-cta__block dual-cta__block--gold">
+            <svg class="dual-cta__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <h2 class="dual-cta__title">Support the Campaign</h2>
+            <p class="dual-cta__text">
+              Every contribution helps us reach more Collingwood residents with Norm's message.
+            </p>
+            <a class="btn btn--navy" href="donations.html">Donate Now</a>
+          </div>
+        </section>
+      </div>
+      <div itemprop="event" itemscope itemtype="https://schema.org/Event" hidden aria-hidden="true">
         <meta itemprop="name" content="2026 Collingwood Municipal Election" />
         <meta itemprop="startDate" content="2026-10-26" />
         <meta itemprop="eventStatus" content="https://schema.org/EventScheduled" />
-        <meta itemprop="eventAttendanceMode" content="https://schema.org/OfflineEventAttendanceMode" />
         <div itemprop="location" itemscope itemtype="https://schema.org/Place">
           <meta itemprop="name" content="Collingwood, Ontario, Canada" />
-          <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <meta itemprop="addressLocality" content="Collingwood" />
-            <meta itemprop="addressRegion" content="ON" />
-            <meta itemprop="addressCountry" content="CA" />
+        </div>
+      </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="site-footer" id="footer-contact">
+        <div class="site-footer__main">
+          <div class="container site-footer__grid">
+            <!-- Contact column -->
+            <section aria-labelledby="footer-contact-heading" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
+              <meta itemprop="contactType" content="customer support" />
+              <meta itemprop="areaServed" content="Collingwood, Ontario, Canada" />
+              <h2 class="site-footer__heading" id="footer-contact-heading">Contact Norm</h2>
+              <ul class="site-footer__contact-list">
+                <li>
+                  <svg class="site-footer__contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                  <a href="tel:+17054458384" itemprop="telephone">705-445-8384</a>
+                </li>
+                <li>
+                  <svg class="site-footer__contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                  <a href="mailto:norm@normformayor.ca" itemprop="email">norm@normformayor.ca</a>
+                </li>
+                <li>
+                  <svg class="site-footer__contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                  <span>Collingwood, Ontario</span>
+                </li>
+              </ul>
+              <ul class="social-links" aria-label="Social media" itemscope itemtype="https://schema.org/Person">
+                <meta itemprop="name" content="Norm Sandberg" />
+                <link itemprop="url" href="https://normformayor.ca/" />
+                <li>
+                  <a href="https://www.facebook.com/MayorNorm" target="_blank" rel="noopener noreferrer" aria-label="Facebook" itemprop="sameAs">
+                    <svg class="social-links__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/MayorNorm2022" target="_blank" rel="noopener noreferrer" aria-label="X" itemprop="sameAs">
+                    <svg class="social-links__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/mayornorm2022/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" itemprop="sameAs">
+                    <svg class="social-links__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="YouTube (placeholder)">
+                    <svg class="social-links__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/norman-sandberg-01496a7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" itemprop="sameAs">
+                    <svg class="social-links__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <a class="brand-logo brand-logo--footer" href="index.html" aria-label="Norm Sandberg for Mayor — Home">
+                <span class="brand-logo__elect">Elect</span>
+                <span class="brand-logo__name">Norm Sandberg</span>
+                <span class="brand-logo__tagline">4 Mayor of Collingwood</span>
+              </a>
+            </section>
+
+            <!-- Message form column -->
+            <section aria-labelledby="footer-message-heading">
+              <h2 class="site-footer__heading" id="footer-message-heading">Send a Message</h2>
+              <form class="contact-form" id="contact-form" method="post">
+                <!-- TODO: action="https://formspree.io/f/YOUR_ID" -->
+                <div class="form-field form-field--dark">
+                  <label for="footer-name">Name</label>
+                  <input type="text" id="footer-name" name="name" required autocomplete="name" />
+                </div>
+                <div class="form-field form-field--dark">
+                  <label for="footer-email">Email</label>
+                  <input type="email" id="footer-email" name="email" required autocomplete="email" />
+                </div>
+                <div class="form-field form-field--dark">
+                  <label for="footer-subject">Subject</label>
+                  <input type="text" id="footer-subject" name="subject" />
+                </div>
+                <div class="form-field form-field--dark">
+                  <label for="footer-message">Message</label>
+                  <textarea id="footer-message" name="message" rows="3" required></textarea>
+                </div>
+                <button class="btn btn--gold btn--block" type="submit">Send Message</button>
+              </form>
+            </section>
+
+            <!-- Branding + lawn sign column -->
+            <section class="site-footer__brand-block" id="lawn-sign" aria-labelledby="footer-sign-heading">
+              <h2 class="site-footer__heading" id="footer-sign-heading">Request a Lawn Sign</h2>
+              <a class="btn btn--gold btn--block" href="#">Send Message</a>
+
+              <figure class="site-footer__portrait">
+                <img
+                  src="assets/LAWN%20SiGNS/mock%20up%20lawn%20sign.png"
+                  alt="Norm Sandberg for Mayor lawn sign"
+                  width="830"
+                  height="556"
+                  loading="lazy"
+                />
+              </figure>
+              <p class="site-footer__placeholder-note">This is a placeholder for final sign.</p>
+            </section>
           </div>
         </div>
-      </div>
 
-      <!--
-        CONTACT FORM — appears at bottom of every page
-        TODO: Set action="" to Formspree or similar before launch
-      -->
-      <section class="section section--light" id="contact" aria-labelledby="contact-heading">
-        <div class="container container--narrow">
-          <h2 id="contact-heading">Contact Norm</h2>
-          <p itemscope itemtype="https://schema.org/ContactPoint" itemprop="contactPoint">
-            <meta itemprop="contactType" content="campaign inquiries" />
-            <meta itemprop="areaServed" content="Collingwood, Ontario, Canada" />
-            <meta itemprop="availableLanguage" content="English" />
-            Tel: <a href="tel:+17054458384" itemprop="telephone">705-445-8384</a> ·
-            Email: <a href="mailto:norm@normformayor.ca" itemprop="email">norm@normformayor.ca</a>
+        <div class="site-footer__legal">
+          <p class="site-footer__legal-line">
+            <span class="site-footer__legal-cfo">Authorized by the CFO for the Norman Sandberg Campaign.</span>
           </p>
-
-          <form class="contact-form" id="contact-form" method="post">
-            <!-- TODO: action="https://formspree.io/f/YOUR_ID" -->
-
-            <div class="contact-form__row contact-form__row--2">
-              <div>
-                <label for="contact-first">First name <span aria-hidden="true">*</span></label>
-                <input type="text" id="contact-first" name="first_name" required autocomplete="given-name" />
-              </div>
-              <div>
-                <label for="contact-last">Last name <span aria-hidden="true">*</span></label>
-                <input type="text" id="contact-last" name="last_name" required autocomplete="family-name" />
-              </div>
-            </div>
-
-            <div>
-              <label for="contact-email">Email <span aria-hidden="true">*</span></label>
-              <input type="email" id="contact-email" name="email" required autocomplete="email" />
-            </div>
-
-            <div>
-              <label for="contact-topic">Inquiry type</label>
-              <select id="contact-topic" name="inquiry_type">
-                <option value="GENERAL INQUIRY">General inquiry</option>
-                <option value="REQUEST A LAWN SIGN">Request a lawn sign</option>
-                <option value="DONATIONS">Donations</option>
-                <option value="VOLUNTEER">Volunteer</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="contact-message">Message <span aria-hidden="true">*</span></label>
-              <textarea id="contact-message" name="message" rows="5" required></textarea>
-            </div>
-
-            <!-- Honeypot anti-spam — keep hidden -->
-            <div class="contact-form__honeypot" aria-hidden="true">
-              <label for="contact-bot">If you are human, leave this field blank</label>
-              <input type="text" id="contact-bot" name="bot-field" tabindex="-1" autocomplete="off" />
-            </div>
-
-            <button class="btn btn--solid" type="submit">Submit</button>
-          </form>
+          <p class="site-footer__legal-line">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            &nbsp;|&nbsp;
+            <a href="#">Campaign Disclosure</a>
+            &nbsp;|&nbsp;
+            Copyright © <span id="footer-year"></span> Norm Sandberg
+          </p>
+          <p class="site-footer__legal-line">
+            Designed &amp; Developed by
+            <a href="https://www.collingwoodwebdesign.com/" target="_blank" rel="noopener noreferrer">Collingwood Web Design</a>
+          </p>
         </div>
-      </section>
-    </main>
+      </footer>
+    </div>
 
-    <!-- START FOOTER (sync with _snippets/footer.html) -->
-    <footer class="site-footer" itemscope itemtype="https://schema.org/WPFooter">
-      <div class="container site-footer__grid">
-        <section aria-labelledby="footer-contact-heading" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
-          <meta itemprop="contactType" content="customer support" />
-          <meta itemprop="areaServed" content="Collingwood, Ontario, Canada" />
-          <meta itemprop="availableLanguage" content="English" />
-          <h3 id="footer-contact-heading">Contact Norm</h3>
-          <p itemscope itemtype="https://schema.org/Person">
-            <meta itemprop="name" content="Norm Sandberg" />
-            Tel: <a href="tel:+17054458384" itemprop="telephone">705-445-8384</a><br />
-            Email: <a href="mailto:norm@normformayor.ca" itemprop="email">norm@normformayor.ca</a>
-          </p>
-        </section>
-        <section aria-labelledby="footer-cta-heading">
-          <h3 id="footer-cta-heading">Get Involved</h3>
-          <p><a class="btn btn--primary" href="donations.html">Donate</a></p>
-          <p><a href="#contact">Request a lawn sign</a></p>
-        </section>
-        <section aria-labelledby="footer-social-heading" itemscope itemtype="https://schema.org/Person">
-          <meta itemprop="name" content="Norm Sandberg" />
-          <link itemprop="url" href="https://normformayor.ca/" />
-          <h3 id="footer-social-heading">Follow Norm</h3>
-          <ul class="social-links">
-            <li><a href="https://www.facebook.com/MayorNorm" target="_blank" rel="noopener noreferrer" itemprop="sameAs">Facebook</a></li>
-            <li><a href="https://twitter.com/MayorNorm2022" target="_blank" rel="noopener noreferrer" itemprop="sameAs">X</a></li>
-            <li><a href="https://www.instagram.com/mayornorm2022/" target="_blank" rel="noopener noreferrer" itemprop="sameAs">Instagram</a></li>
-            <li><a href="https://www.linkedin.com/in/norman-sandberg-01496a7/" target="_blank" rel="noopener noreferrer" itemprop="sameAs">LinkedIn</a></li>
-          </ul>
-        </section>
-      </div>
-      <nav class="site-footer__nav" aria-label="Footer navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-        <meta itemprop="name" content="Footer navigation" />
-        <ul class="site-footer__nav-list">
-          <li><a class="site-footer__nav-link site-footer__nav-link--active" href="index.html">HOME</a></li>
-          <li><a class="site-footer__nav-link" href="experience.html">EXPERIENCE</a></li>
-          <li><a class="site-footer__nav-link" href="donations.html">DONATIONS</a></li>
-          <li><a class="site-footer__nav-link" href="priorities.html">PRIORITIES</a></li>
-          <li><a class="site-footer__nav-link" href="faq.html">FAQ</a></li>
-          <li><a class="site-footer__nav-link" href="activities.html">NORM'S ACTIVITIES</a></li>
-        </ul>
-      </nav>
-      <div class="site-footer__legal">
-        <p>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          &nbsp;|&nbsp;
-          Copyright © <span id="footer-year"></span>
-          <span itemprop="copyrightHolder" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Norm Sandberg</span></span>
-        </p>
-      </div>
-    </footer>
-    <aside class="land-acknowledgement" aria-label="Land acknowledgement" itemscope itemtype="https://schema.org/Place">
-      <meta itemprop="name" content="Collingwood, Ontario — Traditional Territory" />
-      <div class="container">
-        <p itemprop="description">
-          We acknowledge that we are on Turtle Island in the Traditional Territory of the
-          Anishnaabek, Haudenosaunee, Ojibwe and others. We also acknowledge the Lake Simcoe –
-          Nottawasaga Treaty of 1818. As settlers, we are grateful for the opportunity to be here
-          and thank the generations of people who have taken care of this land for millennia. We
-          also recognize the contributions of Metis, Inuit and other Indigenous peoples have made
-          in shaping and strengthening our community, Ontario and Canada.
-        </p>
-        <p>
-          As we all share this land today, let us all remember and take inspiration from the spirit
-          and teachings of the Indigenous wampum of "The Dish With One Spoon", a thousand-year-old
-          treaty of sharing between Nations.
-        </p>
-        <p>
-          As settlers, this recognition of the contributions and historic importance of Indigenous
-          peoples must also be clearly reflected in our collective commitment to make the promises
-          and challenges of Truth and Reconciliation real in our communities, in particular, to bring
-          justice for the murdered and missing Indigenous women and girls across Canada.
-        </p>
-        <p class="photo-credit" itemprop="creditText">Photo credit: Dave West Photography</p>
-      </div>
-    </aside>
-    <!-- END FOOTER -->
-  </div>
-
-  <script src="js/main.js" defer></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
