@@ -17,7 +17,7 @@
  * HOME (index.html) — 2026 mockup layout
  * ----------------------------------------------------------------------- */
 .page-home {
-  background-color: var(--color-white);
+  background-color: var(--color-navy-dark);
 }
 
 /* --- HERO --- */
@@ -428,7 +428,15 @@
 /* --- CAMPAIGN VIDEO (homepage placeholder) --- */
 .video-feature {
   padding-block: var(--section-padding-y);
-  background: var(--color-gray-section);
+  background: var(--color-white);
+}
+
+.video-feature__note {
+  margin: 0.85rem 0 0;
+  font-size: 0.875rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--color-text);
 }
 
 .video-embed {
@@ -616,11 +624,21 @@
   aspect-ratio: 16 / 10;
 }
 
+.video-placeholder--feature {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 10px 32px rgba(28, 26, 94, 0.18);
+}
+
 .video-placeholder img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0.85;
+}
+
+.video-placeholder--feature img {
+  opacity: 1;
 }
 
 .video-placeholder__play {
@@ -630,9 +648,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.65rem;
   color: var(--color-white);
-  background: rgba(32, 29, 112, 0.35);
+  background: rgba(28, 26, 94, 0.42);
   border: none;
   cursor: not-allowed;
 }
@@ -641,10 +659,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  font-size: 1.25rem;
-  background: rgba(255, 255, 255, 0.2);
+  width: 4.5rem;
+  height: 4.5rem;
+  padding-left: 0.2rem;
+  font-size: 1.35rem;
+  line-height: 1;
+  background: transparent;
   border: 2px solid var(--color-white);
   border-radius: 50%;
 }

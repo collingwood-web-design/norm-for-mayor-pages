@@ -19,6 +19,14 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
+/* Fixed header must not reserve height inside the flex page shell */
+.page-wrapper > .site-header {
+  height: 0;
+  min-height: 0;
+  overflow: visible;
+  flex: 0 0 auto;
+}
+
 .site-header__inner {
   display: grid;
   grid-template-columns: 1fr auto;

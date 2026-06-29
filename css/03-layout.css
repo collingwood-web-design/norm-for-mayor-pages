@@ -20,12 +20,35 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: var(--site-header-offset);
 }
 
 /* Main content grows to push footer down */
 main {
   flex: 1;
+}
+
+/*
+ * Fixed header clearance — pad sections with their own background, not
+ * .page-wrapper (which left a white strip between the navy header and hero).
+ */
+.hero-home {
+  padding-top: var(--site-header-offset);
+}
+
+.priorities-page-hero {
+  padding-top: calc(clamp(2rem, 5vw, 3.25rem) + var(--site-header-offset));
+}
+
+.section--hero {
+  padding-top: calc(4rem + var(--site-header-offset));
+}
+
+.ask-norm {
+  padding-top: calc(var(--section-padding-y) + var(--site-header-offset));
+}
+
+main > .section:not(.section--hero) {
+  padding-top: calc(var(--section-padding-y) + var(--site-header-offset));
 }
 
 /* Standard content width — mirrors legacy .et_pb_row max-width: 1080px */
