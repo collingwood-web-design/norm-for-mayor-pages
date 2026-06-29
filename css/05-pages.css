@@ -39,40 +39,6 @@
   object-position: right center;
 }
 
-/* Desktop — keep Norm anchored on the right; small laptops use moderate vertical center */
-@media (min-width: 900px) {
-  .hero-home__media img {
-    object-position: 88% 22%;
-  }
-}
-
-/* Large desktop — taller frame + anchor image bottom so torso is not cropped */
-@media (min-width: 1200px) {
-  .hero-home__content {
-    min-height: clamp(480px, 45vh, 580px);
-  }
-
-  .hero-home__media img {
-    object-position: 90% bottom;
-  }
-}
-
-@media (min-width: 1600px) {
-  .hero-home__content {
-    min-height: clamp(500px, 48vh, 620px);
-  }
-
-  .hero-home__media img {
-    object-position: right bottom;
-  }
-}
-
-@media (min-width: 2000px) {
-  .hero-home__content {
-    min-height: clamp(520px, 50vh, 660px);
-  }
-}
-
 /* Light overlay — hero PNG already has a left-side gradient */
 .hero-home__overlay {
   position: absolute;
@@ -93,6 +59,21 @@
   /* Height driven by content + modest padding — not 78vh */
   min-height: clamp(320px, 42vw, 460px);
   padding-block: 2rem;
+}
+
+/*
+ * Desktop — match hero height to the 2:1 hero PNG (2400×1200) so cover
+ * does not crop Norm. Must sit after the base rule above (was capped at 460px).
+ */
+@media (min-width: 901px) {
+  .hero-home__content {
+    min-height: clamp(480px, 50vw, 920px);
+    padding-block: clamp(2rem, 4vh, 3rem);
+  }
+
+  .hero-home__media img {
+    object-position: right center;
+  }
 }
 
 .hero-home__headline {
