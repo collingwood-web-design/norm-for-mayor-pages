@@ -39,26 +39,37 @@
   object-position: right center;
 }
 
-/* Large desktop — anchor high so head stays in frame; crop chest if needed */
+/* Desktop — keep Norm anchored on the right; small laptops use moderate vertical center */
 @media (min-width: 900px) {
   .hero-home__media img {
-    object-position: 88% 18%;
+    object-position: 88% 22%;
   }
 }
 
+/* Large desktop — taller frame + anchor image bottom so torso is not cropped */
 @media (min-width: 1200px) {
   .hero-home__content {
-    min-height: clamp(440px, 36vw, 520px);
+    min-height: clamp(480px, 45vh, 580px);
   }
 
   .hero-home__media img {
-    object-position: 90% 12%;
+    object-position: 90% bottom;
   }
 }
 
 @media (min-width: 1600px) {
+  .hero-home__content {
+    min-height: clamp(500px, 48vh, 620px);
+  }
+
   .hero-home__media img {
-    object-position: 92% 8%;
+    object-position: right bottom;
+  }
+}
+
+@media (min-width: 2000px) {
+  .hero-home__content {
+    min-height: clamp(520px, 50vh, 660px);
   }
 }
 
