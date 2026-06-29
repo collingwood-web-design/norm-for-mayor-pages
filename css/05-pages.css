@@ -39,6 +39,29 @@
   object-position: right center;
 }
 
+/* Large desktop — anchor high so head stays in frame; crop chest if needed */
+@media (min-width: 900px) {
+  .hero-home__media img {
+    object-position: 88% 18%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-home__content {
+    min-height: clamp(440px, 36vw, 520px);
+  }
+
+  .hero-home__media img {
+    object-position: 90% 12%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero-home__media img {
+    object-position: 92% 8%;
+  }
+}
+
 /* Light overlay — hero PNG already has a left-side gradient */
 .hero-home__overlay {
   position: absolute;
@@ -164,7 +187,7 @@
   }
 }
 
-/* Phone — full-bleed hero; crop positions Norm lower; match desktop navy palette */
+/* Phone — full-bleed hero; balance content vertically in frame */
 @media (max-width: 640px) {
   .page-home .site-header {
     background-color: var(--color-navy);
@@ -194,9 +217,9 @@
   }
 
   .hero-home__content {
-    align-items: flex-start;
-    min-height: clamp(420px, 112vw, 520px);
-    padding-top: clamp(0.65rem, 2.5vw, 1.1rem);
+    align-items: center;
+    min-height: clamp(380px, 78svh, 460px);
+    padding-block: clamp(1.25rem, 4svh, 2rem);
   }
 }
 
@@ -853,6 +876,34 @@
 .page-donations .donations-intro {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.page-donations .hero__eyebrow {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.page-donations .hero__title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.page-donations .hero__subtitle {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
 }
 
 .page-donations .donations-rules h2 {
