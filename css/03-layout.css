@@ -20,6 +20,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: var(--site-header-offset);
 }
 
 /* Main content grows to push footer down */

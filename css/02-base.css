@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--site-header-offset);
   /* Prevent horizontal scroll from full-bleed sections */
   overflow-x: hidden;
 }

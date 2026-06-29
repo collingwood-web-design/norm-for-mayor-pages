@@ -8,9 +8,13 @@
  * SITE HEADER — single row on desktop: logo | nav | donate
  * ----------------------------------------------------------------------- */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 999;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  flex-shrink: 0;
   background-color: var(--color-navy);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
 }
@@ -23,8 +27,7 @@
     "nav nav";
   align-items: center;
   gap: 0.35rem 1rem;
-  min-height: var(--header-height);
-  padding-block: 0.65rem;
+  padding-block: 0.75rem;
 }
 
 .brand-logo {
@@ -48,7 +51,7 @@
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "logo nav actions";
     gap: 1rem 1.5rem;
-    padding-block: 0.5rem;
+    padding-block: 0.65rem;
   }
 }
 

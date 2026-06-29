@@ -76,6 +76,7 @@
   --layout-gutter: clamp(1rem, 4vw, 2rem);
   --section-padding-y: clamp(3rem, 6vw, 5rem);
   --header-height: 64px;
+  --site-header-offset: 4.5rem;
   --grid-gap: clamp(1rem, 3vw, 2rem);
   --grid-gap-sm: clamp(0.75rem, 2vw, 1.25rem);
 
@@ -100,4 +101,16 @@
   --bp-tablet: 980px;
   --bp-mobile: 767px;
   --bp-mobile-sm: 480px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --site-header-offset: 4.875rem;
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    --site-header-offset: 5.25rem;
+  }
 }
