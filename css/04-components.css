@@ -19,14 +19,6 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
-/* Fixed header must not reserve height inside the flex page shell */
-.page-wrapper > .site-header {
-  height: 0;
-  min-height: 0;
-  overflow: visible;
-  flex: 0 0 auto;
-}
-
 .site-header__inner {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -168,6 +160,15 @@
 
 .site-nav--open .site-nav__list {
   display: flex;
+}
+
+@media (max-width: 899px) {
+  .site-nav--open .site-nav__list {
+    margin-inline: calc(-1 * var(--layout-gutter));
+    padding: 0.65rem var(--layout-gutter) 0.85rem;
+    background-color: var(--color-navy);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
 }
 
 @media (min-width: 900px) {
