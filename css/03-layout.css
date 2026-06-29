@@ -27,30 +27,6 @@ main {
   flex: 1;
 }
 
-/*
- * Fixed header clearance — pad sections with their own background, not
- * .page-wrapper (which left a white strip between the navy header and hero).
- */
-.hero-home {
-  padding-top: var(--site-header-offset);
-}
-
-.priorities-page-hero {
-  padding-top: calc(clamp(2rem, 5vw, 3.25rem) + var(--site-header-offset));
-}
-
-.section--hero {
-  padding-top: calc(4rem + var(--site-header-offset));
-}
-
-.ask-norm {
-  padding-top: calc(var(--section-padding-y) + var(--site-header-offset));
-}
-
-main > .section:not(.section--hero) {
-  padding-top: calc(var(--section-padding-y) + var(--site-header-offset));
-}
-
 /* Standard content width — mirrors legacy .et_pb_row max-width: 1080px */
 .container {
   width: 100%;
@@ -93,12 +69,25 @@ main > .section:not(.section--hero) {
 /* Hero — placeholder for homepage banner; add background-image in page HTML or CSS */
 .section--hero {
   position: relative;
-  padding-block: 4rem;
+  padding-top: calc(4rem + var(--site-header-offset));
+  padding-bottom: 4rem;
   background-color: var(--color-navy);
   background-size: cover;
   background-position: center;
   color: var(--color-text-on-dark);
   text-align: center;
+}
+
+/*
+ * Fixed header clearance — must follow .section { padding-block } so
+ * padding-top is not reset by the shorthand.
+ */
+.hero-home {
+  padding-top: var(--site-header-offset);
+}
+
+main > .section:not(.section--hero) {
+  padding-top: calc(var(--section-padding-y) + var(--site-header-offset));
 }
 
 /* Simple two-column grid for content + sidebar/image layouts */

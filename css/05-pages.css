@@ -278,7 +278,8 @@
 }
 
 .ask-norm {
-  padding-block: var(--section-padding-y);
+  padding-top: calc(var(--section-padding-y) + var(--site-header-offset));
+  padding-bottom: var(--section-padding-y);
   background: var(--color-gray-section);
 }
 
@@ -1045,7 +1046,8 @@
 }
 
 .priorities-page-hero {
-  padding: clamp(2rem, 5vw, 3.25rem) 0 clamp(1.75rem, 4vw, 2.5rem);
+  padding-top: calc(clamp(2rem, 5vw, 3.25rem) + var(--site-header-offset));
+  padding-bottom: clamp(1.75rem, 4vw, 2.5rem);
   text-align: center;
   color: var(--color-white);
   background: var(--color-navy-dark);

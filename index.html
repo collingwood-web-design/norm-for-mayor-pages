@@ -291,8 +291,32 @@
           </div>
         </section>
 
-        <!-- TODO: Campaign video embed — add section here when new YouTube video is ready
-             See .video-feature / .video-embed styles in css/05-pages.css -->
+        <!-- CAMPAIGN VIDEO — placeholder until new video is ready -->
+        <section class="video-feature" aria-labelledby="video-feature-heading">
+          <div class="container">
+            <h2 class="sr-only" id="video-feature-heading">Campaign video</h2>
+            <div class="video-placeholder video-placeholder--feature">
+              <!-- TODO: Replace with embedded video (YouTube/Vimeo) when ready -->
+              <img
+                src="assets/images/photos/family.jpg"
+                alt="Norm Sandberg with family"
+                width="1200"
+                height="675"
+                loading="lazy"
+              />
+              <button
+                class="video-placeholder__play"
+                type="button"
+                disabled
+                aria-label="Watch Norm's Story (video coming soon)"
+              >
+                <span class="video-placeholder__play-icon" aria-hidden="true">▶</span>
+                <span class="video-placeholder__label">Watch Norm's Story</span>
+              </button>
+            </div>
+            <p class="video-feature__note">Placeholder for new video.</p>
+          </div>
+        </section>
 
         <!-- MY PRIORITIES -->
         <section class="priorities-home" aria-labelledby="priorities-heading">
@@ -364,26 +388,9 @@
 
         <!-- WHY NORM -->
         <section class="why-norm section--gray" aria-labelledby="why-norm-heading">
-          <div class="container">
-            <div class="split split--video">
-              <div class="video-placeholder">
-                <!-- TODO: Replace with embedded video (YouTube/Vimeo) -->
-                <img
-                  src="assets/images/photos/family.jpg"
-                  alt=""
-                  width="800"
-                  height="500"
-                  loading="lazy"
-                />
-                <button class="video-placeholder__play" type="button" disabled>
-                  <span class="video-placeholder__play-icon" aria-hidden="true">▶</span>
-                  <span class="video-placeholder__label">Watch Norm's Story</span>
-                </button>
-              </div>
-
-              <div>
-                <h2 class="why-norm__title" id="why-norm-heading">Why Norm?</h2>
-                <ul class="why-norm__list">
+          <div class="container container--narrow">
+            <h2 class="why-norm__title" id="why-norm-heading">Why Norm?</h2>
+            <ul class="why-norm__list">
                   <li>
                     <span class="why-norm__check" aria-hidden="true">✓</span>
                     Former Collingwood Councillor
@@ -414,8 +421,6 @@
                   </li>
                 </ul>
                 <a class="btn btn--outline-navy" href="experience.html">Learn More About Norm</a>
-              </div>
-            </div>
           </div>
         </section>
 
