@@ -272,160 +272,6 @@
   }
 }
 
-/* --- ASK NORM (ask-norm.html — removed from homepage) --- */
-.page-ask-norm {
-  background: var(--color-gray-section);
-}
-
-.ask-norm {
-  padding-top: calc(var(--section-padding-y) + var(--site-header-offset));
-  padding-bottom: var(--section-padding-y);
-  background: var(--color-gray-section);
-}
-
-.ask-norm__panel {
-  display: grid;
-  gap: var(--grid-gap);
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-  color: var(--color-white);
-  background: var(--color-navy);
-  border-radius: var(--border-radius-lg);
-  box-shadow: 0 12px 40px rgba(28, 26, 94, 0.22);
-}
-
-@media (min-width: 900px) {
-  .ask-norm__panel {
-    grid-template-columns: 1fr 1.15fr;
-    align-items: center;
-  }
-}
-
-.ask-norm__intro {
-  text-align: center;
-}
-
-@media (min-width: 900px) {
-  .ask-norm__intro {
-    text-align: left;
-  }
-}
-
-.ask-norm__icon {
-  width: 4.5rem;
-  height: 4.5rem;
-  margin: 0 auto 1rem;
-  color: var(--color-white);
-}
-
-@media (min-width: 900px) {
-  .ask-norm__icon {
-    margin-inline: 0;
-  }
-}
-
-.ask-norm__title {
-  margin: 0 0 0.75rem;
-  font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-gold);
-}
-
-.ask-norm__text {
-  margin: 0 0 1.25rem;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/* Chat placeholder widget */
-.chat-widget {
-  display: flex;
-  flex-direction: column;
-  min-height: 300px;
-  background: var(--color-white);
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-  border: 3px solid var(--color-gray-border);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-}
-
-.chat-widget__header {
-  padding: 0.85rem 1rem;
-  font-size: 0.8rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-navy);
-  background: var(--color-gray-light);
-  border-bottom: 1px solid var(--color-gray-border);
-}
-
-.chat-widget__body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 1rem;
-  overflow-y: auto;
-}
-
-.chat-bubble {
-  max-width: 88%;
-  padding: 0.65rem 0.85rem;
-  font-size: 0.82rem;
-  line-height: 1.45;
-  border-radius: var(--border-radius-md);
-}
-
-.chat-bubble--bot {
-  align-self: flex-start;
-  color: var(--color-text-dark);
-  background: var(--color-gray-light);
-}
-
-.chat-bubble--user {
-  align-self: flex-end;
-  color: var(--color-white);
-  background: var(--color-navy);
-}
-
-.chat-widget__input {
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.75rem;
-  border-top: 1px solid var(--color-gray-border);
-}
-
-.chat-widget__input input {
-  flex: 1;
-  padding: 0.55rem 0.75rem;
-  font-size: 0.85rem;
-  border: 1px solid var(--color-gray-border);
-  border-radius: var(--border-radius-sm);
-  background: var(--color-gray-light);
-}
-
-.chat-widget__input input:disabled {
-  cursor: not-allowed;
-  opacity: 0.7;
-}
-
-.chat-widget__send {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  padding: 0;
-  color: var(--color-white);
-  background: var(--color-purple);
-  border: none;
-  border-radius: var(--border-radius-sm);
-  cursor: not-allowed;
-  opacity: 0.75;
-}
-
 /* --- CAMPAIGN VIDEO (homepage placeholder) --- */
 .video-feature {
   padding-block: var(--section-padding-y);
@@ -1133,6 +979,133 @@
   color: var(--color-navy);
   background-color: var(--color-gold);
   border-color: var(--color-gold);
+}
+
+.priorities-jump__link--current {
+  color: var(--color-navy);
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.priorities-page-hero .priorities-jump__link--current {
+  color: var(--color-navy);
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.priorities-breadcrumb {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.priorities-breadcrumb a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.priorities-breadcrumb a:hover,
+.priorities-breadcrumb a:focus-visible {
+  color: var(--color-gold);
+}
+
+.priorities-breadcrumb__sep {
+  margin-inline: 0.35rem;
+  opacity: 0.55;
+}
+
+.page-vision {
+  background-color: #eef2f6;
+}
+
+.page-vision #main-content {
+  padding-top: var(--site-header-offset);
+  min-height: 40vh;
+}
+
+/* Vision for Collingwood — policy paper document viewer */
+.vision-document__toolbar {
+  padding-top: calc(var(--site-header-offset) + 0.75rem);
+  padding-bottom: 0.75rem;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-border);
+}
+
+.vision-document__toolbar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+}
+
+.vision-document__series {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
+.vision-document__pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.vision-document__pager-link {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-navy);
+  background: var(--color-gray-section);
+  border: 1px solid rgba(28, 26, 94, 0.12);
+  border-radius: var(--border-radius-sm);
+}
+
+.vision-document__pager-link--current {
+  color: var(--color-navy);
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.vision-document__pager-link--soon {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.vision-document__stage {
+  padding: clamp(1.25rem, 3vw, 2rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.vision-document__stage-inner {
+  max-width: 691px;
+}
+
+.vision-document__sheet {
+  margin: 0;
+  background: var(--color-white);
+  border-radius: 2px;
+  box-shadow: 0 10px 36px rgba(28, 26, 94, 0.14);
+  overflow: hidden;
+}
+
+.vision-document__sheet img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: top;
 }
 
 .priority-detail {
