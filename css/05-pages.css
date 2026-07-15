@@ -462,6 +462,25 @@
   font-weight: var(--font-weight-bold);
 }
 
+/* --- HOME HIGHLIGHT BAND (between Why Norm and Community) --- */
+.home-highlight {
+  margin: 0;
+  padding-block: clamp(1.1rem, 2.5vw, 1.5rem);
+  background: var(--color-gold);
+  text-align: center;
+}
+
+.home-highlight__text {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.05rem, 2.4vw, 1.45rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
 /* Video placeholder */
 .video-placeholder {
   position: relative;
@@ -813,9 +832,9 @@
   margin: 1.25rem 0 0;
   font-size: 1rem;
   font-style: italic;
-  line-height: 1.7;
+  line-height: 1.65;
   text-align: left;
-  color: var(--color-navy);
+  color: var(--color-text);
 }
 
 .priority-detail .about-norm__pull-quote + .about-norm__tagline {
@@ -1496,7 +1515,8 @@
   color: var(--color-navy);
 }
 
-.priority-detail p {
+.priority-detail p,
+.priority-detail__points li {
   margin: 0 0 1rem;
   font-size: 1rem;
   line-height: 1.65;
@@ -1512,10 +1532,7 @@
 .priority-detail__points li {
   position: relative;
   padding-left: 1.35rem;
-  margin-bottom: 0.45rem;
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: var(--color-text-dark);
+  margin-bottom: 0.65rem;
 }
 
 .priority-detail__points li::before {
@@ -2179,6 +2196,7 @@
 
 .policy-sheet__plan {
   grid-template-columns: 1fr;
+  align-items: stretch;
 }
 
 @media (min-width: 700px) {
@@ -2223,8 +2241,49 @@
   }
 }
 
+.policy-sheet__plan article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.policy-sheet__plan-num {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  color: var(--policy-color, #2b9cd9);
+}
+
+.policy-sheet__tri article .policy-sheet__plan-num {
+  color: var(--policy-color, #2b9cd9);
+}
+
+.policy-sheet__plan article p {
+  margin: 0;
+  flex: 1;
+}
+
+.policy-sheet__plan-note {
+  margin: 0;
+  padding: 0.85rem 1.1rem 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text-dark);
+  background: #f7f8fb;
+  border-top: 1px solid var(--color-gray-border);
+}
+
+.policy-sheet__quad--inset {
+  border-top: 0;
+}
+
 .policy-sheet__tests {
   grid-template-columns: 1fr;
+  align-items: stretch;
 }
 
 @media (min-width: 700px) {
@@ -2247,6 +2306,8 @@
   flex-direction: column;
   gap: 0.35rem;
   padding: 1.1rem 1rem;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .policy-sheet__test-icon {
@@ -2274,6 +2335,7 @@
   font-size: 0.84rem;
   line-height: 1.4;
   color: var(--color-text);
+  flex: 1;
 }
 
 .policy-sheet__duo {
