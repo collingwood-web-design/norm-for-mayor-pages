@@ -517,6 +517,13 @@
 .why-norm {
   padding-block: var(--section-padding-y);
   background: var(--color-gray-section);
+  text-align: center;
+}
+
+.why-norm .container--narrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .why-norm__title {
@@ -527,34 +534,53 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-navy);
+  text-align: center;
 }
 
 .why-norm__intro {
   margin: 0 0 1.25rem;
+  max-width: 36rem;
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--color-text);
+  text-align: center;
 }
 
 .why-norm__list {
   list-style: none;
   margin: 0 0 1.5rem;
   padding: 0;
+  width: 100%;
+  max-width: 40rem;
+  text-align: center;
 }
 
 .why-norm__list li {
   display: flex;
-  gap: 0.6rem;
-  margin-bottom: 0.55rem;
-  font-size: 0.88rem;
-  line-height: 1.45;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-bottom: 0.65rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: var(--color-text-dark);
+  text-align: center;
 }
 
 .why-norm__check {
   flex-shrink: 0;
+  display: inline-grid;
+  place-items: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.15rem;
   color: var(--color-gold);
-  font-weight: var(--font-weight-bold);
+}
+
+.why-norm__check svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: currentColor;
 }
 
 /* --- HOME HIGHLIGHT BAND (between Why Norm and Community) --- */
@@ -717,17 +743,23 @@
 .land-ack {
   padding-block: clamp(1.5rem, 3vw, 2.5rem);
   border-top: 4px solid var(--color-gold);
+  text-align: center;
 }
 
 .land-ack__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 52rem;
+  margin-inline: auto;
 }
 
 .land-ack__heading {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.85rem;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.85rem;
 }
 
 .land-ack__icon {
@@ -750,13 +782,16 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-navy);
+  text-align: center;
 }
 
 .land-ack__text {
   margin: 0;
+  max-width: 46rem;
   font-size: 0.85rem;
   line-height: 1.6;
   color: var(--color-text);
+  text-align: center;
 }
 
 /* --- DUAL CTA (Subscribe + Donate) --- */
