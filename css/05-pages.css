@@ -1214,12 +1214,12 @@
 .policy-card__badge {
   display: inline-flex;
   align-self: flex-start;
-  padding: 0.22rem 0.55rem;
+  padding: 0.35rem 0.7rem;
   margin-bottom: 0.85rem;
   font-family: var(--font-heading);
-  font-size: 0.68rem;
+  font-size: 0.88rem;
   font-weight: var(--font-weight-bold);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: var(--color-white);
   background: var(--policy-color);
   border-radius: 4px;
@@ -1675,7 +1675,19 @@
 /* ===== Policy paper pages (PP01+) - Word-doc layout ===== */
 .page-policy {
   background: var(--color-gray-section);
+  --policy-color: #2b9cd9;
 }
+
+.page-policy--pp01 { --policy-color: #2b9cd9; }
+.page-policy--pp02 { --policy-color: #5ba85a; }
+.page-policy--pp03 { --policy-color: #e8913a; }
+.page-policy--pp04 { --policy-color: #7cb342; }
+.page-policy--pp05 { --policy-color: #8e6bb5; }
+.page-policy--pp06 { --policy-color: #26a69a; }
+.page-policy--pp07 { --policy-color: #c9a227; }
+.page-policy--pp08 { --policy-color: #3b6fe8; }
+.page-policy--pp09 { --policy-color: #2e7d32; }
+.page-policy--pp10 { --policy-color: #1c1a5e; }
 
 .page-policy #main-content {
   padding-top: 0;
@@ -1725,13 +1737,17 @@
 }
 
 .policy-hero__eyebrow {
-  margin: 0 0 0.65rem;
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.35rem 0.7rem;
   font-family: var(--font-heading);
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   font-weight: var(--font-weight-bold);
-  letter-spacing: 0.16em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--color-white);
+  background: var(--policy-color);
+  border-radius: 4px;
 }
 
 .policy-hero__title {
@@ -1763,6 +1779,14 @@
   padding-top: 0.7rem;
 }
 
+.policy-breadcrumb--footer {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-top: 1px solid var(--color-gray-border);
+  border-bottom: 0;
+  margin-top: 0;
+}
+
 .policy-breadcrumb__list {
   display: flex;
   flex-wrap: wrap;
@@ -1791,7 +1815,7 @@
 }
 
 .policy-doc {
-  padding: 1.25rem 0 2.5rem;
+  padding: 1.25rem 0 1.5rem;
 }
 
 .policy-doc__banner {
@@ -1817,8 +1841,22 @@
   font-size: 1rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.06em;
-  background: #121048;
-  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  background: var(--policy-color);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.policy-breadcrumb__list li[aria-current="page"] {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  background: var(--policy-color);
+  border-radius: 4px;
 }
 
 .policy-doc__banner-text {
