@@ -306,6 +306,101 @@
   border: 0;
 }
 
+/* --- VISION PREVIEW (home) --- */
+.vision-home {
+  padding-block: var(--section-padding-y);
+  background: var(--color-white);
+}
+
+.vision-home__lead {
+  margin: -0.25rem auto 1.25rem;
+  max-width: 40rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.vision-home .policy-card {
+  min-height: 0;
+  padding-top: 1.35rem;
+  height: 100%;
+}
+
+.vision-home .policy-card__title {
+  font-size: clamp(0.78rem, 1.35vw, 0.9rem);
+  line-height: 1.35;
+}
+
+/* Mobile: one-card horizontal swipe strip */
+.vision-home__grid {
+  display: flex;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0.15rem 0.15rem 0.65rem;
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0.15rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.vision-home__grid > li {
+  flex: 0 0 min(18.5rem, 82vw);
+  scroll-snap-align: start;
+}
+
+.vision-home__swipe-hint {
+  display: block;
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--color-text);
+  opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  .vision-home__swipe-hint {
+    display: none;
+  }
+
+  /* Flex wrap so a leftover last-row card centers */
+  .vision-home__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.15rem;
+    padding: 0;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .vision-home__grid > li {
+    flex: 0 1 calc((100% - 2 * 1.15rem) / 3);
+    max-width: calc((100% - 2 * 1.15rem) / 3);
+    scroll-snap-align: unset;
+  }
+}
+
+@media (min-width: 1100px) {
+  .vision-home__grid {
+    gap: 1.1rem;
+  }
+
+  .vision-home__grid > li {
+    flex: 0 1 calc((100% - 4 * 1.1rem) / 5);
+    max-width: calc((100% - 4 * 1.1rem) / 5);
+  }
+}
+
+.vision-home__cta {
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
 /* --- PRIORITIES GRID --- */
 .priorities-home {
   padding-block: var(--section-padding-y);
@@ -1831,6 +1926,114 @@
   text-decoration: underline;
 }
 
+/* Prev / next between published Vision papers (skips unpublished) */
+.policy-pager {
+  padding: 0.85rem 0;
+  background: #f7f8fb;
+  border-bottom: 1px solid var(--color-gray-border);
+}
+
+.policy-pager--footer {
+  margin-top: 0;
+  border-top: 1px solid var(--color-gray-border);
+  border-bottom: 0;
+}
+
+.policy-pager__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem 1rem;
+  align-items: center;
+}
+
+@media (min-width: 720px) {
+  .policy-pager__inner {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  }
+}
+
+.policy-pager__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+  padding: 0.35rem 0;
+  color: var(--color-navy);
+  text-decoration: none;
+}
+
+.policy-pager__link:hover .policy-pager__label,
+.policy-pager__link:focus-visible .policy-pager__label {
+  text-decoration: underline;
+}
+
+.policy-pager__link--next {
+  text-align: left;
+}
+
+@media (min-width: 720px) {
+  .policy-pager__link--next {
+    text-align: right;
+    justify-self: end;
+  }
+}
+
+.policy-pager__link--placeholder {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .policy-pager__link--placeholder {
+    display: block;
+  }
+}
+
+.policy-pager__dir {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--policy-color, var(--color-navy));
+}
+
+.policy-pager__label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-navy);
+}
+
+.policy-pager__all {
+  justify-self: start;
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  text-decoration: none;
+  border: 1px solid var(--color-gray-border);
+  border-radius: 4px;
+  background: var(--color-white);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+@media (min-width: 720px) {
+  .policy-pager__all {
+    justify-self: center;
+  }
+}
+
+.policy-pager__all:hover,
+.policy-pager__all:focus-visible {
+  color: var(--color-white);
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  text-decoration: none;
+}
+
 .policy-doc {
   padding: 1.25rem 0 1.5rem;
 }
@@ -2046,7 +2249,18 @@
   margin: 0;
   padding: 0.9rem 1.1rem;
   font-size: 1.02rem;
+  border-top: 1px solid var(--color-gray-border);
   border-bottom: 1px solid var(--color-gray-border);
+}
+
+.policy-sheet > .policy-sheet__subhead:first-child {
+  border-top: 0;
+}
+
+/* Avoid a double rule when a grid already follows the subhead */
+.policy-sheet__subhead + .policy-sheet__tests,
+.policy-sheet__subhead + .policy-sheet__quad {
+  border-top: 0;
 }
 
 .policy-sheet--roles {
@@ -2194,6 +2408,25 @@
   color: var(--color-navy);
 }
 
+.policy-sheet__framework strong a.policy-ref {
+  display: inline;
+  color: inherit;
+}
+
+/* Cross-references to other Vision papers */
+.policy-ref {
+  color: var(--color-navy);
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+  text-decoration-thickness: 1px;
+}
+
+.policy-ref:hover,
+.policy-ref:focus-visible {
+  color: var(--policy-color, var(--color-navy));
+  text-decoration: underline;
+}
+
 .policy-sheet__plan {
   grid-template-columns: 1fr;
   align-items: stretch;
@@ -2230,6 +2463,15 @@
   .policy-sheet__plan article {
     border-top: 0;
     border-left: 1px solid var(--color-gray-border);
+  }
+
+  /* Reset 2-column rules that still match at desktop */
+  .policy-sheet__plan article:nth-child(2n + 1) {
+    border-left: 1px solid var(--color-gray-border);
+  }
+
+  .policy-sheet__plan article:nth-child(n + 3) {
+    border-top: 0;
   }
 
   .policy-sheet__plan article:nth-child(3n + 1) {
@@ -2313,17 +2555,18 @@
 .policy-sheet__test-icon {
   display: grid;
   place-items: center;
-  width: 1.85rem;
-  height: 1.85rem;
-  margin-bottom: 0.15rem;
-  color: var(--color-navy);
-  background: #eef2f8;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.2rem;
+  color: var(--color-white);
+  background: var(--policy-color, var(--color-navy));
   border-radius: 4px;
 }
 
 .policy-sheet__test-icon svg {
-  width: 1.05rem;
-  height: 1.05rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
 }
 
 .policy-sheet__tests h4 {

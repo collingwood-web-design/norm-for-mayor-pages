@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-CA">
   <head>
     <!--
-      PAGE: Home (index.html) — 2026 mockup layout (June 2025 design)
-      Responsive: CSS Grid collapses sections from desktop → tablet → mobile.
+      PAGE: Home (index.html) ? 2026 mockup layout (June 2025 design)
+      Responsive: CSS Grid collapses sections from desktop ? tablet ? mobile.
       Placeholders: video, chat, gallery images, forms, external page links.
     -->
     <meta charset="UTF-8" />
@@ -97,7 +97,7 @@
               "https://www.facebook.com/MayorNorm",
               "https://twitter.com/MayorNorm2022",
               "https://www.instagram.com/mayornorm2022/",
-              "https://www.linkedin.com/in/norman-sandberg-01496a7/"
+              "https://www.linkedin.com/in/Norm-sandberg-01496a7/"
             ],
             "homeLocation": {
               "@type": "Place",
@@ -183,7 +183,7 @@
         <link itemprop="url" href="https://normformayor.ca/" />
         <meta itemprop="email" content="norm@normformayor.ca" />
         <div class="container site-header__inner">
-          <a class="brand-logo" href="index.html" itemprop="url" aria-label="Norm Sandberg for Mayor — Home">
+          <a class="brand-logo" href="index.html" itemprop="url" aria-label="Norm Sandberg for Mayor ? Home">
             <span class="brand-logo__elect">Elect</span>
             <span class="brand-logo__name">Norm Sandberg</span>
             <span class="brand-logo__tagline">For Mayor of Collingwood</span>
@@ -192,7 +192,6 @@
           <nav class="site-nav" id="site-nav" aria-label="Main navigation">
             <ul class="site-nav__list" id="site-nav-menu">
               <li><a class="site-nav__link site-nav__link--active" href="index.html">Home</a></li>
-              <li><a class="site-nav__link" href="priorities.html">Priorities</a></li>
               <li><a class="site-nav__link" href="vision-for-collingwood.html">Vision for Collingwood</a></li>
               <li><a class="site-nav__link" href="experience.html">About Norm</a></li>
               <li><a class="site-nav__link" href="#">News</a></li>
@@ -210,7 +209,7 @@
               id="site-nav-toggle"
             >
               <span class="sr-only">Open menu</span>
-              ☰
+              ?
             </button>
           </div>
         </div>
@@ -262,11 +261,11 @@
                 </p>
               </div>
               <div class="hero-home__actions">
-                <a class="btn btn--hero-ghost" href="priorities.html">
+                <a class="btn btn--hero-ghost" href="vision-for-collingwood.html">
                   <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
                   </svg>
-                  View Priorities
+                  Vision for Collingwood
                 </a>
                 <a class="btn btn--hero-ghost" href="#lawn-sign" title="Request a lawn sign">
                   <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -285,7 +284,7 @@
           </div>
         </section>
 
-        <!-- CAMPAIGN VIDEO — placeholder until new video is ready -->
+        <!-- CAMPAIGN VIDEO ? placeholder until new video is ready -->
         <section class="video-feature" aria-labelledby="video-feature-heading">
           <div class="container">
             <h2 class="sr-only" id="video-feature-heading">Campaign video</h2>
@@ -304,78 +303,114 @@
                 disabled
                 aria-label="Watch Norm's Story (video coming soon)"
               >
-                <span class="video-placeholder__play-icon" aria-hidden="true">▶</span>
+                <span class="video-placeholder__play-icon" aria-hidden="true">?</span>
                 <span class="video-placeholder__label">Watch Norm's Story</span>
               </button>
             </div>
             <p class="video-feature__note">Placeholder for new video.</p>
           </div>
         </section>
-
-        <!-- MY PRIORITIES -->
-        <section class="priorities-home" aria-labelledby="priorities-heading">
+        <!-- VISION FOR COLLINGWOOD -->
+        <section class="vision-home" aria-labelledby="vision-home-heading">
           <div class="container">
-            <h2 class="section-title" id="priorities-heading">My Priorities</h2>
+            <h2 class="section-title" id="vision-home-heading">Vision for Collingwood</h2>
 
-            <div class="grid grid--5">
-              <a class="priority-card" href="priorities.html#housing">
-                <div class="priority-card__icon" aria-hidden="true">
-                  <svg class="icon-priority"><use href="#priority-home" /></svg>
-                </div>
-                <h3 class="priority-card__title">Housing That Works for Local Residents</h3>
-                <p class="priority-card__text">
-                  Attainable housing for working families, professionals, seniors, and local
-                  employees — without compromising neighbourhood character.
-                </p>
-              </a>
+            <p class="vision-home__swipe-hint">Swipe for more papers</p>
+            <ul class="vision-home__grid" aria-label="Vision policy papers">
+              <li>
+                                      <a class="policy-card policy-card--pp01" href="vision-pp01.html">
+                                        <span class="policy-card__icon" aria-hidden="true">
+                                          <svg viewBox="0 0 64 64" fill="currentColor"><path d="M32 6C32 6 12 28.4 12 40.2 12 51.2 21 58 32 58s20-6.8 20-17.8C52 28.4 32 6 32 6z"/></svg>
+                                        </span>
+                                        <h3 class="policy-card__title">Preparing Collingwood for the Future of Municipal Water Services</h3>
+                                        <span class="policy-card__cta">Read Policy <span aria-hidden="true">&rarr;</span></span>
+                                      </a>
+                                    </li>
+              <li>
+                                      <a class="policy-card policy-card--pp02" href="vision-pp02.html">
+                                        <span class="policy-card__icon" aria-hidden="true">
+                                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12.75c1.63 0 3.07.39 4.24.9 1.08.48 1.76 1.56 1.76 2.73V18H6v-1.61c0-1.18.68-2.26 1.76-2.73 1.17-.52 2.61-.91 4.24-.91zM4 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm1.13 1.1c-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58A2.01 2.01 0 0 0 0 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29zM20 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm4 3.43c0-.81-.48-1.53-1.22-1.85A6.95 6.95 0 0 0 20 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24v-1.57zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"/></svg>
+                                        </span>
+                                        <h3 class="policy-card__title">Leadership Through Consensus</h3>
+                                        <span class="policy-card__cta">Read Policy <span aria-hidden="true">&rarr;</span></span>
+                                      </a>
+                                    </li>
+              <li>
+                                      <a class="policy-card policy-card--pp03" href="vision-for-collingwood.html#pp03">
+                                        <span class="policy-card__icon" aria-hidden="true">
+                                          <svg viewBox="0 0 64 64" fill="currentColor"><path d="M6 54V32h9v22H6zm12 0V24h9v30h-9zm12 0V28h9v26h-9z"/><circle cx="48" cy="18" r="12"/><path fill="#fff" d="M44.2 12.2h5.1c3.2 0 5.2 1.7 5.2 4.5 0 2.8-2 4.5-5.2 4.5h-2.5V30h-2.6V12.2zm2.6 6.7h2.3c1.5 0 2.4-.7 2.4-2.1s-.9-2.2-2.4-2.2h-2.3v4.3z"/></svg>
+                                        </span>
+                                        <h3 class="policy-card__title">Downtown Parking, Housing &amp; Commercial Catalyst Project</h3>
+                                        <span class="policy-card__cta">Read Policy <span aria-hidden="true">&rarr;</span></span>
+                                      </a>
+                                    </li>
+              <li>
+                                      <a class="policy-card policy-card--pp04" href="vision-pp04.html">
+                                        <span class="policy-card__icon" aria-hidden="true">
+                                          <svg viewBox="0 0 64 64" fill="currentColor"><circle cx="32" cy="32" r="26"/><text x="32" y="42" text-anchor="middle" fill="#fff" font-size="34" font-weight="700" font-family="Oswald, Arial Black, sans-serif">$</text></svg>
+                                        </span>
+                                        <h3 class="policy-card__title">Building a Financially Sustainable Collingwood</h3>
+                                        <span class="policy-card__cta">Read Policy <span aria-hidden="true">&rarr;</span></span>
+                                      </a>
+                                    </li>
+              <li>
+                                      <a class="policy-card policy-card--pp05" href="vision-pp05.html">
+                                        <span class="policy-card__icon" aria-hidden="true">
+                                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/></svg>
+                                        </span>
+                                        <h3 class="policy-card__title">Connecting Collingwood &mdash; Transportation, Active Transportation &amp; Accessibility</h3>
+                                        <span class="policy-card__cta">Read Policy <span aria-hidden="true">&rarr;</span></span>
+                                      </a>
+                                    </li>
+              <li>
+                                      <a class="policy-card policy-card--pp06" href="vision-for-collingwood.html#pp06">
+                                        <span class="policy-card__icon" aria-hidden="true">
+                                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.48 10.41c-.39.39-1.04.39-1.43 0l-4.47-4.46-7.05 7.04-.66-.63a3 3 0 0 1 0-4.24l4.24-4.24a3 3 0 0 1 4.24 0L16.48 9c.39.39.39 1.02 0 1.41zm.7-2.12c.78.78.78 2.05 0 2.83-1.27 1.27-2.61.22-2.83 0l-3.76-3.76-5.57 5.57a.996.996 0 0 0 0 1.41c.39.39 1.02.39 1.42 0l4.62-4.62.71.71-4.62 4.62a.996.996 0 0 0 0 1.41c.39.39 1.02.39 1.42 0l4.62-4.62.71.71-4.62 4.62a.996.996 0 1 0 1.41 1.41l4.62-4.62.71.71-4.62 4.62a.996.996 0 1 0 1.41 1.41l8.32-8.34a3 3 0 0 0 0-4.24l-4.24-4.24a3.001 3.001 0 0 0-4.18-.06l4.47 4.47z"/></svg>
+                                        </span>
+                                        <h3 class="policy-card__title">Working with Simcoe County</h3>
+                                        <span class="policy-card__cta">Read Policy <span aria-hidden="true">&rarr;</span></span>
+                                      </a>
+                                    </li>
+              <li>
+                                      <a class="policy-card policy-card--pp07" href="vision-for-collingwood.html#pp07">
+                                        <span class="policy-card__icon" aria-hidden="true">
+                                          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M10 30 32 10l22 20"/><path d="M16 26v26h32V26"/><path d="M28 52V36h8v16"/><path d="M40 14h8v8"/></svg>
+                                        </span>
+                                        <h3 class="policy-card__title">Housing for a Growing Collingwood</h3>
+                                        <span class="policy-card__cta">Read Policy <span aria-hidden="true">&rarr;</span></span>
+                                      </a>
+                                    </li>
+              <li>
+                                      <a class="policy-card policy-card--pp08" href="vision-for-collingwood.html#pp08">
+                                        <span class="policy-card__icon" aria-hidden="true">
+                                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m16 6 2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                                        </span>
+                                        <h3 class="policy-card__title">Employment &amp; Economic Prosperity</h3>
+                                        <span class="policy-card__cta">Read Policy <span aria-hidden="true">&rarr;</span></span>
+                                      </a>
+                                    </li>
+              <li>
+                                      <a class="policy-card policy-card--pp09" href="vision-for-collingwood.html#pp09">
+                                        <span class="policy-card__icon" aria-hidden="true">
+                                          <svg viewBox="0 0 64 64" fill="currentColor"><ellipse cx="32" cy="22" rx="16" ry="15"/><ellipse cx="22" cy="30" rx="11" ry="10"/><ellipse cx="42" cy="30" rx="11" ry="10"/><rect x="28" y="38" width="8" height="18" rx="1.5"/><rect x="18" y="54" width="28" height="5" rx="1.5"/></svg>
+                                        </span>
+                                        <h3 class="policy-card__title">Parks, Recreation, Culture &amp; Community Well-Being</h3>
+                                        <span class="policy-card__cta">Read Policy <span aria-hidden="true">&rarr;</span></span>
+                                      </a>
+                                    </li>
+              <li>
+                                      <a class="policy-card policy-card--pp10" href="vision-for-collingwood.html#pp10">
+                                        <span class="policy-card__icon" aria-hidden="true">
+                                          <svg viewBox="0 0 64 64" fill="currentColor"><path d="m32 6 7.2 21.2H62L44.4 40.3l6.8 21.2L32 48.6 12.8 61.5l6.8-21.2L2 27.2h22.8L32 6z"/></svg>
+                                        </span>
+                                        <h3 class="policy-card__title">Leading Collingwood Forward</h3>
+                                        <span class="policy-card__cta">Read Policy <span aria-hidden="true">&rarr;</span></span>
+                                      </a>
+                                    </li>
+            </ul>
 
-              <a class="priority-card" href="priorities.html#infrastructure">
-                <div class="priority-card__icon" aria-hidden="true">
-                  <svg class="icon-priority"><use href="#priority-infrastructure" /></svg>
-                </div>
-                <h3 class="priority-card__title">Infrastructure Before Crisis</h3>
-                <p class="priority-card__text">
-                  Roads, water, recreation, and core services planned responsibly so growth never
-                  outpaces the town's capacity.
-                </p>
-              </a>
-
-              <a class="priority-card" href="priorities.html#downtown">
-                <div class="priority-card__icon" aria-hidden="true">
-                  <svg class="icon-priority"><use href="#priority-downtown" /></svg>
-                </div>
-                <h3 class="priority-card__title">A Stronger Downtown</h3>
-                <p class="priority-card__text">
-                  Parking, local business, accessibility, and vitality for Collingwood's historic
-                  downtown.
-                </p>
-              </a>
-
-              <a class="priority-card" href="priorities.html#fiscal">
-                <div class="priority-card__icon" aria-hidden="true">
-                  <svg class="icon-priority"><use href="#priority-fiscal" /></svg>
-                </div>
-                <h3 class="priority-card__title">Fiscal Responsibility and Accountability</h3>
-                <p class="priority-card__text">
-                  Disciplined budgets, transparent decisions, and spending focused on municipal
-                  priorities.
-                </p>
-              </a>
-
-              <a class="priority-card" href="priorities.html#leadership">
-                <div class="priority-card__icon" aria-hidden="true">
-                  <svg class="icon-priority"><use href="#priority-leadership" /></svg>
-                </div>
-                <h3 class="priority-card__title">Collaborative Leadership</h3>
-                <p class="priority-card__text">
-                  Working with residents, businesses, neighbours, and community partners to get
-                  things done.
-                </p>
-              </a>
-            </div>
-
-            <div class="priorities-home__cta">
-              <a class="btn btn--navy-reverse" href="priorities.html">View All Priorities</a>
+            <div class="vision-home__cta">
+              <a class="btn btn--navy-reverse" href="vision-for-collingwood.html">View All Papers</a>
             </div>
           </div>
         </section>
@@ -392,31 +427,31 @@
             <h2 class="why-norm__title" id="why-norm-heading">Why Norm?</h2>
             <ul class="why-norm__list">
                   <li>
-                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    <span class="why-norm__check" aria-hidden="true">?</span>
                     Former Collingwood Councillor
                   </li>
                   <li>
-                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    <span class="why-norm__check" aria-hidden="true">?</span>
                     Former President of the Association of Municipalities of Ontario
                   </li>
                   <li>
-                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    <span class="why-norm__check" aria-hidden="true">?</span>
                     Former Chair of Ontario Small Urban Municipalities
                   </li>
                   <li>
-                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    <span class="why-norm__check" aria-hidden="true">?</span>
                     Certified Engineering Technologist
                   </li>
                   <li>
-                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    <span class="why-norm__check" aria-hidden="true">?</span>
                     Municipal infrastructure specialist
                   </li>
                   <li>
-                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    <span class="why-norm__check" aria-hidden="true">?</span>
                     Community volunteer
                   </li>
                   <li>
-                    <span class="why-norm__check" aria-hidden="true">✓</span>
+                    <span class="why-norm__check" aria-hidden="true">?</span>
                     More than three decades serving municipalities and helping communities plan, build, and grow responsibly
                   </li>
                 </ul>
@@ -424,7 +459,7 @@
           </div>
         </section>
 
-        <!-- OUR COMMUNITY — Instagram feed (last 4 posts); replace mockup grid when account is ready -->
+        <!-- OUR COMMUNITY ? Instagram feed (last 4 posts); replace mockup grid when account is ready -->
         <section class="community" aria-labelledby="community-heading">
           <div class="container">
             <h2 class="section-title" id="community-heading">Living and Working in Our Community</h2>
@@ -469,11 +504,11 @@
             <p class="land-ack__text">
               We acknowledge that we are on Turtle Island in the Traditional Territory of the
               Anishnaabek, Haudenosaunee, Ojibwe and others. We also acknowledge the Lake
-              Simcoe – Nottawasaga Treaty of 1818. As settlers, we are grateful for the
+              Simcoe ? Nottawasaga Treaty of 1818. As settlers, we are grateful for the
               opportunity to be here and thank the generations of people who have taken care
-              of this land for millennia. We recognize the contributions of Métis, Inuit and
+              of this land for millennia. We recognize the contributions of M?tis, Inuit and
               other Indigenous peoples in shaping and strengthening our community, Ontario and
-              Canada. Let us take inspiration from the spirit of "The Dish With One Spoon" —
+              Canada. Let us take inspiration from the spirit of "The Dish With One Spoon" ?
               sharing this land together and honouring our commitment to Truth and
               Reconciliation.
             </p>
@@ -580,14 +615,14 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/norman-sandberg-01496a7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" itemprop="sameAs">
+                  <a href="https://www.linkedin.com/in/Norm-sandberg-01496a7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" itemprop="sameAs">
                     <svg class="social-links__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
                     </svg>
                   </a>
                 </li>
               </ul>
-              <a class="brand-logo brand-logo--footer" href="index.html" aria-label="Norm Sandberg for Mayor — Home">
+              <a class="brand-logo brand-logo--footer" href="index.html" aria-label="Norm Sandberg for Mayor ? Home">
                 <span class="brand-logo__elect">Elect</span>
                 <span class="brand-logo__name">Norm Sandberg</span>
                 <span class="brand-logo__tagline">For Mayor of Collingwood</span>
@@ -640,14 +675,14 @@
 
         <div class="site-footer__legal">
           <p class="site-footer__legal-line">
-            <span class="site-footer__legal-cfo">Authorized by the CFO for the Norman Sandberg Campaign.</span>
+            <span class="site-footer__legal-cfo">Authorized by the CFO for the Norm Sandberg Campaign.</span>
           </p>
           <p class="site-footer__legal-line">
             <a href="privacy-policy.html">Privacy Policy</a>
             &nbsp;|&nbsp;
             <a href="#">Campaign Information</a>
             &nbsp;|&nbsp;
-            Copyright © <span id="footer-year"></span> Norm Sandberg
+            Copyright ? <span id="footer-year"></span> Norm Sandberg
           </p>
           <p class="site-footer__legal-line">
             Designed &amp; Developed by
