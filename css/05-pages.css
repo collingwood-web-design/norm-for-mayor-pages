@@ -1432,6 +1432,54 @@
 .policy-card--pp09 { --policy-color: #2e7d32; }
 .policy-card--pp10 { --policy-color: #1c1a5e; }
 
+/* Continuing the Conversation — below policy cards */
+.vision-conversation {
+  padding-block: clamp(2.5rem, 5vw, 3.75rem);
+  text-align: center;
+  background: var(--color-gray-section);
+}
+
+.vision-conversation__title {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
+.vision-conversation__lead {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--color-navy);
+}
+
+.vision-conversation p {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.vision-conversation p:last-child {
+  margin-bottom: 0;
+}
+
+.vision-conversation a {
+  color: var(--color-navy);
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.vision-conversation a:hover,
+.vision-conversation a:focus-visible {
+  color: var(--color-link-hover);
+}
+
 /* Vision CTA */
 .vision-cta {
   padding-block: clamp(2rem, 4vw, 2.75rem);
