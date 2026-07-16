@@ -330,8 +330,20 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--border-radius-sm);
   color: var(--color-white);
-  font-size: 1.2rem;
   cursor: pointer;
+}
+
+.site-nav__toggle-icon {
+  display: grid;
+  place-items: center;
+  line-height: 0;
+}
+
+.site-nav__toggle-icon svg {
+  display: block;
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: currentColor;
 }
 
 @media (min-width: 900px) {

@@ -2074,13 +2074,11 @@
 }
 
 .policy-doc__banner {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.85rem 1rem;
-  align-items: stretch;
+  display: block;
   margin: 1.5rem 0 0.75rem;
   background: var(--color-navy);
   color: var(--color-white);
+  border-left: 4px solid var(--policy-color, var(--color-gold));
 }
 
 .policy-doc__banner:first-of-type {
@@ -2088,17 +2086,7 @@
 }
 
 .policy-doc__code {
-  display: grid;
-  place-items: center;
-  min-width: 4.25rem;
-  padding: 0.85rem 0.75rem;
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.06em;
-  color: var(--color-white);
-  background: var(--policy-color);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  display: none;
 }
 
 .policy-breadcrumb__list li[aria-current="page"] {
@@ -2115,7 +2103,7 @@
 }
 
 .policy-doc__banner-text {
-  padding: 0.85rem 1rem 0.9rem 0;
+  padding: 0.95rem 1.15rem 1rem;
 }
 
 .policy-doc__banner-text h1,
