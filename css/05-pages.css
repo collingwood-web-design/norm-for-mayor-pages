@@ -1773,23 +1773,35 @@
 }
 
 /* -----------------------------------------------------------------------
- * ACTIVITIES (activities.html) — legacy "Norm's Activities"
+ * NEWS (news.html)
  * ----------------------------------------------------------------------- */
-.page-activities .activity-grid {
-  display: grid;
-  gap: 1.5rem;
+.page-news {
+  background-color: var(--color-white);
 }
 
-@media (min-width: 600px) {
-  .page-activities .activity-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.page-news .news-press__item {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
 }
 
-@media (min-width: 980px) {
-  .page-activities .activity-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.page-news .news-press__item a {
+  color: var(--color-navy);
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.page-news .news-press__item a:hover,
+.page-news .news-press__item a:focus-visible {
+  color: var(--color-link-hover);
+}
+
+.page-news .news-press__date {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  color: var(--color-text);
 }
 
 /* -----------------------------------------------------------------------
