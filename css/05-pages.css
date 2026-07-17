@@ -1808,12 +1808,22 @@
   margin-top: 0.75rem;
 }
 
+.about-norm__closing-photo {
+  margin: 2.5rem 0 0;
+}
+
+.about-norm__closing-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .priorities-page-cta {
   display: grid;
   grid-template-columns: repeat(2, minmax(12rem, 1fr));
   gap: 0.75rem;
   max-width: 34rem;
-  margin-top: 3rem;
+  margin-top: 1.75rem;
   margin-inline: auto;
 }
 
