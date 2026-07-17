@@ -1809,13 +1809,27 @@
 }
 
 .about-norm__closing-photo {
-  margin: 2.5rem 0 0;
+  width: min(100vw, 100rem);
+  max-width: none;
+  margin: 0 0 0 50%;
+  transform: translateX(-50%);
 }
 
 .about-norm__closing-photo img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.about-norm__closing-photo figcaption {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 3vw, 2rem) var(--layout-gutter) 0;
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  text-align: center;
+  color: var(--color-navy);
 }
 
 .priorities-page-cta {
