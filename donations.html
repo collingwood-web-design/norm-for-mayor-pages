@@ -201,21 +201,54 @@
               CONTENT BELOW: ported from legacy donations page (2022).
               TODO before launch:
                 - Confirm contribution limits for current election cycle
-                - Add actual donation method (cheque address, e-transfer, etc.)
-                - Replace donate CTA image/link when payment flow is ready
+                - Point donate CTA to Stripe Payment Link when provided
             -->
             <div class="donate-cta">
-              <a href="mailto:norm@normformayor.ca?subject=Campaign%20Donation" itemprop="email">
-                <img src="assets/images/brand/donate-button.png" alt="Donate to Norm Sandberg's campaign for Mayor of Collingwood" width="300" height="137" />
+              <a class="donate-cta__btn" href="mailto:norm@normformayor.ca?subject=Campaign%20Donation">
+                <svg class="donate-cta__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                Donate
               </a>
             </div>
 
-            <p class="external-resource">
-              Official reference:
-              <a href="https://www.ontario.ca/page/campaign-financing-municipal-and-school-board-elections" target="_blank" rel="noopener noreferrer">
-                Campaign financing — Ontario.ca
-              </a>
-            </p>
+            <section class="donate-howto" aria-labelledby="donate-howto-heading">
+              <h2 id="donate-howto-heading">Make a Donation</h2>
+              <p>
+                You can support the <strong>Norm Sandberg for Mayor</strong> campaign in one of two ways:
+              </p>
+
+              <h3>Donate online</h3>
+              <p>
+                Click the <strong>Donate</strong> button above to make a secure donation through
+                <strong>Stripe</strong>.
+              </p>
+              <p>During checkout, you will be asked to provide:</p>
+              <ul>
+                <li>Full name</li>
+                <li>Residential address</li>
+                <li>Telephone number</li>
+                <li>Email address</li>
+              </ul>
+              <p>This information is required for campaign finance record-keeping.</p>
+
+              <h3>Donate by Interac e-Transfer</h3>
+              <p>
+                Send your e-Transfer to
+                <a href="mailto:cfo@norm4mayor.ca"><strong>cfo@norm4mayor.ca</strong></a>.
+              </p>
+              <p>
+                <strong>No security question is required</strong> — Auto Deposit is enabled.
+              </p>
+              <p>Please include the following in the e-Transfer message:</p>
+              <ul>
+                <li>Full name</li>
+                <li>Residential address</li>
+                <li>Telephone number</li>
+                <li>Email address (optional, but appreciated)</li>
+              </ul>
+              <p>This information is required for campaign finance record-keeping.</p>
+            </section>
 
             <h2>Who can make contributions</h2>
             <p>
@@ -233,8 +266,7 @@
 
             <h2>Contribution limit</h2>
             <p>
-              You may contribute a maximum of <strong>$1,200 to a single candidate</strong>
-              ($2,500 to a mayoral candidate in the City of Toronto).
+              You may contribute a maximum of <strong>$1,200 to a single candidate</strong>.
             </p>
             <p>
               You may also contribute a maximum of $1,200 to a third party advertiser. These amounts
@@ -254,10 +286,10 @@
             </p>
             <p>
               Contributions greater than $25 may not be made in cash. All contributions above $25
-              must be made by cheque, money order, or by a method that clearly shows where the funds
-              came from. If the total value of the contributions you've made is greater than $100,
-              your name and address will be recorded in the candidate's financial statement (a public
-              document).
+              must be made by cheque, money order, Interac e-Transfer, or by a method that clearly
+              shows where the funds came from. If the total value of the contributions you've made
+              is greater than $100, your name and address will be recorded in the candidate's
+              financial statement (a public document).
             </p>
             <p>
               Contributions are not tax deductible. Your municipality may have a contribution rebate
@@ -272,8 +304,55 @@
             <p>
               To donate or for questions, contact Norm:<br />
               Tel: <a href="tel:+17054458384" itemprop="telephone">705-445-8384</a><br />
-              Email: <a href="mailto:norm@normformayor.ca" itemprop="email">norm@normformayor.ca</a>
+              Email: <a href="mailto:cfo@norm4mayor.ca">cfo@norm4mayor.ca</a>
             </p>
+
+            <div class="donate-cta donate-cta--bottom">
+              <a class="donate-cta__btn" href="mailto:norm@normformayor.ca?subject=Campaign%20Donation">
+                <svg class="donate-cta__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                Donate
+              </a>
+            </div>
+
+            <section class="donate-howto donate-howto--bottom" aria-labelledby="donate-howto-heading-bottom">
+              <h2 id="donate-howto-heading-bottom">Make a Donation</h2>
+              <p>
+                You can support the <strong>Norm Sandberg for Mayor</strong> campaign in one of two ways:
+              </p>
+
+              <h3>Donate online</h3>
+              <p>
+                Click the <strong>Donate</strong> button above to make a secure donation through
+                <strong>Stripe</strong>.
+              </p>
+              <p>During checkout, you will be asked to provide:</p>
+              <ul>
+                <li>Full name</li>
+                <li>Residential address</li>
+                <li>Telephone number</li>
+                <li>Email address</li>
+              </ul>
+              <p>This information is required for campaign finance record-keeping.</p>
+
+              <h3>Donate by Interac e-Transfer</h3>
+              <p>
+                Send your e-Transfer to
+                <a href="mailto:cfo@norm4mayor.ca"><strong>cfo@norm4mayor.ca</strong></a>.
+              </p>
+              <p>
+                <strong>No security question is required</strong> — Auto Deposit is enabled.
+              </p>
+              <p>Please include the following in the e-Transfer message:</p>
+              <ul>
+                <li>Full name</li>
+                <li>Residential address</li>
+                <li>Telephone number</li>
+                <li>Email address (optional, but appreciated)</li>
+              </ul>
+              <p>This information is required for campaign finance record-keeping.</p>
+            </section>
           </div>
         </section>
       </main>
