@@ -612,15 +612,17 @@
   transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
+/* Fill is set here rather than inherited so the global gold link hover,
+   which out-specifies this component, cannot wash the icons out. */
 .social-links__icon {
   width: 1.05rem;
   height: 1.05rem;
+  fill: var(--color-navy);
 }
 
 .social-links a:hover,
 .social-links a:focus-visible {
   opacity: 0.88;
-  color: var(--color-navy);
   transform: translateY(-1px);
 }
 

@@ -1622,7 +1622,9 @@
   isolation: isolate;
   display: flex;
   align-items: flex-start;
-  min-height: calc(clamp(26rem, 60vw, 40rem) + var(--site-header-offset));
+  /* Height tracks viewport width so the band keeps a roughly 2.5:1 shape
+     instead of flattening toward 4:1 on wide monitors. */
+  min-height: calc(clamp(22rem, 40vw, 56rem) + var(--site-header-offset));
   padding-top: calc(clamp(1.5rem, 3.5vw, 2.5rem) + var(--site-header-offset));
   overflow: hidden;
   background: var(--color-navy-dark);
@@ -1657,7 +1659,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 45%;
 }
 
 .priorities-page-hero--about > .container {
@@ -1666,7 +1668,12 @@
 
 @media (max-width: 600px) {
   .priorities-page-hero--about {
-    min-height: calc(66.667vw + var(--site-header-offset));
+    min-height: calc(78vw + var(--site-header-offset));
+  }
+
+  /* Narrow band crops width, so anchor left to keep Norm and Jan in frame. */
+  .priorities-page-hero--about .priorities-page-hero__media img {
+    object-position: left 45%;
   }
 }
 
