@@ -1079,6 +1079,528 @@
   background: var(--color-white);
 }
 
+/* --- ABOUT NORM — shared circular icon badge --- */
+.about-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+}
+
+.about-icon .icon-priority {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.about-icon--gold {
+  color: var(--color-navy);
+  background: var(--color-gold);
+}
+
+.about-icon--navy {
+  color: var(--color-white);
+  background: var(--color-navy);
+}
+
+/* --- ABOUT NORM — hero rule under the lead --- */
+.priorities-page-hero__rule {
+  display: block;
+  width: 5rem;
+  height: 3px;
+  margin: clamp(1.25rem, 3vw, 1.85rem) auto 0;
+  background: var(--color-gold);
+}
+
+/* --- ABOUT NORM — Meet Norm intro --- */
+.about-meet {
+  padding-block: clamp(2rem, 4.5vw, 3.25rem);
+  background: var(--color-white);
+}
+
+.about-meet__grid {
+  display: grid;
+  gap: clamp(1.75rem, 4vw, 3rem);
+  align-items: start;
+}
+
+@media (min-width: 860px) {
+  .about-meet__grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+  }
+}
+
+.about-meet__photo {
+  margin: 0;
+}
+
+.about-meet__photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-sm);
+}
+
+.about-meet__photo figcaption {
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.about-meet__header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.about-meet__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
+.about-meet__body p {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.about-meet__body .about-norm__signature {
+  margin-top: 1.25rem;
+  text-align: left;
+}
+
+/* --- ABOUT NORM — navy tagline banner --- */
+.about-banner {
+  padding-block: clamp(1.75rem, 4vw, 2.75rem);
+  background: var(--color-navy-dark);
+}
+
+.about-banner__inner {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .about-banner__inner {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  }
+
+  .about-banner__note {
+    padding-left: clamp(1.5rem, 3vw, 2.5rem);
+    border-left: 2px solid var(--color-gold);
+  }
+}
+
+.about-banner__tagline {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 4.2vw, 2.5rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.about-banner__line {
+  display: block;
+}
+
+.about-banner__line--gold {
+  color: var(--color-gold);
+}
+
+.about-banner__note {
+  margin: 0;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  line-height: 1.7;
+  color: var(--color-white);
+}
+
+/* --- ABOUT NORM — record at a glance --- */
+.about-stats {
+  padding-block: clamp(1.75rem, 3.5vw, 2.5rem);
+  background: var(--color-gray-section);
+}
+
+.about-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.about-stat {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-stat + .about-stat {
+  padding-left: clamp(1.25rem, 3vw, 2rem);
+  border-left: 1px solid var(--color-gray-border);
+}
+
+@media (max-width: 819px) {
+  .about-stat + .about-stat {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+.about-stat .about-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.about-stat .about-icon .icon-priority {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.about-stat__value {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.15;
+  color: var(--color-navy);
+}
+
+.about-stat__unit {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.about-stat__label {
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+/* --- ABOUT NORM — numbered pillars --- */
+.about-pillar {
+  padding-block: clamp(1.5rem, 3.5vw, 2.25rem);
+}
+
+.about-pillar:nth-child(odd) {
+  background: var(--color-white);
+}
+
+.about-pillar:nth-child(even) {
+  background: var(--color-gray-section);
+}
+
+.about-pillar__inner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .about-pillar__inner {
+    grid-template-columns: auto minmax(0, 1fr) minmax(0, 1.45fr);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    align-items: center;
+  }
+}
+
+.about-pillar__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.about-pillar__icon .icon-priority {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.about-pillar__title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
+.about-pillar__intro p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-dark);
+}
+
+.about-pillar__points {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 900px) {
+  .about-pillar__points {
+    grid-column: auto;
+    padding-left: clamp(1.5rem, 3vw, 2.5rem);
+    border-left: 1px solid var(--color-gray-border);
+  }
+}
+
+.about-pillar__points li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+.about-pillar__points li:last-child {
+  margin-bottom: 0;
+}
+
+.about-pillar__points li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-gold);
+  font-weight: var(--font-weight-bold);
+}
+
+/* --- ABOUT NORM — long-form record below the pillars --- */
+.about-record {
+  background: var(--color-gray-section);
+}
+
+.about-record__intro {
+  padding-top: clamp(2rem, 4vw, 3rem);
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.about-record__heading {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
+.about-record__intro p {
+  margin: 0.6rem 0 0;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.about-record__details {
+  margin: 0;
+}
+
+.about-record__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  width: fit-content;
+  max-width: calc(100% - 2rem);
+  margin: 1.25rem auto clamp(1.75rem, 4vw, 2.5rem);
+  padding: 0.8rem 1.6rem;
+  list-style: none;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  background: var(--color-gold);
+  border: 2px solid var(--color-gold);
+  border-radius: 0.65rem;
+  box-shadow: 0 6px 16px rgba(20, 18, 74, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.about-record__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.about-record__toggle::after {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-0.1rem) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.about-record__toggle:hover,
+.about-record__toggle:focus-visible {
+  color: var(--color-purple);
+  background-color: var(--color-gold-hover);
+  border-color: var(--color-gold-hover);
+}
+
+.about-record__toggle-label--open {
+  display: none;
+}
+
+.about-record__details[open] > .about-record__toggle {
+  margin-bottom: 1.5rem;
+}
+
+.about-record__details[open] > .about-record__toggle::after {
+  transform: translateY(0.15rem) rotate(-135deg);
+}
+
+.about-record__details[open] .about-record__toggle-label--closed {
+  display: none;
+}
+
+.about-record__details[open] .about-record__toggle-label--open {
+  display: inline;
+}
+
+.about-record .priority-detail__title {
+  font-size: clamp(1rem, 2.1vw, 1.2rem);
+}
+
+.about-record .priority-detail--band:first-child {
+  border-top: 1px solid var(--color-gray-border);
+}
+
+/* --- ABOUT NORM — photo and pull quote --- */
+.about-quote {
+  display: grid;
+  background: var(--color-navy-dark);
+}
+
+@media (min-width: 860px) {
+  .about-quote {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.about-quote__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 15rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-quote__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: clamp(1.75rem, 4vw, 3rem) clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.about-quote__mark {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  line-height: 0.6;
+  color: var(--color-gold);
+}
+
+.about-quote__body p {
+  margin: 1rem 0 0;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  line-height: 1.65;
+  color: var(--color-white);
+}
+
+.about-quote__cite {
+  margin-top: 1.5rem;
+  padding-bottom: 0.85rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.03em;
+  color: var(--color-gold);
+  border-bottom: 2px solid var(--color-gold);
+  align-self: start;
+}
+
+/* --- ABOUT NORM — closing call to action --- */
+.about-final-cta {
+  padding-block: clamp(1.75rem, 4vw, 2.75rem);
+  background: var(--color-gray-section);
+}
+
+.about-final-cta__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.about-final-cta__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.about-final-cta__icon .icon-priority {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--color-white);
+}
+
+.about-final-cta__copy {
+  flex: 1 1 16rem;
+}
+
+.about-final-cta__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.05rem, 2.5vw, 1.45rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
+.about-final-cta__text {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.about-final-cta__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(9rem, 1fr));
+  gap: 0.65rem;
+  flex: 1 1 20rem;
+}
+
+.about-final-cta__actions .btn {
+  width: 100%;
+  min-height: 2.875rem;
+}
+
+.about-final-cta__wide {
+  grid-column: 1 / -1;
+}
+
 /* -----------------------------------------------------------------------
  * PRIORITIES (priorities.html)
  * ----------------------------------------------------------------------- */
@@ -1099,8 +1621,9 @@
   position: relative;
   isolation: isolate;
   display: flex;
-  align-items: center;
-  min-height: calc(clamp(24rem, 55vw, 34rem) + var(--site-header-offset));
+  align-items: flex-start;
+  min-height: calc(clamp(26rem, 60vw, 40rem) + var(--site-header-offset));
+  padding-top: calc(clamp(1.5rem, 3.5vw, 2.5rem) + var(--site-header-offset));
   overflow: hidden;
   background: var(--color-navy-dark);
 }
@@ -1114,10 +1637,10 @@
   left: 0;
   z-index: -1;
   background: linear-gradient(
-    90deg,
-    rgba(18, 16, 72, 0.58) 0%,
-    rgba(18, 16, 72, 0.42) 50%,
-    rgba(18, 16, 72, 0.3) 100%
+    180deg,
+    rgba(18, 16, 72, 0.62) 0%,
+    rgba(18, 16, 72, 0.42) 45%,
+    rgba(18, 16, 72, 0.22) 100%
   );
 }
 
@@ -1134,7 +1657,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 40%;
 }
 
 .priorities-page-hero--about > .container {
