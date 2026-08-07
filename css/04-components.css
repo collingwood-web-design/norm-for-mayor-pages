@@ -557,6 +557,7 @@
 }
 
 .contact-form {
+  position: relative;
   display: grid;
   gap: 1rem;
 }

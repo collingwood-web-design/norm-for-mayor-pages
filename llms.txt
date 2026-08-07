@@ -1,0 +1,46 @@
+# Norm Sandberg for Mayor of Collingwood
+
+> Official campaign website for Norm Sandberg, candidate for Mayor of Collingwood, Ontario (municipal election October 26, 2026).
+
+Primary site: https://normformayor.ca/
+Secondary domain: https://norm4mayor.ca (redirects to primary)
+Contact email: norm@norm4mayor.ca
+Phone: 705-445-8384
+Location: Collingwood, Ontario, Canada
+
+## Candidate
+
+- Name: Norm Sandberg (also known as Norman Sandberg)
+- Office sought: Mayor of the Town of Collingwood
+- Election date: October 26, 2026
+- Background: Long-time Collingwood resident; multiple terms on Collingwood Council; municipal leadership and engineering experience
+
+## Social profiles
+
+- Facebook: https://www.facebook.com/NormSandberg
+- Instagram: https://www.instagram.com/norm_sandberg/
+- LinkedIn: https://www.linkedin.com/in/norman-sandberg-b459367/
+
+## Key pages
+
+- Home: https://normformayor.ca/
+- About Norm: https://normformayor.ca/about-norm.html
+- Vision for Collingwood (policy papers): https://normformayor.ca/vision-for-collingwood.html
+- Donate: https://normformayor.ca/donations.html
+- News: https://normformayor.ca/news.html
+- Privacy Policy: https://normformayor.ca/privacy-policy.html
+
+## Policy papers (Vision for Collingwood)
+
+- PP01 Water & Wastewater: https://normformayor.ca/vision-pp01.html
+- PP02 Leadership Through Consensus: https://normformayor.ca/vision-pp02.html
+- PP04 Financial Sustainability: https://normformayor.ca/vision-pp04.html
+- PP05 Connecting Collingwood: https://normformayor.ca/vision-pp05.html
+- PP06 Voice at Simcoe County: https://normformayor.ca/vision-pp06.html
+- PP07 Housing for a Growing Collingwood: https://normformayor.ca/vision-pp07.html
+- PP08 Growing Opportunity: https://normformayor.ca/vision-pp08.html
+
+## Optional
+
+- Sitemap: https://normformayor.ca/sitemap.xml
+- Robots: https://normformayor.ca/robots.txt

@@ -306,6 +306,129 @@
   border: 0;
 }
 
+/* --- HOME CAROUSEL (temporary video replacement) ---
+   Fade matched to Dogs R Us Collingwood: stacked slides + staggered
+   CSS keyframes so outgoing/incoming opacities overlap (true crossfade). */
+.home-carousel {
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.home-carousel__viewport {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background: var(--color-white);
+  box-shadow: 0 8px 28px rgba(28, 26, 94, 0.15);
+}
+
+.home-carousel__slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  animation: home-carousel-fade 16s linear infinite;
+  animation-fill-mode: both;
+  pointer-events: none;
+}
+
+.home-carousel__slide:nth-child(1) {
+  animation-delay: 0s;
+  opacity: 1;
+}
+
+.home-carousel__slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.home-carousel__slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.home-carousel__slide:nth-child(4) {
+  animation-delay: 12s;
+}
+
+.home-carousel.is-paused .home-carousel__slide {
+  animation-play-state: paused;
+}
+
+@keyframes home-carousel-fade {
+  0% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  21% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.home-carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.home-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+}
+
+.home-carousel__dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(28, 26, 94, 0.25);
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.home-carousel__dot.is-active {
+  background: var(--color-navy);
+  transform: scale(1.15);
+}
+
+.home-carousel__dot:hover,
+.home-carousel__dot:focus-visible {
+  background: var(--color-gold);
+}
+
+.home-carousel__caption {
+  margin: 0.85rem 0 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-carousel__slide {
+    animation: none;
+    opacity: 0;
+  }
+
+  .home-carousel__slide:first-child {
+    opacity: 1;
+  }
+}
+
 /* --- VISION PREVIEW (home) --- */
 .vision-home {
   padding-block: var(--section-padding-y);
@@ -806,6 +929,36 @@
   width: 2.75rem;
   height: 2.75rem;
   margin: 0 auto 1rem;
+}
+
+.dual-cta__block--gold .dual-cta__icon {
+  transform-origin: center bottom;
+  animation: dual-cta-heart-bounce 2.4s ease-in-out infinite;
+}
+
+@keyframes dual-cta-heart-bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  40% {
+    transform: translateY(-0.35rem) scale(1.06);
+  }
+  55% {
+    transform: translateY(0) scale(0.98);
+  }
+  70% {
+    transform: translateY(-0.15rem) scale(1.03);
+  }
+  85% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dual-cta__block--gold .dual-cta__icon {
+    animation: none;
+  }
 }
 
 .dual-cta__title {
@@ -2101,6 +2254,16 @@
 .policy-card--pp08 { --policy-color: #3b6fe8; }
 .policy-card--pp09 { --policy-color: #2e7d32; }
 .policy-card--pp10 { --policy-color: #1c1a5e; }
+
+.policy-card--soon {
+  cursor: default;
+}
+
+.policy-card--soon:hover,
+.policy-card--soon:focus-visible {
+  transform: none;
+  box-shadow: 0 8px 24px rgba(28, 26, 94, 0.1);
+}
 
 /* Continuing the Conversation — below policy cards */
 .vision-conversation {
@@ -3405,4 +3568,44 @@
   font-size: 0.78rem;
   line-height: 1.45;
   color: var(--color-text);
+}
+
+/* --- THANK YOU (contact form confirmation) --- */
+.thank-you {
+  display: grid;
+  min-height: 55vh;
+  place-items: center;
+  padding-block: clamp(3rem, 8vw, 5rem);
+  background:
+    linear-gradient(160deg, rgba(28, 26, 94, 0.04), transparent 55%),
+    var(--color-white);
+}
+
+.thank-you__inner {
+  max-width: 36rem;
+  text-align: center;
+}
+
+.thank-you__title {
+  margin: 0 0 1rem;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
+.thank-you__text {
+  margin: 0 0 1.75rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.thank-you__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
 }
