@@ -54,9 +54,18 @@
 
   /* -----------------------------------------------------------------------
    * Contact form — posts to FormSubmit (norm@norm4mayor.ca)
+   * Set _next from the current origin so preview and live both work.
    * ----------------------------------------------------------------------- */
   var contactForms = document.querySelectorAll("#contact-form, #donations-contact-form");
   contactForms.forEach(function (contactForm) {
+    var nextInput = contactForm.querySelector('input[name="_next"]');
+    if (nextInput) {
+      var thankYouPath = nextInput.getAttribute("data-thank-you-path") || "thank-you.html";
+      nextInput.value =
+        window.location.origin +
+        window.location.pathname.replace(/[^/]*$/, "") +
+        thankYouPath;
+    }
     contactForm.addEventListener("submit", function (event) {
       if (!contactForm.getAttribute("action")) {
         event.preventDefault();
