@@ -653,7 +653,7 @@
 
 @media (min-width: 900px) {
   .site-footer__grid {
-    grid-template-columns: 1fr 1.2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: start;
   }
 }
