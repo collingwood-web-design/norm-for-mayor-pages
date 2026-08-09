@@ -653,7 +653,9 @@
 
 @media (min-width: 900px) {
   .site-footer__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(14rem, 20rem) minmax(16rem, 22rem);
+    justify-content: start;
+    column-gap: clamp(2rem, 4vw, 3.25rem);
     align-items: start;
   }
 }
