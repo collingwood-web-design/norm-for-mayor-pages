@@ -898,6 +898,10 @@
   text-align: center;
 }
 
+.land-ack__text + .land-ack__text {
+  margin-top: 0.85rem;
+}
+
 /* --- DUAL CTA (Subscribe + Donate) --- */
 .dual-cta {
   display: grid;
