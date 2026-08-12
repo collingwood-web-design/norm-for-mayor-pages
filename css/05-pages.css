@@ -1364,7 +1364,12 @@
 }
 
 .about-meet__photo .home-carousel__viewport {
+  aspect-ratio: 4 / 3;
   border-radius: var(--border-radius-sm);
+}
+
+.about-meet__photo .home-carousel__slide img {
+  object-fit: contain;
 }
 
 .about-meet__photo .home-carousel__caption {
