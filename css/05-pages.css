@@ -351,6 +351,19 @@
   animation-delay: 12s;
 }
 
+.home-carousel--2 .home-carousel__slide {
+  animation-name: home-carousel-fade-2;
+  animation-duration: 8s;
+}
+
+.home-carousel--2 .home-carousel__slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.home-carousel--2 .home-carousel__slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
 .home-carousel--3 .home-carousel__slide {
   animation-name: home-carousel-fade-3;
   animation-duration: 12s;
@@ -383,6 +396,24 @@
     opacity: 1;
   }
   28% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes home-carousel-fade-2 {
+  0% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 1;
+  }
+  56% {
     opacity: 0;
   }
   100% {
