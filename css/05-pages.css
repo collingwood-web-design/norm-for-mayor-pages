@@ -351,6 +351,23 @@
   animation-delay: 12s;
 }
 
+.home-carousel--3 .home-carousel__slide {
+  animation-name: home-carousel-fade-3;
+  animation-duration: 12s;
+}
+
+.home-carousel--3 .home-carousel__slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.home-carousel--3 .home-carousel__slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.home-carousel--3 .home-carousel__slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
 .home-carousel.is-paused .home-carousel__slide {
   animation-play-state: paused;
 }
@@ -366,6 +383,24 @@
     opacity: 1;
   }
   28% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes home-carousel-fade-3 {
+  0% {
+    opacity: 0;
+  }
+  4% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 1;
+  }
+  37% {
     opacity: 0;
   }
   100% {
@@ -1293,18 +1328,16 @@
   margin: 0;
 }
 
-.about-meet__photo img {
-  width: 100%;
-  height: auto;
+.about-meet__photo .home-carousel {
+  max-width: none;
+}
+
+.about-meet__photo .home-carousel__viewport {
   border-radius: var(--border-radius-sm);
 }
 
-.about-meet__photo figcaption {
-  margin-top: 0.9rem;
+.about-meet__photo .home-carousel__caption {
   font-size: 0.85rem;
-  font-style: italic;
-  text-align: center;
-  color: var(--color-text);
 }
 
 .about-meet__header {

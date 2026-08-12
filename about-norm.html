@@ -316,18 +316,52 @@
 
         <section class="about-meet" id="norm" aria-labelledby="meet-norm-heading">
           <div class="container about-meet__grid">
-            <figure class="about-meet__photo">
-              <img
-                itemprop="image"
-                src="https://media.cwd-cdn.com/norm-for-mayor/photos/family-1.jpg"
-                alt="Norm Sandberg with his family and dogs in their Collingwood backyard — candidate for Mayor of Collingwood, Ontario"
-                width="1920"
-                height="1080"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>Proud to call Collingwood home with my family.</figcaption>
-            </figure>
+            <div class="about-meet__photo">
+              <div class="home-carousel home-carousel--3" id="about-carousel" aria-roledescription="carousel" aria-label="Family and campaign photos" itemscope itemtype="https://schema.org/ImageGallery">
+                <meta itemprop="name" content="Norm Sandberg family and campaign photos" />
+                <div class="home-carousel__viewport">
+                  <figure class="home-carousel__slide">
+                    <img
+                      itemprop="image"
+                      src="https://media.cwd-cdn.com/norm-for-mayor/photos/family-1.jpg"
+                      alt="Norm Sandberg with his family and dogs in their Collingwood backyard — candidate for Mayor of Collingwood, Ontario"
+                      width="1920"
+                      height="1080"
+                      loading="eager"
+                      decoding="async"
+                    />
+                  </figure>
+                  <figure class="home-carousel__slide">
+                    <img
+                      itemprop="image"
+                      src="https://media.cwd-cdn.com/norm-for-mayor/photos/thoughtful-leadership-matters.jpg"
+                      alt="Thoughtful leadership matters — Norm Sandberg for Mayor of Collingwood"
+                      width="640"
+                      height="480"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                  <figure class="home-carousel__slide">
+                    <img
+                      itemprop="image"
+                      src="https://media.cwd-cdn.com/norm-for-mayor/photos/experience-matters.jpg"
+                      alt="Experience matters — Norm Sandberg for Mayor of Collingwood"
+                      width="640"
+                      height="480"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                </div>
+                <div class="home-carousel__dots" role="tablist" aria-label="Choose slide">
+                  <button type="button" class="home-carousel__dot is-active" role="tab" aria-selected="true" aria-label="Show photo 1" data-slide="0"></button>
+                  <button type="button" class="home-carousel__dot" role="tab" aria-selected="false" aria-label="Show photo 2" data-slide="1"></button>
+                  <button type="button" class="home-carousel__dot" role="tab" aria-selected="false" aria-label="Show photo 3" data-slide="2"></button>
+                </div>
+                <p class="home-carousel__caption">Proud to call Collingwood home with my family.</p>
+              </div>
+            </div>
 
             <div class="about-meet__body">
               <div class="about-meet__header">

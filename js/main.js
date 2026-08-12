@@ -10,7 +10,7 @@
  * CURRENT FEATURES:
  *   1. Mobile navigation toggle (auto-closes when a nav link is tapped)
  *   2. Dynamic copyright year in footer
- *   3. Home gallery carousel (Dogs R Us–style CSS crossfade)
+ *   3. Gallery carousel (Dogs R Us–style CSS crossfade)
  *   4. (Placeholder) Contact / subscribe forms — wire before launch
  *
  * NO BUILD STEP REQUIRED — this file loads directly in the browser.
@@ -87,18 +87,16 @@
     });
   });
   /* -----------------------------------------------------------------------
-   * Home gallery carousel — CSS keyframe crossfade (Dogs R Us style)
+   * Gallery carousel — CSS keyframe crossfade (Dogs R Us style)
    * Slides animate in CSS; JS only syncs dots / pause / jump.
    * ----------------------------------------------------------------------- */
-  var carousel = document.getElementById("home-carousel");
-  if (carousel) {
+  function initCarousel(carousel) {
     var slides = Array.prototype.slice.call(carousel.querySelectorAll(".home-carousel__slide"));
     var dots = Array.prototype.slice.call(carousel.querySelectorAll(".home-carousel__dot"));
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var slotMs = 4000;
     var cycleMs = slotMs * slides.length;
     var startedAt = performance.now();
-    var tickTimer = null;
     var resumeTimer = null;
     var pauseDepth = 0;
 
@@ -154,7 +152,7 @@
     }
 
     if (!reduceMotion && slides.length > 1) {
-      tickTimer = window.setInterval(tick, 250);
+      window.setInterval(tick, 250);
       carousel.addEventListener("mouseenter", pause);
       carousel.addEventListener("mouseleave", resume);
       carousel.addEventListener("focusin", pause);
@@ -178,4 +176,6 @@
 
     syncDots(0);
   }
+
+  document.querySelectorAll(".home-carousel").forEach(initCarousel);
 })();
