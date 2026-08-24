@@ -1031,6 +1031,11 @@
   color: var(--color-text);
 }
 
+.election-info__what--emphasis {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-navy);
+}
+
 .election-info__links {
   display: flex;
   flex-wrap: wrap;
