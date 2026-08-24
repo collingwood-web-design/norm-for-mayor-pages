@@ -1052,7 +1052,7 @@
 
 .election-info__links a:hover,
 .election-info__links a:focus-visible {
-  color: var(--color-gold-hover);
+  color: #5c5ab8;
 }
 
 /* --- DUAL CTA (Subscribe + Donate) --- */
