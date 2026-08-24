@@ -911,7 +911,8 @@
 
 /* --- LAND ACKNOWLEDGEMENT --- */
 .land-ack {
-  padding-block: clamp(1.5rem, 3vw, 2.5rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
   border-top: 4px solid var(--color-gold);
   text-align: center;
 }
@@ -969,6 +970,10 @@
 }
 
 /* --- ELECTION INFORMATION (homepage civic links) --- */
+.land-ack + .election-info {
+  border-top: none;
+}
+
 .election-info {
   padding-block: clamp(1.25rem, 3vw, 1.75rem);
   background: var(--color-gray-section);
