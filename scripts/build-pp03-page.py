@@ -224,7 +224,7 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                       <tr>
                         <th scope="row">Commercial space</th>
                         <td>0</td>
-                        <td>&asymp;7,300 sq. ft.</td>
+                        <td>&asymp;7,300&nbsp;sq.&nbsp;ft.</td>
                       </tr>
                     </tbody>
                   </table>
@@ -291,7 +291,7 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                       <tr>
                         <th scope="row">Commercial space</th>
                         <td>0</td>
-                        <td>&asymp;11,892 sq. ft.</td>
+                        <td>&asymp;11,892&nbsp;sq.&nbsp;ft.</td>
                       </tr>
                     </tbody>
                   </table>

@@ -3455,6 +3455,7 @@
 
 .policy-data-table td {
   color: var(--color-text);
+  white-space: nowrap;
 }
 
 .policy-data-table tr:last-child th,
