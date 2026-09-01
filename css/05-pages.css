@@ -2916,6 +2916,10 @@
 .page-policy--pp01 { --policy-color: #2b9cd9; }
 .page-policy--pp02 { --policy-color: #5ba85a; }
 .page-policy--pp03 { --policy-color: #e8913a; }
+
+.page-policy--pp03 .policy-hero__media img {
+  object-position: center top;
+}
 .page-policy--pp04 { --policy-color: #7cb342; }
 .page-policy--pp05 { --policy-color: #8e6bb5; }
 .page-policy--pp06 { --policy-color: #26a69a; }
