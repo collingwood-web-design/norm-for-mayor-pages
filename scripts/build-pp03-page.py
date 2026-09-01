@@ -146,19 +146,11 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
 
             <section class="policy-sheet" aria-labelledby="public-land-heading">
               <h2 id="public-land-heading" class="sr-only">Making Public Land Work Harder</h2>
-              <div class="policy-sheet__split policy-sheet__split--issue">
-                <figure class="policy-sheet__figure policy-sheet__figure--pending" aria-label="Downtown municipal parking concept illustration — coming soon">
-                  <div class="policy-sheet__figure-placeholder">
-                    <span class="policy-sheet__figure-label">Downtown Concept Overview</span>
-                    <span class="policy-sheet__figure-note">Illustration coming soon</span>
-                  </div>
-                </figure>
-                <div class="policy-sheet__copy">
-                  <p>Surface parking is an inefficient use of valuable downtown land. Structured parking creates an opportunity to increase parking while using the space above and around it for other community needs.</p>
-                  <p>Parking remains essential downtown infrastructure. It supports businesses, restaurants, tourism, community events, cultural activities and the Eddie Bush Memorial Arena.</p>
-                  <p>The opportunity is to provide <strong>more parking &mdash; not less</strong> &mdash; while also creating housing and commercial activity on the same municipal land.</p>
-                  <p>The work completed since this initiative was first announced demonstrates what that could mean.</p>
-                </div>
+              <div class="policy-sheet__copy">
+                <p>Surface parking is an inefficient use of valuable downtown land. Structured parking creates an opportunity to increase parking while using the space above and around it for other community needs.</p>
+                <p>Parking remains essential downtown infrastructure. It supports businesses, restaurants, tourism, community events, cultural activities and the Eddie Bush Memorial Arena.</p>
+                <p>The opportunity is to provide <strong>more parking &mdash; not less</strong> &mdash; while also creating housing and commercial activity on the same municipal land.</p>
+                <p>The work completed since this initiative was first announced demonstrates what that could mean.</p>
               </div>
             </section>
 
@@ -167,12 +159,6 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                 <h3 id="ste-marie-heading">140 Ste. Marie Street</h3>
               </div>
               <div class="policy-site__body">
-                <figure class="policy-sheet__figure policy-sheet__figure--pending" aria-label="140 Ste. Marie Street concept site plan — coming soon">
-                  <div class="policy-sheet__figure-placeholder">
-                    <span class="policy-sheet__figure-label">140 Ste. Marie Street</span>
-                    <span class="policy-sheet__figure-note">Concept site plan &amp; rendering coming soon</span>
-                  </div>
-                </figure>
                 <div>
                   <div class="policy-sheet__copy">
                     <p>The 140 Ste. Marie Street concept has been developed through a detailed planning-level project development study.</p>
@@ -243,12 +229,6 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                 <h3 id="second-pine-heading">Second Street / Pine Street</h3>
               </div>
               <div class="policy-site__body">
-                <figure class="policy-sheet__figure policy-sheet__figure--pending" aria-label="Second Street and Pine Street concept site plan — coming soon">
-                  <div class="policy-sheet__figure-placeholder">
-                    <span class="policy-sheet__figure-label">Second Street / Pine Street</span>
-                    <span class="policy-sheet__figure-note">Concept site plan &amp; rendering coming soon</span>
-                  </div>
-                </figure>
                 <div>
                   <div class="policy-sheet__copy">
                     <p>The larger Second Street/Pine Street municipal lot demonstrates that the same approach may have even greater potential.</p>
