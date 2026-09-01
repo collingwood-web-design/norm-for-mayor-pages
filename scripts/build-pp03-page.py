@@ -25,7 +25,7 @@ replacements = [
     ),
     (
         "pp04-financially-sustainable.jpg",
-        "pp03-downtown-catalyst.jpg",
+        "pp03-downtown-catalyst-2.jpg",
     ),
     (
         "Cover image for PP04: Building a Financially Sustainable Collingwood - Norm Sandberg Vision for Collingwood",
@@ -65,7 +65,7 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
           <div class="policy-hero__media" aria-hidden="true">
             <img
               itemprop="image"
-              src="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03-downtown-catalyst.jpg"
+              src="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03-downtown-catalyst-2.jpg"
               alt="Downtown Collingwood streetscape for PP03: Parking, Housing and Commercial Catalyst Project"
               width="2400"
               height="900"
