@@ -315,7 +315,6 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                         decoding="async"
                       />
                     </a>
-                    <figcaption>Concept presentation overview</figcaption>
                   </figure>
                 </div>
 
