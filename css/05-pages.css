@@ -3819,7 +3819,7 @@ body.policy-lightbox-open {
   right: 0.75rem;
 }
 
-@media (max-width: 639px) {
+@media (max-width: 1024px) {
   .policy-lightbox {
     padding:
       max(3.5rem, calc(env(safe-area-inset-top) + 3rem))
