@@ -11,7 +11,8 @@
  *   1. Mobile navigation toggle (auto-closes when a nav link is tapped)
  *   2. Dynamic copyright year in footer
  *   3. Gallery carousel (Dogs R Us–style CSS crossfade)
- *   4. (Placeholder) Contact / subscribe forms — wire before launch
+ *   4. Policy materials lightbox (image overlays with next/prev)
+ *   5. (Placeholder) Contact / subscribe forms — wire before launch
  *
  * NO BUILD STEP REQUIRED — this file loads directly in the browser.
  * ==========================================================================
@@ -178,4 +179,117 @@
   }
 
   document.querySelectorAll(".home-carousel").forEach(initCarousel);
+
+  /* -----------------------------------------------------------------------
+   * Policy materials lightbox — image gallery overlays (PDFs stay as links)
+   * ----------------------------------------------------------------------- */
+  function initMaterialsLightbox(root) {
+    var thumbs = Array.prototype.slice.call(
+      root.querySelectorAll("a.policy-materials__thumb")
+    ).filter(function (link) {
+      return /\.(jpe?g|png|gif|webp)(\?|#|$)/i.test(link.getAttribute("href") || "");
+    });
+
+    if (!thumbs.length) return;
+
+    var items = thumbs.map(function (link) {
+      var img = link.querySelector("img");
+      var figure = link.closest("figure");
+      var caption = figure ? figure.querySelector("figcaption") : null;
+      return {
+        src: link.getAttribute("href"),
+        alt: img ? img.getAttribute("alt") || "" : "",
+        caption: caption ? caption.textContent.trim() : ""
+      };
+    });
+
+    var overlay = document.createElement("div");
+    overlay.className = "policy-lightbox";
+    overlay.setAttribute("hidden", "");
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-label", "Concept drawing viewer");
+    overlay.innerHTML =
+      '<button type="button" class="policy-lightbox__close" aria-label="Close">&times;</button>' +
+      '<button type="button" class="policy-lightbox__nav policy-lightbox__nav--prev" aria-label="Previous drawing">&lsaquo;</button>' +
+      '<button type="button" class="policy-lightbox__nav policy-lightbox__nav--next" aria-label="Next drawing">&rsaquo;</button>' +
+      '<div class="policy-lightbox__stage">' +
+      '<img class="policy-lightbox__image" alt="" />' +
+      '<p class="policy-lightbox__caption"></p>' +
+      '<p class="policy-lightbox__counter" aria-live="polite"></p>' +
+      "</div>";
+    document.body.appendChild(overlay);
+
+    var imageEl = overlay.querySelector(".policy-lightbox__image");
+    var captionEl = overlay.querySelector(".policy-lightbox__caption");
+    var counterEl = overlay.querySelector(".policy-lightbox__counter");
+    var closeBtn = overlay.querySelector(".policy-lightbox__close");
+    var prevBtn = overlay.querySelector(".policy-lightbox__nav--prev");
+    var nextBtn = overlay.querySelector(".policy-lightbox__nav--next");
+    var activeIndex = 0;
+    var lastFocus = null;
+
+    function show(index) {
+      activeIndex = ((index % items.length) + items.length) % items.length;
+      var item = items[activeIndex];
+      imageEl.src = item.src;
+      imageEl.alt = item.alt;
+      captionEl.textContent = item.caption;
+      counterEl.textContent = activeIndex + 1 + " / " + items.length;
+      prevBtn.hidden = items.length < 2;
+      nextBtn.hidden = items.length < 2;
+    }
+
+    function open(index) {
+      lastFocus = document.activeElement;
+      show(index);
+      overlay.removeAttribute("hidden");
+      document.body.classList.add("policy-lightbox-open");
+      closeBtn.focus();
+    }
+
+    function close() {
+      overlay.setAttribute("hidden", "");
+      document.body.classList.remove("policy-lightbox-open");
+      imageEl.removeAttribute("src");
+      if (lastFocus && typeof lastFocus.focus === "function") {
+        lastFocus.focus();
+      }
+    }
+
+    thumbs.forEach(function (link, index) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        open(index);
+      });
+    });
+
+    closeBtn.addEventListener("click", close);
+    prevBtn.addEventListener("click", function () {
+      show(activeIndex - 1);
+    });
+    nextBtn.addEventListener("click", function () {
+      show(activeIndex + 1);
+    });
+
+    overlay.addEventListener("click", function (event) {
+      if (event.target === overlay) close();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (overlay.hasAttribute("hidden")) return;
+      if (event.key === "Escape") {
+        event.preventDefault();
+        close();
+      } else if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        show(activeIndex - 1);
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        show(activeIndex + 1);
+      }
+    });
+  }
+
+  document.querySelectorAll(".policy-materials").forEach(initMaterialsLightbox);
 })();

@@ -3560,6 +3560,274 @@
   color: var(--color-text);
 }
 
+/* PP03 — Second/Pine concept materials (2×2 gallery + PDF links) */
+.policy-materials {
+  border-top: 1px solid var(--color-gray-border);
+  background: #fff;
+}
+
+.policy-materials__disclaimer {
+  margin: 0;
+  padding: 0.85rem 1.2rem;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--color-text-muted, #5a6478);
+  background: #f8f9fb;
+  border-bottom: 1px solid var(--color-gray-border);
+}
+
+.policy-materials__title {
+  margin: 0;
+  padding: 1rem 1.2rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  border-bottom: 1px solid var(--color-gray-border);
+}
+
+.policy-materials__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--color-gray-border);
+}
+
+@media (min-width: 640px) {
+  .policy-materials__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .policy-materials__item--wide {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid var(--color-gray-border);
+  }
+
+  .policy-materials__item:nth-child(2),
+  .policy-materials__item:nth-child(4) {
+    border-right: 1px solid var(--color-gray-border);
+  }
+
+  .policy-materials__item:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+}
+
+.policy-materials__item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-bottom: 1px solid var(--color-gray-border);
+}
+
+.policy-materials__item--wide .policy-materials__thumb {
+  aspect-ratio: 11 / 7.1;
+  min-height: 14rem;
+}
+
+.policy-materials__thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 12rem;
+  aspect-ratio: 4 / 3;
+  background: #eef1f6;
+  overflow: hidden;
+}
+
+.policy-materials__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+}
+
+.policy-materials__item figcaption {
+  margin-top: auto;
+  padding: 0.7rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-navy);
+  background: color-mix(in srgb, var(--policy-color, var(--color-gold)) 8%, white);
+  border-top: 1px solid var(--color-gray-border);
+}
+
+.policy-materials__downloads {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  .policy-materials__downloads {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .policy-materials__downloads li:first-child {
+    border-right: 1px solid var(--color-gray-border);
+  }
+}
+
+.policy-materials__downloads li + li {
+  border-top: 1px solid var(--color-gray-border);
+}
+
+@media (min-width: 640px) {
+  .policy-materials__downloads li + li {
+    border-top: 0;
+  }
+}
+
+.policy-materials__downloads a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1rem 1.2rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  text-decoration: none;
+  background: #fafbfc;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.policy-materials__downloads a::before {
+  content: "";
+  flex-shrink: 0;
+  width: 1.15rem;
+  height: 1.15rem;
+  background: currentColor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.policy-materials__downloads a:hover,
+.policy-materials__downloads a:focus-visible {
+  color: var(--policy-color, var(--color-purple));
+  background: color-mix(in srgb, var(--policy-color, var(--color-gold)) 10%, white);
+}
+
+/* PP03 materials lightbox */
+body.policy-lightbox-open {
+  overflow: hidden;
+}
+
+.policy-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(12, 10, 48, 0.88);
+}
+
+.policy-lightbox[hidden] {
+  display: none !important;
+}
+
+.policy-lightbox__stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: min(96vw, 1200px);
+  max-height: 92vh;
+}
+
+.policy-lightbox__image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(92vh - 4.5rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.policy-lightbox__caption,
+.policy-lightbox__counter {
+  margin: 0.65rem 0 0;
+  color: #fff;
+  text-align: center;
+}
+
+.policy-lightbox__caption {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.policy-lightbox__counter {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.policy-lightbox__close,
+.policy-lightbox__nav {
+  position: absolute;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.policy-lightbox__close:hover,
+.policy-lightbox__close:focus-visible,
+.policy-lightbox__nav:hover,
+.policy-lightbox__nav:focus-visible {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.policy-lightbox__close {
+  top: 1rem;
+  right: 1rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.policy-lightbox__nav {
+  top: 50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: 2rem;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.policy-lightbox__nav--prev {
+  left: 0.75rem;
+}
+
+.policy-lightbox__nav--next {
+  right: 0.75rem;
+}
+
+@media (max-width: 639px) {
+  .policy-lightbox__nav--prev {
+    left: 0.35rem;
+  }
+
+  .policy-lightbox__nav--next {
+    right: 0.35rem;
+  }
+}
+
 .policy-sheet__copy {
   padding: 1.15rem 1.2rem;
 }
