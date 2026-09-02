@@ -3767,6 +3767,11 @@ body.policy-lightbox-open {
   background: var(--color-gold-hover, #e6b816);
 }
 
+.policy-lightbox__nav[hidden],
+.policy-lightbox__counter[hidden] {
+  display: none !important;
+}
+
 .policy-lightbox__close {
   top: max(0.75rem, env(safe-area-inset-top));
   right: max(0.75rem, env(safe-area-inset-right));

@@ -236,6 +236,7 @@
       imageEl.alt = item.alt;
       captionEl.textContent = item.caption;
       counterEl.textContent = activeIndex + 1 + " / " + items.length;
+      counterEl.hidden = items.length < 2;
       prevBtn.hidden = items.length < 2;
       nextBtn.hidden = items.length < 2;
     }
