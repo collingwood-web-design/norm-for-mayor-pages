@@ -317,29 +317,7 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                     </a>
                     <figcaption>Concept presentation overview</figcaption>
                   </figure>
-                  <figure class="policy-materials__item" role="listitem">
-                    <a class="policy-materials__thumb" href="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/second-pine-site-map.png" target="_blank" rel="noopener">
-                      <img
-                        src="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/second-pine-site-map.png"
-                        alt="Parcel map showing the municipal parking lot at Second Street and Pine Street outlined in red"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </a>
-                    <figcaption>Site location &mdash; municipal lot at Second &amp; Pine</figcaption>
-                  </figure>
-                  <figure class="policy-materials__item" role="listitem">
-                    <a class="policy-materials__thumb" href="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/street-facades.png" target="_blank" rel="noopener">
-                      <img
-                        src="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/street-facades.png"
-                        alt="Coordinated principal street facade elevations for Second Street and Pine Street"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </a>
-                    <figcaption>Principal street facades</figcaption>
-                  </figure>
-                  <figure class="policy-materials__item" role="listitem">
+                  <figure class="policy-materials__item policy-materials__item--wide" role="listitem">
                     <a class="policy-materials__thumb" href="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/parking-layout.png" target="_blank" rel="noopener">
                       <img
                         src="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/parking-layout.png"
@@ -350,28 +328,12 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                     </a>
                     <figcaption>Structured parking layout</figcaption>
                   </figure>
-                  <figure class="policy-materials__item" role="listitem">
-                    <a class="policy-materials__thumb" href="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/penthouse-terraces.png" target="_blank" rel="noopener">
-                      <img
-                        src="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/penthouse-terraces.png"
-                        alt="Level 4 penthouse terrace concept for Second Street and Pine Street"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </a>
-                    <figcaption>Level 4 penthouse terraces</figcaption>
-                  </figure>
                 </div>
 
                 <ul class="policy-materials__downloads">
                   <li>
                     <a href="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/council-board-presentation.pdf" target="_blank" rel="noopener">
                       Download concept presentation (PDF)
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/street-facades.pdf" target="_blank" rel="noopener">
-                      Download street facade study (PDF)
                     </a>
                   </li>
                 </ul>
