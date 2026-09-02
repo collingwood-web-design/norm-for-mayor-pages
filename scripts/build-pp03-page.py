@@ -317,17 +317,6 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                     </a>
                     <figcaption>Concept presentation overview</figcaption>
                   </figure>
-                  <figure class="policy-materials__item policy-materials__item--wide" role="listitem">
-                    <a class="policy-materials__thumb" href="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/parking-layout.png" target="_blank" rel="noopener">
-                      <img
-                        src="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/parking-layout.png"
-                        alt="Optimized structured parking layout concept for Second Street and Pine Street"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </a>
-                    <figcaption>Structured parking layout</figcaption>
-                  </figure>
                 </div>
 
                 <ul class="policy-materials__downloads">
