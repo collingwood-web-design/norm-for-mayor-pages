@@ -3580,6 +3580,20 @@
   object-fit: contain;
 }
 
+.policy-materials__action {
+  display: flex;
+  justify-content: center;
+  padding: 1.15rem 1.2rem 1.35rem;
+  border-top: 1px solid var(--color-gray-border);
+  background: #fafbfc;
+}
+
+.policy-materials__report-btn {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 .policy-materials {
   border-top: 1px solid var(--color-gray-border);
   background: #fff;
