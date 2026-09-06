@@ -637,28 +637,140 @@
         <section class="election-info" aria-labelledby="election-info-heading">
           <div class="container election-info__inner">
             <h2 class="election-info__title" id="election-info-heading">Election Information</h2>
-            <ul class="election-info__schedule">
-              <li>
-                <time class="election-info__when" datetime="2026-10-08">October 8, 2026</time>
-                <span class="election-info__what">Internet voting opens at 10:00 a.m. and closes on October 26 at 8:00 p.m.</span>
-              </li>
-              <li>
-                <time class="election-info__when" datetime="2026-10-15">October 15, 2026</time>
-                <span class="election-info__what">Advanced voting (paper ballot), Collingwood Public Library, 4:00 p.m. to 8:00 p.m.</span>
-              </li>
-              <li>
-                <time class="election-info__when" datetime="2026-10-22">October 22, 2026</time>
-                <span class="election-info__what">Advanced voting (paper ballot), Collingwood Public Library, 4:00 p.m. to 8:00 p.m.</span>
-              </li>
-              <li>
-                <time class="election-info__when" datetime="2026-10-25">October 25, 2026</time>
-                <span class="election-info__what">Advanced voting (paper ballot), Collingwood Public Library, 10:00 a.m. to 2:00 p.m.</span>
-              </li>
-              <li>
-                <time class="election-info__when" datetime="2026-10-26">October 26, 2026</time>
-                <span class="election-info__what election-info__what--emphasis">Election Day &mdash; internet and paper ballot voting, 10:00 a.m. to 8:00 p.m.</span>
-              </li>
-            </ul>
+
+            <div class="election-cal">
+              <section class="election-cal__group" aria-labelledby="meet-candidates-heading">
+                <h3 class="election-cal__group-title" id="meet-candidates-heading">Meet the Candidates</h3>
+                <ol class="election-cal__list">
+                  <li class="election-cal__item" itemscope itemtype="https://schema.org/Event">
+                    <div class="election-cal__date" aria-hidden="true">
+                      <span class="election-cal__month">Sep</span>
+                      <span class="election-cal__day">18</span>
+                      <span class="election-cal__weekday">Fri</span>
+                    </div>
+                    <div class="election-cal__body">
+                      <h4 class="election-cal__event-title" itemprop="name">Meet the Candidates</h4>
+                      <p class="election-cal__meta">
+                        <time datetime="2026-09-18" itemprop="startDate">Friday, September 18, 2026</time>
+                        <span class="election-cal__dot" aria-hidden="true"></span>
+                        <time datetime="2026-09-18T17:00">5:00 &ndash; 7:00 p.m.</time>
+                      </p>
+                      <p class="election-cal__place" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                        <span itemprop="name">Royal Canadian Legion Branch 63</span>
+                      </p>
+                      <p class="election-cal__sponsor">Sponsored by Escarpment Corridor Alliance</p>
+                    </div>
+                  </li>
+                  <li class="election-cal__item" itemscope itemtype="https://schema.org/Event">
+                    <div class="election-cal__date" aria-hidden="true">
+                      <span class="election-cal__month">Sep</span>
+                      <span class="election-cal__day">30</span>
+                      <span class="election-cal__weekday">Wed</span>
+                    </div>
+                    <div class="election-cal__body">
+                      <h4 class="election-cal__event-title" itemprop="name">Meet the Candidates</h4>
+                      <p class="election-cal__meta">
+                        <time datetime="2026-09-30" itemprop="startDate">Wednesday, September 30, 2026</time>
+                        <span class="election-cal__dot" aria-hidden="true"></span>
+                        <time datetime="2026-09-30T18:00">6:00 &ndash; 9:00 p.m.</time>
+                      </p>
+                      <p class="election-cal__place" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                        <span itemprop="name">Royal Canadian Legion Branch 63</span>
+                      </p>
+                      <p class="election-cal__sponsor">Sponsored by Collingwood Chamber of Commerce</p>
+                    </div>
+                  </li>
+                </ol>
+              </section>
+
+              <section class="election-cal__group" aria-labelledby="voting-dates-heading">
+                <h3 class="election-cal__group-title" id="voting-dates-heading">Voting Dates</h3>
+                <ol class="election-cal__list">
+                  <li class="election-cal__item">
+                    <div class="election-cal__date" aria-hidden="true">
+                      <span class="election-cal__month">Oct</span>
+                      <span class="election-cal__day">8</span>
+                      <span class="election-cal__weekday">Thu</span>
+                    </div>
+                    <div class="election-cal__body">
+                      <h4 class="election-cal__event-title">Internet Voting Opens</h4>
+                      <p class="election-cal__meta">
+                        <time datetime="2026-10-08">Thursday, October 8, 2026</time>
+                      </p>
+                      <p class="election-cal__detail">Opens at 10:00 a.m. and closes on October 26 at 8:00 p.m.</p>
+                    </div>
+                  </li>
+                  <li class="election-cal__item">
+                    <div class="election-cal__date" aria-hidden="true">
+                      <span class="election-cal__month">Oct</span>
+                      <span class="election-cal__day">15</span>
+                      <span class="election-cal__weekday">Thu</span>
+                    </div>
+                    <div class="election-cal__body">
+                      <h4 class="election-cal__event-title">Advanced Voting</h4>
+                      <p class="election-cal__meta">
+                        <time datetime="2026-10-15">Thursday, October 15, 2026</time>
+                        <span class="election-cal__dot" aria-hidden="true"></span>
+                        <span>4:00 &ndash; 8:00 p.m.</span>
+                      </p>
+                      <p class="election-cal__place">Collingwood Public Library</p>
+                      <p class="election-cal__detail">Paper ballot</p>
+                    </div>
+                  </li>
+                  <li class="election-cal__item">
+                    <div class="election-cal__date" aria-hidden="true">
+                      <span class="election-cal__month">Oct</span>
+                      <span class="election-cal__day">22</span>
+                      <span class="election-cal__weekday">Thu</span>
+                    </div>
+                    <div class="election-cal__body">
+                      <h4 class="election-cal__event-title">Advanced Voting</h4>
+                      <p class="election-cal__meta">
+                        <time datetime="2026-10-22">Thursday, October 22, 2026</time>
+                        <span class="election-cal__dot" aria-hidden="true"></span>
+                        <span>4:00 &ndash; 8:00 p.m.</span>
+                      </p>
+                      <p class="election-cal__place">Collingwood Public Library</p>
+                      <p class="election-cal__detail">Paper ballot</p>
+                    </div>
+                  </li>
+                  <li class="election-cal__item">
+                    <div class="election-cal__date" aria-hidden="true">
+                      <span class="election-cal__month">Oct</span>
+                      <span class="election-cal__day">25</span>
+                      <span class="election-cal__weekday">Sun</span>
+                    </div>
+                    <div class="election-cal__body">
+                      <h4 class="election-cal__event-title">Advanced Voting</h4>
+                      <p class="election-cal__meta">
+                        <time datetime="2026-10-25">Sunday, October 25, 2026</time>
+                        <span class="election-cal__dot" aria-hidden="true"></span>
+                        <span>10:00 a.m. &ndash; 2:00 p.m.</span>
+                      </p>
+                      <p class="election-cal__place">Collingwood Public Library</p>
+                      <p class="election-cal__detail">Paper ballot</p>
+                    </div>
+                  </li>
+                  <li class="election-cal__item election-cal__item--highlight">
+                    <div class="election-cal__date" aria-hidden="true">
+                      <span class="election-cal__month">Oct</span>
+                      <span class="election-cal__day">26</span>
+                      <span class="election-cal__weekday">Mon</span>
+                    </div>
+                    <div class="election-cal__body">
+                      <h4 class="election-cal__event-title">Election Day</h4>
+                      <p class="election-cal__meta">
+                        <time datetime="2026-10-26">Monday, October 26, 2026</time>
+                        <span class="election-cal__dot" aria-hidden="true"></span>
+                        <span>10:00 a.m. &ndash; 8:00 p.m.</span>
+                      </p>
+                      <p class="election-cal__detail election-cal__detail--emphasis">Internet and paper ballot voting</p>
+                    </div>
+                  </li>
+                </ol>
+              </section>
+            </div>
+
             <ul class="election-info__links">
               <li>
                 <a href="https://www.collingwood.ca/governance-engagement/elections" target="_blank" rel="noopener noreferrer">Collingwood Elections</a>
