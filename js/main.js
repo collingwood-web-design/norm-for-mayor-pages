@@ -292,5 +292,5 @@
     });
   }
 
-  document.querySelectorAll(".policy-materials").forEach(initMaterialsLightbox);
+  initMaterialsLightbox(document);
 })();

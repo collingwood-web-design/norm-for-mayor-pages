@@ -3561,6 +3561,25 @@
 }
 
 /* PP03 — Second/Pine concept materials (2×2 gallery + PDF links) */
+.policy-site__visual {
+  margin: 0;
+  border-top: 1px solid var(--color-gray-border);
+  background: #fff;
+}
+
+.policy-site__visual .policy-materials__thumb {
+  display: block;
+  min-height: 0;
+  aspect-ratio: auto;
+  background: #fff;
+}
+
+.policy-site__visual .policy-materials__thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .policy-materials {
   border-top: 1px solid var(--color-gray-border);
   background: #fff;
