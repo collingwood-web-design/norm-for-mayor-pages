@@ -250,7 +250,7 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
 
                 <div class="policy-materials__action">
                   <a
-                    class="btn btn--gold policy-materials__report-btn"
+                    class="btn btn--navy policy-materials__report-btn"
                     href="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/140-ste-marie-full-report.pdf"
                     target="_blank"
                     rel="noopener"
