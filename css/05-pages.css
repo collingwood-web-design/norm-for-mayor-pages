@@ -3580,30 +3580,6 @@
   object-fit: contain;
 }
 
-.policy-materials__action {
-  display: flex;
-  justify-content: flex-start;
-  padding: 1.15rem 1.2rem 1.35rem;
-  border-top: 1px solid var(--color-gray-border);
-  background: #fafbfc;
-}
-
-.policy-materials__report-btn {
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  background: var(--policy-color, var(--color-navy));
-  border-color: var(--policy-color, var(--color-navy));
-  color: #fff;
-}
-
-.policy-materials__report-btn:hover,
-.policy-materials__report-btn:focus-visible {
-  background: var(--color-navy);
-  border-color: var(--color-navy);
-  color: #fff;
-}
-
 .policy-materials {
   border-top: 1px solid var(--color-gray-border);
   background: #fff;
