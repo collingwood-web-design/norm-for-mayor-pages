@@ -248,16 +248,13 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                   </a>
                 </figure>
 
-                <div class="policy-materials__action">
-                  <a
-                    class="btn btn--navy policy-materials__report-btn"
-                    href="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/140-ste-marie-full-report.pdf"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    View / Download Full Report
-                  </a>
-                </div>
+                <ul class="policy-materials__downloads">
+                  <li>
+                    <a href="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/140-ste-marie-full-report.pdf" target="_blank" rel="noopener">
+                      Download concept report (PDF)
+                    </a>
+                  </li>
+                </ul>
               </div>
             </section>
 
@@ -268,7 +265,7 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
               <div class="policy-site__body policy-site__body--split">
                 <div class="policy-sheet__copy">
                   <p>The larger Second Street/Pine Street municipal lot demonstrates that the same approach may have even greater potential.</p>
-                  <p>The current concept provides <strong>232 structured parking stalls</strong> &mdash; 217 public and 15 residential &mdash; compared with the 87 existing surface stalls used as the concept baseline. That represents approximately <strong>130 net new public parking stalls</strong>.</p>
+                  <p>The current concept provides <strong>232 structured parking stalls</strong> &mdash; 217 public and 15 residential &mdash; compared with the 94 existing surface stalls used as the concept baseline. That represents approximately <strong>123 net new public parking stalls</strong>.</p>
                   <p>The concept also provides <strong>42 rental apartments</strong>:</p>
                   <ul>
                     <li>8 studios of approximately 500 sq. ft.;</li>
@@ -294,7 +291,7 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                     <tbody>
                       <tr>
                         <th scope="row">Public parking</th>
-                        <td>87</td>
+                        <td>94</td>
                         <td>217</td>
                       </tr>
                       <tr>
@@ -304,13 +301,13 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                       </tr>
                       <tr>
                         <th scope="row">Total parking</th>
-                        <td>87</td>
+                        <td>94</td>
                         <td>232</td>
                       </tr>
                       <tr class="policy-data-table__highlight">
                         <th scope="row">Net new public parking</th>
                         <td>&mdash;</td>
-                        <td>+130</td>
+                        <td>+123</td>
                       </tr>
                       <tr>
                         <th scope="row">Rental apartments</th>
@@ -328,7 +325,10 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                 </div>
               </div>
 
-              <div class="policy-materials" aria-label="Second Street and Pine Street concept presentation">
+              <div class="policy-materials" aria-labelledby="second-pine-materials-heading">
+                <p class="policy-materials__disclaimer">Planning concept &mdash; not an approved project. Prepared for public review and discussion.</p>
+                <h4 class="policy-materials__title" id="second-pine-materials-heading">Concept materials &mdash; Second Street / Pine Street</h4>
+
                 <div class="policy-materials__grid" role="list">
                   <figure class="policy-materials__item policy-materials__item--wide" role="listitem">
                     <a class="policy-materials__thumb" href="https://media.cwd-cdn.com/norm-for-mayor/vision/pp03/council-board-presentation.jpg" target="_blank" rel="noopener">
@@ -377,7 +377,7 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
                   <span class="policy-potential__label">Public parking stalls</span>
                 </div>
                 <div class="policy-potential__item" role="listitem">
-                  <span class="policy-potential__value">&asymp;224</span>
+                  <span class="policy-potential__value">&asymp;217</span>
                   <span class="policy-potential__label">Net new public parking</span>
                 </div>
                 <div class="policy-potential__item" role="listitem">
