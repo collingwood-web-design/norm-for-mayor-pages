@@ -468,7 +468,7 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
             <div class="policy-sheet__duo">
               <article>
                 <h3>Connecting the Vision</h3>
-                <p>This publication complements <a class="policy-ref" href="vision-pp04.html">PP04</a> on financial sustainability, <a class="policy-ref" href="vision-pp05.html">PP05</a> on downtown mobility and parking management, and <a class="policy-ref" href="vision-pp07.html">PP07</a> on housing for a growing Collingwood.</p>
+                <p>This publication complements <a class="policy-ref" href="/vision-pp04">PP04</a> on financial sustainability, <a class="policy-ref" href="/vision-pp05">PP05</a> on downtown mobility and parking management, and <a class="policy-ref" href="/vision-pp07">PP07</a> on housing for a growing Collingwood.</p>
               </article>
               <article>
                 <h3>Continuing the Conversation</h3>
@@ -481,12 +481,12 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
 
         <nav class="policy-pager policy-pager--footer" aria-label="Policy papers">
           <div class="container policy-pager__inner">
-            <a class="policy-pager__link policy-pager__link--prev" href="vision-pp02.html">
+            <a class="policy-pager__link policy-pager__link--prev" href="/vision-pp02">
               <span class="policy-pager__dir">Previous</span>
               <span class="policy-pager__label">PP02 Leadership Through Consensus</span>
             </a>
-            <a class="policy-pager__all" href="vision-for-collingwood.html">ALL PAPERS</a>
-            <a class="policy-pager__link policy-pager__link--next" href="vision-pp04.html">
+            <a class="policy-pager__all" href="/vision-for-collingwood">ALL PAPERS</a>
+            <a class="policy-pager__link policy-pager__link--next" href="/vision-pp04">
               <span class="policy-pager__dir">Next</span>
               <span class="policy-pager__label">PP04 Financial Sustainability</span>
             </a>

@@ -390,7 +390,7 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
               <div class="policy-sheet__duo">
                 <article>
                   <h3>Connecting the Vision</h3>
-                  <p>PP10 brings together the practical plans developed across this series &mdash; from <a class="policy-ref" href="vision-pp01.html">PP01</a> water services and <a class="policy-ref" href="vision-pp04.html">PP04</a> financial sustainability to <a class="policy-ref" href="vision-pp05.html">PP05</a> transportation, <a class="policy-ref" href="vision-pp06.html">PP06</a> County relationships, <a class="policy-ref" href="vision-pp07.html">PP07</a> housing and <a class="policy-ref" href="vision-pp08.html">PP08</a> economic opportunity.</p>
+                  <p>PP10 brings together the practical plans developed across this series &mdash; from <a class="policy-ref" href="/vision-pp01">PP01</a> water services and <a class="policy-ref" href="/vision-pp04">PP04</a> financial sustainability to <a class="policy-ref" href="/vision-pp05">PP05</a> transportation, <a class="policy-ref" href="/vision-pp06">PP06</a> County relationships, <a class="policy-ref" href="/vision-pp07">PP07</a> housing and <a class="policy-ref" href="/vision-pp08">PP08</a> economic opportunity.</p>
                 </article>
                 <article>
                   <h3>Some Move Quickly, Some Require Study</h3>
@@ -495,11 +495,11 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
 
         <nav class="policy-pager policy-pager--footer" aria-label="Policy papers">
           <div class="container policy-pager__inner">
-            <a class="policy-pager__link policy-pager__link--prev" href="vision-pp08.html">
+            <a class="policy-pager__link policy-pager__link--prev" href="/vision-pp08">
               <span class="policy-pager__dir">Previous</span>
               <span class="policy-pager__label">PP08 Growing Opportunity</span>
             </a>
-            <a class="policy-pager__all" href="vision-for-collingwood.html">ALL PAPERS</a>
+            <a class="policy-pager__all" href="/vision-for-collingwood">ALL PAPERS</a>
             <span class="policy-pager__link policy-pager__link--placeholder" aria-hidden="true"></span>
           </div>
         </nav>

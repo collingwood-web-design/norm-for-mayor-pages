@@ -61,7 +61,7 @@
   contactForms.forEach(function (contactForm) {
     var nextInput = contactForm.querySelector('input[name="_next"]');
     if (nextInput) {
-      var thankYouPath = nextInput.getAttribute("data-thank-you-path") || "thank-you.html";
+      var thankYouPath = nextInput.getAttribute("data-thank-you-path") || "/thank-you";
       nextInput.value =
         window.location.origin +
         window.location.pathname.replace(/[^/]*$/, "") +

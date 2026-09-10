@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-CA">
   <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form. */
+      (function () {
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Thank you for contacting Norm Sandberg for Mayor of Collingwood." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="canonical" href="https://norm4mayor.ca/thank-you.html" />
+    <link rel="canonical" href="https://norm4mayor.ca/thank-you" />
     <title>Thank You | Norm Sandberg for Mayor</title>
     <link rel="icon" href="https://media.cwd-cdn.com/norm-for-mayor/icons/favicon-32.png" sizes="32x32" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +31,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Thank You | Norm Sandberg for Mayor" />
     <meta property="og:description" content="Thank you for contacting Norm Sandberg for Mayor of Collingwood." />
-    <meta property="og:url" content="https://norm4mayor.ca/thank-you.html" />
+    <meta property="og:url" content="https://norm4mayor.ca/thank-you" />
     <meta property="og:image" content="https://media.cwd-cdn.com/norm-for-mayor/social/og-default.jpg" />
     <meta property="og:image:alt" content="Norm Sandberg - candidate for Mayor of Collingwood, Ontario" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -38,7 +50,7 @@
         <link itemprop="url" href="https://norm4mayor.ca/" />
         <meta itemprop="email" content="norm@norm4mayor.ca" />
         <div class="container site-header__inner">
-          <a class="brand-logo" href="index.html" itemprop="url" aria-label="Norm Sandberg for Mayor — Home">
+          <a class="brand-logo" href="/" itemprop="url" aria-label="Norm Sandberg for Mayor — Home">
             <span class="brand-logo__elect">Elect</span>
             <span class="brand-logo__name">Norm Sandberg</span>
             <span class="brand-logo__tagline">For Mayor of Collingwood</span>
@@ -53,8 +65,8 @@
             Your message has been sent. We appreciate you reaching out and will get back to you soon.
           </p>
           <div class="thank-you__actions">
-            <a class="btn btn--gold" href="index.html">Back to Home</a>
-            <a class="btn btn--outline-navy" href="about-norm.html">About Norm</a>
+            <a class="btn btn--gold" href="/">Back to Home</a>
+            <a class="btn btn--outline-navy" href="/about-norm">About Norm</a>
           </div>
         </div>
       </main>

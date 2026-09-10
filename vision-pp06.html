@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-CA">
   <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form. */
+      (function () {
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="PP06: Collingwood’s Voice at Simcoe County — stronger regional advocacy and representation for Collingwood residents and businesses." />
@@ -13,7 +25,7 @@
 
         <meta name="author" content="Norm Sandberg" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <link rel="canonical" href="https://norm4mayor.ca/vision-pp06.html" />
+    <link rel="canonical" href="https://norm4mayor.ca/vision-pp06" />
     <meta name="geo.region" content="CA-ON" />
     <meta name="geo.placename" content="Collingwood" />
     <meta name="geo.position" content="44.5008;-80.2169" />
@@ -32,7 +44,7 @@
     <meta property="article:section" content="Vision for Collingwood" />
     <meta property="article:author" content="Norm Sandberg" />
     <meta property="og:updated_time" content="2026-09-06T12:00:00-04:00" />
-    <meta property="og:url" content="https://norm4mayor.ca/vision-pp06.html" />
+    <meta property="og:url" content="https://norm4mayor.ca/vision-pp06" />
     <meta property="og:image" content="https://media.cwd-cdn.com/norm-for-mayor/vision/pp06-simcoe-county.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -54,8 +66,8 @@
         "@graph": [
           {
             "@type": "WebPage",
-            "@id": "https://norm4mayor.ca/vision-pp06.html#webpage",
-            "url": "https://norm4mayor.ca/vision-pp06.html",
+            "@id": "https://norm4mayor.ca/vision-pp06#webpage",
+            "url": "https://norm4mayor.ca/vision-pp06",
             "name": "PP06 Collingwood's Voice at Simcoe County | Vision for Collingwood | Norm Sandberg",
             "description": "PP06: Collingwood's Voice at Simcoe County. Norm Sandberg's plan for stronger regional advocacy and representation for Collingwood.",
             "inLanguage": "en-CA",
@@ -71,7 +83,7 @@
               "caption": "Collingwood waterfront - PP06 Collingwood's Voice at Simcoe County by Norm Sandberg for Mayor"
             },
             "breadcrumb": {
-              "@id": "https://norm4mayor.ca/vision-pp06.html#breadcrumb"
+              "@id": "https://norm4mayor.ca/vision-pp06#breadcrumb"
             },
             "dateModified": "2026-09-06",
             "speakable": {
@@ -87,7 +99,7 @@
           },
           {
             "@type": "Article",
-            "@id": "https://norm4mayor.ca/vision-pp06.html#article",
+            "@id": "https://norm4mayor.ca/vision-pp06#article",
             "headline": "Collingwood's Voice at Simcoe County",
             "alternativeHeadline": "PP06",
             "description": "PP06: Collingwood's Voice at Simcoe County. Norm Sandberg's plan for stronger regional advocacy and representation for Collingwood.",
@@ -99,7 +111,7 @@
               "@id": "https://norm4mayor.ca/#person"
             },
             "mainEntityOfPage": {
-              "@id": "https://norm4mayor.ca/vision-pp06.html#webpage"
+              "@id": "https://norm4mayor.ca/vision-pp06#webpage"
             },
             "image": "https://media.cwd-cdn.com/norm-for-mayor/vision/pp06-simcoe-county.jpg",
             "about": {
@@ -111,7 +123,7 @@
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://norm4mayor.ca/vision-pp06.html#breadcrumb",
+            "@id": "https://norm4mayor.ca/vision-pp06#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
@@ -123,13 +135,13 @@
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Vision for Collingwood",
-                "item": "https://norm4mayor.ca/vision-for-collingwood.html"
+                "item": "https://norm4mayor.ca/vision-for-collingwood"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "PP06 Voice at Simcoe County",
-                "item": "https://norm4mayor.ca/vision-pp06.html"
+                "item": "https://norm4mayor.ca/vision-pp06"
               }
             ]
           },
@@ -228,7 +240,7 @@
   <body class="page-policy page-policy--pp06" itemscope itemtype="https://schema.org/WebPage">
     <meta itemprop="name" content="PP06 Collingwood's Voice at Simcoe County | Vision for Collingwood | Norm Sandberg" />
     <meta itemprop="description" content="PP06: Collingwood's Voice at Simcoe County. Norm Sandberg's plan for stronger regional advocacy and representation for Collingwood." />
-    <link itemprop="url" href="https://norm4mayor.ca/vision-pp06.html" />
+    <link itemprop="url" href="https://norm4mayor.ca/vision-pp06" />
     <meta itemprop="inLanguage" content="en-CA" />
     <div itemprop="about" itemscope itemtype="https://schema.org/Place" hidden>
       <meta itemprop="name" content="Collingwood, Ontario, Canada" />
@@ -247,18 +259,18 @@
         <meta itemprop="telephone" content="+1-705-445-8384" />
         <link itemprop="logo" href="https://media.cwd-cdn.com/norm-for-mayor/photos/final-norm-image-hero.jpg" />
         <div class="container site-header__inner">
-          <a class="brand-logo" href="index.html" itemprop="url" aria-label="Norm Sandberg for Mayor - Home">
+          <a class="brand-logo" href="/" itemprop="url" aria-label="Norm Sandberg for Mayor - Home">
             <span class="brand-logo__elect">Elect</span>
             <span class="brand-logo__name">Norm Sandberg</span>
             <span class="brand-logo__tagline">For Mayor of Collingwood</span>
           </a>
           <nav class="site-nav" id="site-nav" aria-label="Main navigation">
             <ul class="site-nav__list" id="site-nav-menu">
-              <li><a class="site-nav__link" href="index.html">Home</a></li>
-              <li><a class="site-nav__link site-nav__link--active" href="vision-for-collingwood.html">Vision for Collingwood</a></li>
-              <li><a class="site-nav__link" href="about-norm.html">About Norm</a></li>
-              <li><a class="site-nav__link" href="news.html">News</a></li>
-              <li><a class="site-nav__link" href="index.html#dual-cta">Get Involved</a></li>
+              <li><a class="site-nav__link" href="/">Home</a></li>
+              <li><a class="site-nav__link site-nav__link--active" href="/vision-for-collingwood">Vision for Collingwood</a></li>
+              <li><a class="site-nav__link" href="/about-norm">About Norm</a></li>
+              <li><a class="site-nav__link" href="/news">News</a></li>
+              <li><a class="site-nav__link" href="/#dual-cta">Get Involved</a></li>
               <li><a class="site-nav__link" href="#footer-contact">Contact</a></li>
             </ul>
           </nav>
@@ -484,7 +496,7 @@
               <div class="policy-sheet__duo">
                 <article>
                   <h3>Connecting the Vision</h3>
-                  <p>PP06 complements <a class="policy-ref" href="vision-pp05.html">PP05</a> on regional transportation, <a class="policy-ref" href="vision-pp07.html">PP07</a> on housing, <a class="policy-ref" href="vision-for-collingwood.html#pp08">PP08</a> on regional economic development and future PP11 work on environmental stewardship.</p>
+                  <p>PP06 complements <a class="policy-ref" href="/vision-pp05">PP05</a> on regional transportation, <a class="policy-ref" href="/vision-pp07">PP07</a> on housing, <a class="policy-ref" href="/vision-for-collingwood#pp08">PP08</a> on regional economic development and future PP11 work on environmental stewardship.</p>
                 </article>
                 <article>
                   <h3>Policy Position</h3>
@@ -542,12 +554,12 @@
 
         <nav class="policy-pager policy-pager--footer" aria-label="Policy papers">
           <div class="container policy-pager__inner">
-            <a class="policy-pager__link policy-pager__link--prev" href="vision-pp05.html">
+            <a class="policy-pager__link policy-pager__link--prev" href="/vision-pp05">
               <span class="policy-pager__dir">Previous</span>
               <span class="policy-pager__label">PP05 Connecting Collingwood</span>
             </a>
-            <a class="policy-pager__all" href="vision-for-collingwood.html">ALL PAPERS</a>
-            <a class="policy-pager__link policy-pager__link--next" href="vision-pp07.html">
+            <a class="policy-pager__all" href="/vision-for-collingwood">ALL PAPERS</a>
+            <a class="policy-pager__link policy-pager__link--next" href="/vision-pp07">
               <span class="policy-pager__dir">Next</span>
               <span class="policy-pager__label">PP07 Housing</span>
             </a>
@@ -659,7 +671,7 @@
 
               </ul>
 
-              <a class="brand-logo brand-logo--footer" href="index.html" aria-label="Norm Sandberg for Mayor â€” Home">
+              <a class="brand-logo brand-logo--footer" href="/" aria-label="Norm Sandberg for Mayor â€” Home">
 
                 <span class="brand-logo__elect">Elect</span>
 
@@ -716,7 +728,7 @@
 
           <p class="site-footer__legal-line">
 
-            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
 
             &nbsp;|&nbsp;
 

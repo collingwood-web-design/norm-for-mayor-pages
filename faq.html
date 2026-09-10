@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-CA">
   <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form. */
+      (function () {
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+
     <!-- PAGE: FAQ | LEGACY: https://goto.network/norm4mayor/faq/ -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <meta name="author" content="Norm Sandberg" />
     <meta name="robots" content="noindex, follow" />
-    <link rel="canonical" href="https://norm4mayor.ca/faq.html" />
+    <link rel="canonical" href="https://norm4mayor.ca/faq" />
     <meta name="geo.region" content="CA-ON" />
     <meta name="geo.placename" content="Collingwood" />
     <meta name="geo.position" content="44.5008;-80.2169" />
@@ -27,7 +39,7 @@
     <meta property="og:title" content="FAQ | Norm Sandberg for Mayor of Collingwood, Ontario" />
     <meta property="og:description" content="Frequently asked questions about Norm Sandberg’s campaign for Mayor of Collingwood, Ontario — municipal election October 26, 2026." />
     <meta property="og:updated_time" content="2026-09-06T12:00:00-04:00" />
-    <meta property="og:url" content="https://norm4mayor.ca/faq.html" />
+    <meta property="og:url" content="https://norm4mayor.ca/faq" />
     <meta property="og:image" content="https://media.cwd-cdn.com/norm-for-mayor/social/og-default.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -47,8 +59,8 @@
         "@graph": [
           {
             "@type": "WebPage",
-            "@id": "https://norm4mayor.ca/faq.html#webpage",
-            "url": "https://norm4mayor.ca/faq.html",
+            "@id": "https://norm4mayor.ca/faq#webpage",
+            "url": "https://norm4mayor.ca/faq",
             "name": "FAQ | Norm Sandberg for Mayor of Collingwood, Ontario",
             "description": "Frequently asked questions about Norm Sandberg's campaign for Mayor of Collingwood, Ontario. Election October 26, 2026.",
             "inLanguage": "en-CA",
@@ -59,10 +71,10 @@
               "@id": "https://norm4mayor.ca/#person"
             },
             "breadcrumb": {
-              "@id": "https://norm4mayor.ca/faq.html#breadcrumb"
+              "@id": "https://norm4mayor.ca/faq#breadcrumb"
             },
             "mainEntity": {
-              "@id": "https://norm4mayor.ca/faq.html#faq"
+              "@id": "https://norm4mayor.ca/faq#faq"
             },
             "dateModified": "2026-09-06",
             "speakable": {
@@ -78,8 +90,8 @@
           },
           {
             "@type": "FAQPage",
-            "@id": "https://norm4mayor.ca/faq.html#faq",
-            "url": "https://norm4mayor.ca/faq.html",
+            "@id": "https://norm4mayor.ca/faq#faq",
+            "url": "https://norm4mayor.ca/faq",
             "name": "FAQ | Norm Sandberg for Mayor of Collingwood, Ontario",
             "inLanguage": "en-CA",
             "isPartOf": {
@@ -120,7 +132,7 @@
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://norm4mayor.ca/faq.html#breadcrumb",
+            "@id": "https://norm4mayor.ca/faq#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
@@ -132,7 +144,7 @@
                 "@type": "ListItem",
                 "position": 2,
                 "name": "FAQ",
-                "item": "https://norm4mayor.ca/faq.html"
+                "item": "https://norm4mayor.ca/faq"
               }
             ]
           },
@@ -231,7 +243,7 @@
   <body class="page-faq" itemscope itemtype="https://schema.org/WebPage">
     <meta itemprop="name" content="FAQ | Norm Sandberg for Mayor of Collingwood, Ontario" />
     <meta itemprop="description" content="Frequently asked questions about Norm Sandberg's campaign for Mayor of Collingwood, Ontario. Election October 26, 2026." />
-    <link itemprop="url" href="https://norm4mayor.ca/faq.html" />
+    <link itemprop="url" href="https://norm4mayor.ca/faq" />
     <meta itemprop="inLanguage" content="en-CA" />
     <div itemprop="about" itemscope itemtype="https://schema.org/Place" hidden>
       <meta itemprop="name" content="Collingwood, Ontario, Canada" />
@@ -251,7 +263,7 @@
         <meta itemprop="telephone" content="+1-705-445-8384" />
         <link itemprop="logo" href="https://media.cwd-cdn.com/norm-for-mayor/photos/final-norm-image-hero.jpg" />
         <div class="container site-header__inner">
-          <a class="brand-logo" href="index.html" itemprop="url" aria-label="Norm Sandberg for Mayor — Home">
+          <a class="brand-logo" href="/" itemprop="url" aria-label="Norm Sandberg for Mayor — Home">
             <span class="brand-logo__elect">Elect</span>
             <span class="brand-logo__name">Norm Sandberg</span>
             <span class="brand-logo__tagline">For Mayor of Collingwood</span>
@@ -259,11 +271,11 @@
 
           <nav class="site-nav" id="site-nav" aria-label="Main navigation">
             <ul class="site-nav__list" id="site-nav-menu">
-              <li><a class="site-nav__link" href="index.html">Home</a></li>
-              <li><a class="site-nav__link" href="vision-for-collingwood.html">Vision for Collingwood</a></li>
-              <li><a class="site-nav__link" href="about-norm.html">About Norm</a></li>
-              <li><a class="site-nav__link" href="news.html">News</a></li>
-              <li><a class="site-nav__link" href="index.html#dual-cta">Get Involved</a></li>
+              <li><a class="site-nav__link" href="/">Home</a></li>
+              <li><a class="site-nav__link" href="/vision-for-collingwood">Vision for Collingwood</a></li>
+              <li><a class="site-nav__link" href="/about-norm">About Norm</a></li>
+              <li><a class="site-nav__link" href="/news">News</a></li>
+              <li><a class="site-nav__link" href="/#dual-cta">Get Involved</a></li>
               <li><a class="site-nav__link" href="#footer-contact">Contact</a></li>
             </ul>
           </nav>
@@ -358,7 +370,7 @@
                   </a>
                 </li>
               </ul>
-              <a class="brand-logo brand-logo--footer" href="index.html" aria-label="Norm Sandberg for Mayor — Home">
+              <a class="brand-logo brand-logo--footer" href="/" aria-label="Norm Sandberg for Mayor — Home">
                 <span class="brand-logo__elect">Elect</span>
                 <span class="brand-logo__name">Norm Sandberg</span>
                 <span class="brand-logo__tagline">For Mayor of Collingwood</span>
@@ -387,7 +399,7 @@
             <span class="site-footer__legal-cfo">Authorized by the CFO for the Norm Sandberg Campaign.</span>
           </p>
           <p class="site-footer__legal-line">
-            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
             &nbsp;|&nbsp;
             Copyright &copy; <span id="footer-year"></span> Norm Sandberg
           </p>

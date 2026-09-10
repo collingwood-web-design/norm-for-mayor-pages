@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-CA">
   <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form. */
+      (function () {
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+
     <!--
       =======================================================================
       PAGE: Donations (donations.html)
@@ -22,7 +34,7 @@
 
         <meta name="author" content="Norm Sandberg" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <link rel="canonical" href="https://norm4mayor.ca/donations.html" />
+    <link rel="canonical" href="https://norm4mayor.ca/donations" />
     <meta name="geo.region" content="CA-ON" />
     <meta name="geo.placename" content="Collingwood" />
     <meta name="geo.position" content="44.5008;-80.2169" />
@@ -37,7 +49,7 @@
     <meta property="og:title" content="Donate | Norm Sandberg for Mayor of Collingwood, Ontario" />
     <meta property="og:description" content="Donate to Norm Sandberg for Mayor of Collingwood. Support a campaign focused on practical leadership, housing, infrastructure, and a stronger downtown." />
     <meta property="og:updated_time" content="2026-09-06T12:00:00-04:00" />
-    <meta property="og:url" content="https://norm4mayor.ca/donations.html" />
+    <meta property="og:url" content="https://norm4mayor.ca/donations" />
     <meta property="og:image" content="https://media.cwd-cdn.com/norm-for-mayor/social/og-default.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -59,8 +71,8 @@
         "@graph": [
           {
             "@type": "WebPage",
-            "@id": "https://norm4mayor.ca/donations.html#webpage",
-            "url": "https://norm4mayor.ca/donations.html",
+            "@id": "https://norm4mayor.ca/donations#webpage",
+            "url": "https://norm4mayor.ca/donations",
             "name": "Donate | Norm Sandberg for Mayor of Collingwood, Ontario",
             "description": "Support Norm Sandberg's campaign for Mayor of Collingwood. Ontario municipal campaign finance rules and how to contribute.",
             "inLanguage": "en-CA",
@@ -76,7 +88,7 @@
               "caption": "Norm Sandberg - candidate for Mayor of Collingwood, Ontario"
             },
             "breadcrumb": {
-              "@id": "https://norm4mayor.ca/donations.html#breadcrumb"
+              "@id": "https://norm4mayor.ca/donations#breadcrumb"
             },
             "dateModified": "2026-09-06",
             "speakable": {
@@ -92,7 +104,7 @@
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://norm4mayor.ca/donations.html#breadcrumb",
+            "@id": "https://norm4mayor.ca/donations#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
@@ -104,7 +116,7 @@
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Donate",
-                "item": "https://norm4mayor.ca/donations.html"
+                "item": "https://norm4mayor.ca/donations"
               }
             ]
           },
@@ -171,7 +183,7 @@
           },
           {
             "@type": "DonateAction",
-            "@id": "https://norm4mayor.ca/donations.html#donate",
+            "@id": "https://norm4mayor.ca/donations#donate",
             "name": "Donate to Norm Sandberg for Mayor",
             "target": "https://buy.stripe.com/9B6cN57c08fa3by2yz18c00",
             "recipient": {
@@ -213,7 +225,7 @@
   <body class="page-donations" itemscope itemtype="https://schema.org/WebPage">
     <meta itemprop="name" content="Donate | Norm Sandberg for Mayor of Collingwood, Ontario" />
     <meta itemprop="description" content="Support Norm Sandberg's campaign for Mayor of Collingwood. Ontario municipal campaign finance rules and how to contribute." />
-    <link itemprop="url" href="https://norm4mayor.ca/donations.html" />
+    <link itemprop="url" href="https://norm4mayor.ca/donations" />
     <meta itemprop="inLanguage" content="en-CA" />
     <div itemprop="about" itemscope itemtype="https://schema.org/Place" hidden>
       <meta itemprop="name" content="Collingwood, Ontario, Canada" />
@@ -233,7 +245,7 @@
         <meta itemprop="telephone" content="+1-705-445-8384" />
         <link itemprop="logo" href="https://media.cwd-cdn.com/norm-for-mayor/photos/final-norm-image-hero.jpg" />
         <div class="container site-header__inner">
-          <a class="brand-logo" href="index.html" itemprop="url" aria-label="Norm Sandberg for Mayor — Home">
+          <a class="brand-logo" href="/" itemprop="url" aria-label="Norm Sandberg for Mayor — Home">
             <span class="brand-logo__elect">Elect</span>
             <span class="brand-logo__name">Norm Sandberg</span>
             <span class="brand-logo__tagline">For Mayor of Collingwood</span>
@@ -241,11 +253,11 @@
 
           <nav class="site-nav" id="site-nav" aria-label="Main navigation">
             <ul class="site-nav__list" id="site-nav-menu">
-              <li><a class="site-nav__link" href="index.html">Home</a></li>
-              <li><a class="site-nav__link" href="vision-for-collingwood.html">Vision for Collingwood</a></li>
-              <li><a class="site-nav__link" href="about-norm.html">About Norm</a></li>
-              <li><a class="site-nav__link" href="news.html">News</a></li>
-              <li><a class="site-nav__link site-nav__link--active" href="index.html#dual-cta">Get Involved</a></li>
+              <li><a class="site-nav__link" href="/">Home</a></li>
+              <li><a class="site-nav__link" href="/vision-for-collingwood">Vision for Collingwood</a></li>
+              <li><a class="site-nav__link" href="/about-norm">About Norm</a></li>
+              <li><a class="site-nav__link" href="/news">News</a></li>
+              <li><a class="site-nav__link site-nav__link--active" href="/#dual-cta">Get Involved</a></li>
               <li><a class="site-nav__link" href="#footer-contact">Contact</a></li>
             </ul>
           </nav>
@@ -489,7 +501,7 @@
                   </a>
                 </li>
               </ul>
-              <a class="brand-logo brand-logo--footer" href="index.html" aria-label="Norm Sandberg for Mayor — Home">
+              <a class="brand-logo brand-logo--footer" href="/" aria-label="Norm Sandberg for Mayor — Home">
                 <span class="brand-logo__elect">Elect</span>
                 <span class="brand-logo__name">Norm Sandberg</span>
                 <span class="brand-logo__tagline">For Mayor of Collingwood</span>
@@ -518,7 +530,7 @@
             <span class="site-footer__legal-cfo">Authorized by the CFO for the Norm Sandberg Campaign.</span>
           </p>
           <p class="site-footer__legal-line">
-            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
             &nbsp;|&nbsp;
             Copyright &copy; <span id="footer-year"></span> Norm Sandberg
           </p>

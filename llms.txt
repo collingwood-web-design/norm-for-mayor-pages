@@ -24,25 +24,25 @@ Location: Collingwood, Ontario, Canada
 ## Key pages
 
 - Home: https://norm4mayor.ca/
-- About Norm: https://norm4mayor.ca/about-norm.html
-- Vision for Collingwood (policy papers): https://norm4mayor.ca/vision-for-collingwood.html
-- Donate: https://norm4mayor.ca/donations.html
-- News: https://norm4mayor.ca/news.html
-- FAQ: https://norm4mayor.ca/faq.html
-- Privacy Policy: https://norm4mayor.ca/privacy-policy.html
+- About Norm: https://norm4mayor.ca/about-norm
+- Vision for Collingwood (policy papers): https://norm4mayor.ca/vision-for-collingwood
+- Donate: https://norm4mayor.ca/donations
+- News: https://norm4mayor.ca/news
+- FAQ: https://norm4mayor.ca/faq
+- Privacy Policy: https://norm4mayor.ca/privacy-policy
 
 ## Policy papers (Vision for Collingwood)
 
-- PP01 Water & Wastewater: https://norm4mayor.ca/vision-pp01.html
-- PP02 Leadership Through Consensus: https://norm4mayor.ca/vision-pp02.html
-- PP03 Downtown Parking, Housing & Commercial Catalyst: https://norm4mayor.ca/vision-pp03.html
-- PP04 Financial Sustainability: https://norm4mayor.ca/vision-pp04.html
-- PP05 Connecting Collingwood: https://norm4mayor.ca/vision-pp05.html
-- PP06 Voice at Simcoe County: https://norm4mayor.ca/vision-pp06.html
-- PP07 Housing for a Growing Collingwood: https://norm4mayor.ca/vision-pp07.html
-- PP08 Growing Opportunity: https://norm4mayor.ca/vision-pp08.html
-- PP09 Parks, Recreation, Culture & Community Well-Being (MURF & Performing Arts Centre): https://norm4mayor.ca/vision-pp09.html
-- PP10 Leading Collingwood Forward: https://norm4mayor.ca/vision-pp10.html
+- PP01 Water & Wastewater: https://norm4mayor.ca/vision-pp01
+- PP02 Leadership Through Consensus: https://norm4mayor.ca/vision-pp02
+- PP03 Downtown Parking, Housing & Commercial Catalyst: https://norm4mayor.ca/vision-pp03
+- PP04 Financial Sustainability: https://norm4mayor.ca/vision-pp04
+- PP05 Connecting Collingwood: https://norm4mayor.ca/vision-pp05
+- PP06 Voice at Simcoe County: https://norm4mayor.ca/vision-pp06
+- PP07 Housing for a Growing Collingwood: https://norm4mayor.ca/vision-pp07
+- PP08 Growing Opportunity: https://norm4mayor.ca/vision-pp08
+- PP09 Parks, Recreation, Culture & Community Well-Being (MURF & Performing Arts Centre): https://norm4mayor.ca/vision-pp09
+- PP10 Leading Collingwood Forward: https://norm4mayor.ca/vision-pp10
 
 ## Optional
 
