@@ -58,7 +58,7 @@ main = r'''      <main id="main-content" itemprop="mainContentOfPage" itemscope 
         <meta itemprop="inLanguage" content="en-CA" />
         <div itemprop="author" itemscope itemtype="https://schema.org/Person">
           <meta itemprop="name" content="Norm Sandberg" />
-          <link itemprop="url" href="https://normformayor.ca/" />
+          <link itemprop="url" href="https://norm4mayor.ca/" />
         </div>
 
         <header class="policy-hero">

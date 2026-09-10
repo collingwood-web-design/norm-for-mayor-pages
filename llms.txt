@@ -2,8 +2,8 @@
 
 > Official campaign website for Norm Sandberg, candidate for Mayor of Collingwood, Ontario (municipal election October 26, 2026).
 
-Primary site: https://normformayor.ca/
-Secondary domain: https://norm4mayor.ca (redirects to primary)
+Primary site: https://norm4mayor.ca/
+Secondary domain: https://normformayor.ca (redirects to primary)
 Contact email: norm@norm4mayor.ca
 Phone: 705-445-8384
 Location: Collingwood, Ontario, Canada
@@ -23,28 +23,28 @@ Location: Collingwood, Ontario, Canada
 
 ## Key pages
 
-- Home: https://normformayor.ca/
-- About Norm: https://normformayor.ca/about-norm.html
-- Vision for Collingwood (policy papers): https://normformayor.ca/vision-for-collingwood.html
-- Donate: https://normformayor.ca/donations.html
-- News: https://normformayor.ca/news.html
-- FAQ: https://normformayor.ca/faq.html
-- Privacy Policy: https://normformayor.ca/privacy-policy.html
+- Home: https://norm4mayor.ca/
+- About Norm: https://norm4mayor.ca/about-norm.html
+- Vision for Collingwood (policy papers): https://norm4mayor.ca/vision-for-collingwood.html
+- Donate: https://norm4mayor.ca/donations.html
+- News: https://norm4mayor.ca/news.html
+- FAQ: https://norm4mayor.ca/faq.html
+- Privacy Policy: https://norm4mayor.ca/privacy-policy.html
 
 ## Policy papers (Vision for Collingwood)
 
-- PP01 Water & Wastewater: https://normformayor.ca/vision-pp01.html
-- PP02 Leadership Through Consensus: https://normformayor.ca/vision-pp02.html
-- PP03 Downtown Parking, Housing & Commercial Catalyst: https://normformayor.ca/vision-pp03.html
-- PP04 Financial Sustainability: https://normformayor.ca/vision-pp04.html
-- PP05 Connecting Collingwood: https://normformayor.ca/vision-pp05.html
-- PP06 Voice at Simcoe County: https://normformayor.ca/vision-pp06.html
-- PP07 Housing for a Growing Collingwood: https://normformayor.ca/vision-pp07.html
-- PP08 Growing Opportunity: https://normformayor.ca/vision-pp08.html
-- PP09 Parks, Recreation, Culture & Community Well-Being (MURF & Performing Arts Centre): https://normformayor.ca/vision-pp09.html
-- PP10 Leading Collingwood Forward: https://normformayor.ca/vision-pp10.html
+- PP01 Water & Wastewater: https://norm4mayor.ca/vision-pp01.html
+- PP02 Leadership Through Consensus: https://norm4mayor.ca/vision-pp02.html
+- PP03 Downtown Parking, Housing & Commercial Catalyst: https://norm4mayor.ca/vision-pp03.html
+- PP04 Financial Sustainability: https://norm4mayor.ca/vision-pp04.html
+- PP05 Connecting Collingwood: https://norm4mayor.ca/vision-pp05.html
+- PP06 Voice at Simcoe County: https://norm4mayor.ca/vision-pp06.html
+- PP07 Housing for a Growing Collingwood: https://norm4mayor.ca/vision-pp07.html
+- PP08 Growing Opportunity: https://norm4mayor.ca/vision-pp08.html
+- PP09 Parks, Recreation, Culture & Community Well-Being (MURF & Performing Arts Centre): https://norm4mayor.ca/vision-pp09.html
+- PP10 Leading Collingwood Forward: https://norm4mayor.ca/vision-pp10.html
 
 ## Optional
 
-- Sitemap: https://normformayor.ca/sitemap.xml
-- Robots: https://normformayor.ca/robots.txt
+- Sitemap: https://norm4mayor.ca/sitemap.xml
+- Robots: https://norm4mayor.ca/robots.txt
