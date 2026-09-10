@@ -76,7 +76,8 @@
               "cssSelector": [
                 "h1",
                 ".news-feature__title",
-                ".news-feature__body p",
+                ".news-feature__lead p",
+                ".news-feature__story p",
                 ".priorities-page-hero__lead",
                 ".policy-hero__title",
                 ".about-meet__body p",
@@ -350,11 +351,17 @@
               itemtype="https://schema.org/NewsArticle"
             >
               <div class="container">
+                <header class="news-feature__header">
+                  <div class="news-feature__icon" aria-hidden="true">
+                    <svg class="icon-priority"><use href="#icon-press" /></svg>
+                  </div>
+                  <h2 class="news-feature__title" itemprop="headline">
+                    The Answer to Downtown Parking Has Been Sitting Under the Cars
+                  </h2>
+                </header>
+
                 <div class="news-feature__grid">
                   <div class="news-feature__media">
-                    <div class="news-feature__icon" aria-hidden="true">
-                      <svg class="icon-priority"><use href="#icon-press" /></svg>
-                    </div>
                     <time class="news-feature__date" itemprop="datePublished" datetime="2026-09-09"
                       >Sept. 9, 2026</time
                     >
@@ -368,51 +375,50 @@
                       ></iframe>
                     </div>
                   </div>
-                  <div class="news-feature__body">
-                    <h2 class="news-feature__title" itemprop="headline">
-                      The Answer to Downtown Parking Has Been Sitting Under the Cars
-                    </h2>
-                    <div itemprop="articleBody">
-                      <p>
-                        Collingwood has argued about downtown parking for thirty years. I think the
-                        answer has been sitting under the cars the whole time.
-                      </p>
-                      <p>
-                        In this video I&rsquo;m standing in the municipal lot at 140 Ste. Marie Street,
-                        behind the Eddie Bush Arena. It&rsquo;s 87 parking spaces, the Town has owned it
-                        for decades, and that&rsquo;s all it has ever done. The concept I&rsquo;m
-                        releasing today would rebuild it as structured parking with rental apartments
-                        and storefronts above: 196 spaces instead of 87, with 181 public and 15 for
-                        residents. That&rsquo;s 94 more public spaces than we have now, plus 30 rental
-                        apartments for people who work downtown and five new storefronts on Ste. Marie
-                        Street. The Town keeps the land and owns the parking; a private partner builds
-                        and runs the homes and shops.
-                      </p>
-                      <p>
-                        This is a concept, not an approved project. It needs independent review, public
-                        consultation and a hard look at costs and risks before anyone decides anything.
-                        But I didn&rsquo;t commission this work, I did it, with my team, and I think
-                        Collingwood deserves to see what this lot could be.
-                      </p>
-                      <p>And this is the smaller of the two lots. The second one is coming soon.</p>
-                      <p>
-                        The full 59-page Project Development Report is below. Take a look, and tell me
-                        what you think.
-                      </p>
-                    </div>
-                    <p class="news-feature__cta">
-                      <a class="btn btn--navy" href="vision-pp03.html"
-                        >Read the Project Development Report</a
-                      >
+                  <div class="news-feature__lead">
+                    <p>
+                      Collingwood has argued about downtown parking for thirty years. I think the
+                      answer has been sitting under the cars the whole time.
                     </p>
-                    <div itemprop="author" itemscope itemtype="https://schema.org/Person" hidden>
-                      <meta itemprop="name" content="Norm Sandberg" />
-                      <link itemprop="url" href="https://norm4mayor.ca/" />
-                    </div>
-                    <link itemprop="url" href="https://norm4mayor.ca/news.html#downtown-parking-concept" />
-                    <meta itemprop="inLanguage" content="en-CA" />
                   </div>
                 </div>
+
+                <div class="news-feature__story" itemprop="articleBody">
+                  <p>
+                    In this video I&rsquo;m standing in the municipal lot at 140 Ste. Marie Street,
+                    behind the Eddie Bush Arena. It&rsquo;s 87 parking spaces, the Town has owned it
+                    for decades, and that&rsquo;s all it has ever done. The concept I&rsquo;m
+                    releasing today would rebuild it as structured parking with rental apartments
+                    and storefronts above: 196 spaces instead of 87, with 181 public and 15 for
+                    residents. That&rsquo;s 94 more public spaces than we have now, plus 30 rental
+                    apartments for people who work downtown and five new storefronts on Ste. Marie
+                    Street. The Town keeps the land and owns the parking; a private partner builds
+                    and runs the homes and shops.
+                  </p>
+                  <p>
+                    This is a concept, not an approved project. It needs independent review, public
+                    consultation and a hard look at costs and risks before anyone decides anything.
+                    But I didn&rsquo;t commission this work, I did it, with my team, and I think
+                    Collingwood deserves to see what this lot could be.
+                  </p>
+                  <p>And this is the smaller of the two lots. The second one is coming soon.</p>
+                  <p>
+                    The full 59-page Project Development Report is below. Take a look, and tell me
+                    what you think.
+                  </p>
+                  <p class="news-feature__cta">
+                    <a class="btn btn--navy" href="vision-pp03.html"
+                      >Read the Project Development Report</a
+                    >
+                  </p>
+                </div>
+
+                <div itemprop="author" itemscope itemtype="https://schema.org/Person" hidden>
+                  <meta itemprop="name" content="Norm Sandberg" />
+                  <link itemprop="url" href="https://norm4mayor.ca/" />
+                </div>
+                <link itemprop="url" href="https://norm4mayor.ca/news.html#downtown-parking-concept" />
+                <meta itemprop="inLanguage" content="en-CA" />
               </div>
             </article>
 

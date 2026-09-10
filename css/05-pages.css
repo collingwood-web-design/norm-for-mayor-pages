@@ -3009,23 +3009,11 @@
   background: var(--color-white);
 }
 
-.page-news .news-feature__grid {
-  display: grid;
-  gap: clamp(1.75rem, 4vw, 3rem);
-  align-items: start;
-}
-
-@media (min-width: 900px) {
-  .page-news .news-feature__grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-  }
-}
-
-.page-news .news-feature__media {
+.page-news .news-feature__header {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.85rem;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .page-news .news-feature__icon {
@@ -3046,6 +3034,35 @@
   height: 1.5rem;
 }
 
+.page-news .news-feature__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.8vw, 1.9rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--color-navy);
+}
+
+.page-news .news-feature__grid {
+  display: grid;
+  gap: clamp(1.5rem, 3.5vw, 2.75rem);
+  align-items: start;
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+@media (min-width: 900px) {
+  .page-news .news-feature__grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  }
+}
+
+.page-news .news-feature__media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
 .page-news .news-feature__date {
   display: block;
   margin: 0;
@@ -3060,20 +3077,21 @@
   margin-inline: 0;
 }
 
-.page-news .news-feature__title {
-  margin: 0 0 1.1rem;
-  font-family: var(--font-heading);
-  font-size: clamp(1.45rem, 3vw, 2rem);
-  font-weight: var(--font-weight-bold);
-  line-height: 1.2;
-  color: var(--color-navy);
-}
-
-.page-news .news-feature__body p {
+.page-news .news-feature__lead p,
+.page-news .news-feature__story p {
   margin: 0 0 1rem;
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--color-text);
+}
+
+.page-news .news-feature__lead p:last-child,
+.page-news .news-feature__story p:last-child {
+  margin-bottom: 0;
+}
+
+.page-news .news-feature__story {
+  max-width: 52rem;
 }
 
 .page-news .news-feature__cta {
