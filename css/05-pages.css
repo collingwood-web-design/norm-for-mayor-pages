@@ -3054,13 +3054,18 @@
 .page-news .news-feature__grid {
   display: grid;
   gap: clamp(1.5rem, 3.5vw, 2.75rem);
-  align-items: center;
+  align-items: stretch;
   margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 @media (min-width: 900px) {
   .page-news .news-feature__grid {
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  }
+
+  .page-news .news-feature__lead {
+    display: flex;
+    align-items: center;
   }
 }
 
