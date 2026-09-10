@@ -3085,7 +3085,7 @@
 }
 
 .page-news .news-feature__story {
-  max-width: 52rem;
+  max-width: none;
 }
 
 .page-news .news-feature__cta {
