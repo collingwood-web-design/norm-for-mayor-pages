@@ -31,7 +31,16 @@ CLIENT_REDIRECT = """    <script>
 
 
 def clean_path(stem: str, fragment: str = "", query: str = "") -> str:
-    path = "/" if stem == "index" else f"/{stem}"
+    """Path-relative clean URL for navigation (GH Pages project-safe)."""
+    if stem == "index":
+        path = "./"
+        if query:
+            path = f"./?{query}"
+        if fragment:
+            path = f"{path}#{fragment}" if query else f"./#{fragment}"
+        return path
+
+    path = stem
     if query:
         path += f"?{query}"
     if fragment:
@@ -40,6 +49,7 @@ def clean_path(stem: str, fragment: str = "", query: str = "") -> str:
 
 
 def clean_abs(stem: str, fragment: str = "", query: str = "") -> str:
+    """Absolute production clean URL for SEO metadata only."""
     base = f"{SITE}/" if stem == "index" else f"{SITE}/{stem}"
     if query:
         base += f"?{query}"
@@ -98,8 +108,8 @@ def rewrite_text(text: str, *, urls_only: bool) -> str:
         text,
     )
 
-    text = text.replace('"thank-you.html"', '"/thank-you"')
-    text = text.replace("'thank-you.html'", "'/thank-you'")
+    text = text.replace('"thank-you.html"', '"thank-you"')
+    text = text.replace("'thank-you.html'", "'thank-you'")
 
     if not urls_only:
         # Remaining quoted relative page refs (JSON-LD strings, etc.)
