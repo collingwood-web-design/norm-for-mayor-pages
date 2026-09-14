@@ -17,8 +17,9 @@ PAGE_STEMS_DESC = sorted(PAGE_STEMS, key=len, reverse=True)
 STEM_ALT = "|".join(re.escape(s) for s in PAGE_STEMS_DESC)
 
 CLIENT_REDIRECT = """    <script>
-      /* Prefer clean URLs when someone lands on the .html form. */
+      /* Prefer clean URLs when someone lands on the .html form (http/https only). */
       (function () {
+        if (window.location.protocol === \"file:\") return;
         var path = window.location.pathname;
         if (!/\\.html$/i.test(path)) return;
         var clean = path.replace(/\\.html$/i, "");
