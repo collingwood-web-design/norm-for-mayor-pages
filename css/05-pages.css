@@ -3009,6 +3009,14 @@
   background: var(--color-white);
 }
 
+.page-news .news-feature--band {
+  background-color: var(--color-gray-section);
+}
+
+.page-news .priority-detail--band {
+  background-color: var(--color-gray-section);
+}
+
 .page-news .news-feature__header {
   display: flex;
   align-items: center;
