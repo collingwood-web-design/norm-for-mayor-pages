@@ -278,6 +278,26 @@
   background: var(--color-white);
 }
 
+.home-video {
+  padding-block: var(--section-padding-y);
+  background: var(--color-white);
+}
+
+.home-video__title {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-navy);
+}
+
+.home-video + .video-feature {
+  padding-top: 0;
+}
+
 .video-feature__note {
   margin: 0.85rem 0 0;
   font-size: 0.875rem;
