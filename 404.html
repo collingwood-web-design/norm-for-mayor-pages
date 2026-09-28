@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form (http/https only). */
+      (function () {
+        if (window.location.protocol === "file:") return;
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+    <script>
+      /* GitHub Pages serves this page at whatever address was missing, so resolve
+         relative links from the site root (or the repository folder on github.io). */
+      (function () {
+        if (window.location.protocol === "file:") return;
+        var root = "/";
+        if (/\.github\.io$/i.test(window.location.hostname)) {
+          var repo = window.location.pathname.split("/")[1];
+          if (repo) root = "/" + repo + "/";
+        }
+        var base = document.createElement("base");
+        base.href = root;
+        document.head.appendChild(base);
+      })();
+    </script>
+
+    <!-- Google consent mode: reads the cookie banner's saved answer -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      (function () {
+        var answer = null;
+        try { answer = localStorage.getItem("cookie-consent.answer"); } catch (e) {}
+        gtag("consent", "default", {
+          analytics_storage: answer === "decline" ? "denied" : "granted",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied"
+        });
+      })();
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NHVJCR56');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The page you were looking for isn't on the Norm Sandberg for Mayor website." />
+    <meta name="robots" content="noindex, follow" />
+    <title>Page Not Found | Norm Sandberg for Mayor</title>
+    <link rel="icon" href="assets/images/icons/favicon-32.png" sizes="32x32" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#201d70" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="page-not-found">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHVJCR56"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="page-wrapper">
+      <header class="site-header" id="site-header">
+        <div class="container site-header__inner">
+          <a class="brand-logo" href="./" aria-label="Norm Sandberg for Mayor &mdash; Home">
+            <span class="brand-logo__elect">Elect</span>
+            <span class="brand-logo__name">Norm Sandberg</span>
+            <span class="brand-logo__tagline">For Mayor of Collingwood</span>
+          </a>
+
+          <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+            <ul class="site-nav__list" id="site-nav-menu">
+              <li><a class="site-nav__link" href="./">Home</a></li>
+              <li><a class="site-nav__link" href="vision-for-collingwood">Vision for Collingwood</a></li>
+              <li><a class="site-nav__link" href="about-norm">About Norm</a></li>
+              <li><a class="site-nav__link" href="news">News</a></li>
+              <li><a class="site-nav__link" href="./#dual-cta">Get Involved</a></li>
+              <li><a class="site-nav__link" href="./#footer-contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="site-header__actions">
+            <button
+              class="site-nav__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="site-nav-menu"
+              id="site-nav-toggle"
+            >
+              <span class="sr-only">Open menu</span>
+              <span class="site-nav__toggle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main id="main-content" class="thank-you">
+        <div class="container thank-you__inner">
+          <p class="not-found__code">404</p>
+          <h1 class="thank-you__title">Page Not Found</h1>
+          <p class="thank-you__text">
+            Sorry, we couldn&rsquo;t find that page. It may have moved, or the address may have a typo.
+            These pages will help you find what you&rsquo;re looking for:
+          </p>
+          <div class="thank-you__actions">
+            <a class="btn btn--gold" href="./">Home</a>
+            <a class="btn btn--outline-navy" href="about-norm">About Norm</a>
+            <a class="btn btn--outline-navy" href="vision-for-collingwood">Vision for Collingwood</a>
+            <a class="btn btn--outline-navy" href="news">News</a>
+          </div>
+          <p class="not-found__contact">
+            Still can&rsquo;t find it? Contact Norm at
+            <a href="mailto:norm@norm4mayor.ca">norm@norm4mayor.ca</a> or
+            <a href="tel:+17054458384">705-445-8384</a>.
+          </p>
+        </div>
+      </main>
+
+      <footer class="site-footer" id="footer-contact">
+        <div class="site-footer__legal">
+          <p class="site-footer__legal-line">
+            <span class="site-footer__legal-cfo">Authorized by the CFO for the Norm Sandberg Campaign.</span>
+          </p>
+          <p class="site-footer__legal-line">
+            <a href="privacy-policy">Privacy Policy</a>
+            &nbsp;|&nbsp;
+            Copyright &copy; <span id="footer-year"></span> Norm Sandberg
+          </p>
+          <p class="site-footer__legal-line">
+            <a href="https://www.collingwoodwebdesign.com/" target="_blank" rel="noopener noreferrer">Design &amp; Develop | Collingwood WEB Design</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      /* The <base> above would send in-page links to the home page; keep them on this page. */
+      (function () {
+        var links = document.querySelectorAll('a[href^="#"]');
+        for (var i = 0; i < links.length; i++) {
+          links[i].href = window.location.pathname + window.location.search + links[i].getAttribute("href");
+        }
+      })();
+    </script>
+    <script src="js/main.js" defer></script>
+    <!-- Elfsight Cookie Consent | Norm for Mayor -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-ea1afe65-ed96-4853-bfc4-a9ad6f72e60d" data-elfsight-app-lazy></div>
+  </body>
+</html>
