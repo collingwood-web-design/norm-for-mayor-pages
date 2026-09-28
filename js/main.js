@@ -13,6 +13,7 @@
  *   3. Gallery carousel (Dogs R Us–style CSS crossfade)
  *   4. Policy materials lightbox (image overlays with next/prev)
  *   5. (Placeholder) Contact / subscribe forms — wire before launch
+ *   6. Cookie banner → Google consent mode (Decline switches Analytics off)
  *
  * NO BUILD STEP REQUIRED — this file loads directly in the browser.
  * ==========================================================================
@@ -52,6 +53,33 @@
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
+
+  /* -----------------------------------------------------------------------
+   * Cookie banner → Google consent mode
+   * The consent default is set in each page's <head> from the answer the
+   * Elfsight banner saved earlier; this updates it the moment a visitor
+   * clicks. The banner renders inside a shadow root, so the button is only
+   * visible through composedPath(), not event.target.
+   * ----------------------------------------------------------------------- */
+  document.addEventListener(
+    "click",
+    function (event) {
+      if (typeof window.gtag !== "function" || !event.composedPath) return;
+      var path = event.composedPath();
+      for (var i = 0; i < path.length; i++) {
+        var classes = path[i].classList;
+        if (!classes) continue;
+        var allowed = classes.contains("eapp-cookie-consent-actions-accept");
+        if (allowed || classes.contains("eapp-cookie-consent-actions-decline")) {
+          window.gtag("consent", "update", {
+            analytics_storage: allowed ? "granted" : "denied"
+          });
+          return;
+        }
+      }
+    },
+    true
+  );
 
   /* -----------------------------------------------------------------------
    * Contact form — posts to FormSubmit (norm@norm4mayor.ca)

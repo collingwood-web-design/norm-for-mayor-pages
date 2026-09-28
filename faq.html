@@ -14,6 +14,21 @@
       })();
     </script>
 
+    <!-- Google consent mode: reads the cookie banner's saved answer -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      (function () {
+        var answer = null;
+        try { answer = localStorage.getItem("cookie-consent.answer"); } catch (e) {}
+        gtag("consent", "default", {
+          analytics_storage: answer === "decline" ? "denied" : "granted",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied"
+        });
+      })();
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -423,5 +438,8 @@
       </footer>
     </div>
     <script src="js/main.js" defer></script>
+    <!-- Elfsight Cookie Consent | Norm for Mayor -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-ea1afe65-ed96-4853-bfc4-a9ad6f72e60d" data-elfsight-app-lazy></div>
   </body>
 </html>

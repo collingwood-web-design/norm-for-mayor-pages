@@ -14,6 +14,21 @@
       })();
     </script>
 
+    <!-- Google consent mode: reads the cookie banner's saved answer -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      (function () {
+        var answer = null;
+        try { answer = localStorage.getItem("cookie-consent.answer"); } catch (e) {}
+        gtag("consent", "default", {
+          analytics_storage: answer === "decline" ? "denied" : "granted",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied"
+        });
+      })();
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -90,7 +105,7 @@
             "breadcrumb": {
               "@id": "https://norm4mayor.ca/privacy-policy#breadcrumb"
             },
-            "dateModified": "2026-09-06",
+            "dateModified": "2026-09-28",
             "speakable": {
               "@type": "SpeakableSpecification",
               "cssSelector": [
@@ -277,7 +292,7 @@
         <section class="section section--light">
           <div class="container container--narrow legal-content">
             <h1>Privacy Policy</h1>
-            <p class="legal-content__effective"><strong>Effective date:</strong> July 9, 2026</p>
+            <p class="legal-content__effective"><strong>Effective date:</strong> September 28, 2026</p>
 
             <p>
               The Norm Sandberg Campaign for Mayor of Collingwood (the &ldquo;Campaign&rdquo;) respects your
@@ -315,7 +330,7 @@
               <li><strong>Messages and requests</strong> &mdash; information you provide when you contact us, request a lawn sign, ask about volunteering, or inquire about donations.</li>
               <li><strong>Newsletter information</strong> &mdash; your email address if you subscribe to campaign updates.</li>
               <li><strong>Donation-related information</strong> &mdash; if you contact us about contributing, we may collect information needed to respond and, if you donate, information required under Ontario municipal campaign finance law (which may include your name and address for contributions above applicable thresholds).</li>
-              <li><strong>Technical information</strong> &mdash; basic data automatically collected when you visit the Website, such as browser type, device type, referring page, and general usage information through our hosting provider&rsquo;s server logs.</li>
+              <li><strong>Technical information</strong> &mdash; basic data automatically collected when you visit the Website, such as browser type, device type, referring page, and general usage information through our hosting provider&rsquo;s server logs and Google Analytics (see <a href="#cookies-and-analytics">Cookies and analytics</a>).</li>
             </ul>
             <p>
               We collect personal information only when you provide it to us (for example, through a form or email)
@@ -393,16 +408,24 @@
               provide on social media is governed by the platform&rsquo;s policies, not this Website.
             </p>
 
-            <h2>Cookies and analytics</h2>
+            <h2 id="cookies-and-analytics">Cookies and analytics</h2>
             <p>
-              The Website is designed to work without requiring you to accept marketing or tracking cookies.
-              We do not currently use third-party advertising or analytics trackers on this site. Standard
-              server and browser technical data may still be collected by our hosting provider as part of
-              normal website operation.
+              We use Google Analytics, through Google Tag Manager, to understand how many people visit the
+              Website and which pages they read. Google Analytics uses cookies to count visits and to tell new
+              visitors from returning ones. The reports we see show totals and trends, not the identity of
+              individual visitors.
             </p>
             <p>
-              If we add analytics or similar tools in the future, we will update this policy to describe what
-              is collected and how you can manage your preferences.
+              When you first visit, a cookie banner lets you choose. If you click <strong>Decline</strong>,
+              Google Analytics stops using cookies on your device. The banner remembers your choice in your
+              browser; to change it later, clear this site&rsquo;s data in your browser settings and the banner
+              will appear again.
+            </p>
+            <p>
+              We do not use advertising or remarketing cookies. Google processes analytics data under
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&rsquo;s Privacy Policy</a>.
+              Standard server and browser technical data may also be collected by our hosting provider as part
+              of normal website operation.
             </p>
 
             <h2>How long we keep information</h2>
@@ -560,5 +583,8 @@
       </footer>
     </div>
     <script src="js/main.js" defer></script>
+    <!-- Elfsight Cookie Consent | Norm for Mayor -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-ea1afe65-ed96-4853-bfc4-a9ad6f72e60d" data-elfsight-app-lazy></div>
   </body>
 </html>
