@@ -1277,6 +1277,44 @@
   color: var(--color-navy);
 }
 
+.election-cal__event-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.election-cal__event-link:hover,
+.election-cal__event-link:focus-visible {
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--color-gold);
+}
+
+.election-cal__schedule {
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--color-text);
+}
+
+.election-cal__schedule li {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.election-cal__schedule time {
+  flex: 0 0 4.4rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy);
+}
+
+.election-cal__schedule-start {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-navy);
+}
+
 .election-info__links {
   display: flex;
   flex-wrap: wrap;
