@@ -1173,6 +1173,29 @@
   background: color-mix(in srgb, var(--color-gold) 8%, white);
 }
 
+.election-cal__item--pride {
+  position: relative;
+  padding-bottom: calc(0.85rem + 6px);
+}
+
+.election-cal__item--pride::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  left: -3px;
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    #e40303 0 16.66%,
+    #ff8c00 16.66% 33.33%,
+    #ffed00 33.33% 50%,
+    #008026 50% 66.66%,
+    #004dff 66.66% 83.33%,
+    #750787 83.33% 100%
+  );
+}
+
 .election-cal__date {
   display: flex;
   flex-direction: column;
