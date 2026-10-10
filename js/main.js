@@ -124,8 +124,8 @@
     var dots = Array.prototype.slice.call(carousel.querySelectorAll(".home-carousel__dot"));
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var slotMs = 4000;
-    var cycleMs = slotMs * slides.length;
-    var startedAt = performance.now();
+    /* Every fade keyframe finishes fading in by 0.48s; start a jumped-to slide past that so it is visible while paused. */
+    var fadeInMs = 500;
     var resumeTimer = null;
     var pauseDepth = 0;
 
@@ -137,11 +137,18 @@
       });
     }
 
+    /* Read the visible slide from the animation itself so hover/click pauses can't put the dots out of step. */
     function currentIndex() {
-      if (!slides.length) return 0;
-      var elapsed = (performance.now() - startedAt) % cycleMs;
-      if (elapsed < 0) elapsed += cycleMs;
-      return Math.floor(elapsed / slotMs) % slides.length;
+      var best = 0;
+      var bestOpacity = -1;
+      slides.forEach(function (slide, i) {
+        var opacity = parseFloat(window.getComputedStyle(slide).opacity);
+        if (opacity > bestOpacity) {
+          bestOpacity = opacity;
+          best = i;
+        }
+      });
+      return best;
     }
 
     function tick() {
@@ -168,9 +175,8 @@
         return;
       }
       var n = ((index % slides.length) + slides.length) % slides.length;
-      startedAt = performance.now() - n * slotMs;
       slides.forEach(function (slide, i) {
-        var delaySec = ((i - n + slides.length) % slides.length) * (slotMs / 1000);
+        var delaySec = (((i - n + slides.length) % slides.length) * slotMs - fadeInMs) / 1000;
         slide.style.animation = "none";
         void slide.offsetWidth;
         slide.style.animation = "";
