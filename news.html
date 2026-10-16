@@ -64,7 +64,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="News | Norm Sandberg for Mayor of Collingwood, Ontario" />
     <meta property="og:description" content="Campaign news and press for Norm Sandberg, candidate for Mayor of Collingwood, Ontario in the October 26, 2026 municipal election." />
-    <meta property="og:updated_time" content="2026-10-15T12:00:00-04:00" />
+    <meta property="og:updated_time" content="2026-10-16T12:00:00-04:00" />
     <meta property="og:url" content="https://norm4mayor.ca/news" />
     <meta property="og:image" content="https://norm4mayor.ca/assets/images/photos/sandberg-norm-news.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -106,7 +106,7 @@
             "breadcrumb": {
               "@id": "https://norm4mayor.ca/news#breadcrumb"
             },
-            "dateModified": "2026-10-15",
+            "dateModified": "2026-10-16",
             "speakable": {
               "@type": "SpeakableSpecification",
               "cssSelector": [
@@ -212,6 +212,28 @@
               "@id": "https://norm4mayor.ca/#person"
             },
             "hasPart": [
+              {
+                "@type": "NewsArticle",
+                "@id": "https://norm4mayor.ca/news#message-from-tim-fryer",
+                "headline": "A Message from Deputy Mayor Tim Fryer",
+                "datePublished": "2026-10-16",
+                "url": "https://norm4mayor.ca/news#message-from-tim-fryer",
+                "image": "https://norm4mayor.ca/assets/images/photos/message-from-tim-fryer-collingwood-needs-norm-for-mayor.jpg",
+                "author": {
+                  "@id": "https://norm4mayor.ca/#person"
+                },
+                "publisher": {
+                  "@id": "https://norm4mayor.ca/#campaign"
+                },
+                "mentions": {
+                  "@type": "Person",
+                  "name": "Tim Fryer",
+                  "jobTitle": "Deputy Mayor of Collingwood"
+                },
+                "isPartOf": {
+                  "@id": "https://norm4mayor.ca/news#collection"
+                }
+              },
               {
                 "@type": "NewsArticle",
                 "@id": "https://norm4mayor.ca/news#firefighters-support",
@@ -552,7 +574,7 @@
                 }
               }
             ],
-            "dateModified": "2026-10-15",
+            "dateModified": "2026-10-16",
             "inLanguage": "en-CA",
             "speakable": {
               "@type": "SpeakableSpecification",
@@ -690,66 +712,103 @@
 
         <section class="priorities-page" aria-label="News">
           <div class="priority-sections">
-            <article
+            <section
               class="news-feature news-feature--band"
-              id="firefighters-support"
-              itemscope
-              itemtype="https://schema.org/NewsArticle"
+              id="messages-of-support"
+              aria-labelledby="messages-of-support-heading"
             >
               <div class="container">
                 <header class="news-feature__header">
                   <div class="news-feature__icon" aria-hidden="true">
                     <svg class="icon-priority"><use href="#icon-support" /></svg>
                   </div>
-                  <h2 class="news-feature__title" itemprop="headline">
-                    We Support Those Who Support Us: Collingwood Professional Firefighters Local 938
+                  <h2 class="news-feature__title" id="messages-of-support-heading">
+                    Messages of Support
                   </h2>
                 </header>
 
-                <time class="news-feature__date" itemprop="datePublished" datetime="2026-10-14"
-                  >Oct. 14, 2026</time
-                >
+                <ul class="support-cards">
+                  <li
+                    class="support-card"
+                    id="message-from-tim-fryer"
+                    itemscope
+                    itemtype="https://schema.org/NewsArticle"
+                  >
+                    <h3 class="support-card__title" itemprop="headline">
+                      A Message from Deputy Mayor Tim Fryer
+                    </h3>
+                    <figure class="support-card__media">
+                      <img
+                        itemprop="image"
+                        src="assets/images/photos/message-from-tim-fryer-collingwood-needs-norm-for-mayor.jpg"
+                        alt="A message from Deputy Mayor Tim Fryer asking Collingwood to join him in backing Norm Sandberg for Mayor. The graphic closes with Collingwood Needs Norm at the Helm."
+                        width="1080"
+                        height="1350"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </figure>
+                    <div itemprop="author" itemscope itemtype="https://schema.org/Person" hidden>
+                      <meta itemprop="name" content="Norm Sandberg" />
+                      <link itemprop="url" href="https://norm4mayor.ca/" />
+                    </div>
+                    <link itemprop="url" href="https://norm4mayor.ca/news#message-from-tim-fryer" />
+                    <meta itemprop="datePublished" content="2026-10-16" />
+                    <meta itemprop="inLanguage" content="en-CA" />
+                  </li>
 
-                <div class="news-feature__grid">
-                  <figure class="news-feature__image">
-                    <img
-                      itemprop="image"
-                      src="assets/images/photos/collingwood-firefighters-support.jpg"
-                      alt="Collingwood Professional Firefighters Local 938 graphic titled We Support Those Who Support Us, featuring Chris Potts, Ian MacCulloch, Rob Ring, Steve Perry, Norm Sandberg and Tyler MacFarlane"
-                      width="526"
-                      height="526"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                  <div class="news-feature__lead" itemprop="articleBody">
-                    <p>
-                      Norm is proud to have the support of the Collingwood Professional
-                      Firefighters Local 938. Thank you to the firefighters who keep our
-                      community safe, every day and every night.
-                    </p>
-                    <p class="news-feature__cta">
-                      <a
-                        class="btn btn--navy"
-                        href="https://www.facebook.com/photo?fbid=1089726264034910&amp;set=a.106934428980770"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >View the Post on Facebook<span class="sr-only">
-                          (opens in a new tab)</span
-                        ></a
-                      >
-                    </p>
-                  </div>
-                </div>
-
-                <div itemprop="author" itemscope itemtype="https://schema.org/Person" hidden>
-                  <meta itemprop="name" content="Norm Sandberg" />
-                  <link itemprop="url" href="https://norm4mayor.ca/" />
-                </div>
-                <link itemprop="url" href="https://norm4mayor.ca/news#firefighters-support" />
-                <meta itemprop="inLanguage" content="en-CA" />
+                  <li
+                    class="support-card"
+                    id="firefighters-support"
+                    itemscope
+                    itemtype="https://schema.org/NewsArticle"
+                  >
+                    <h3 class="support-card__title" itemprop="headline">
+                      We Support Those Who Support Us
+                    </h3>
+                    <figure class="support-card__media">
+                      <img
+                        itemprop="image"
+                        src="assets/images/photos/collingwood-firefighters-support.jpg"
+                        alt="Collingwood Professional Firefighters Local 938 graphic titled We Support Those Who Support Us, featuring Chris Potts, Ian MacCulloch, Rob Ring, Steve Perry, Norm Sandberg and Tyler MacFarlane"
+                        width="526"
+                        height="526"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </figure>
+                    <div class="support-card__body" itemprop="articleBody">
+                      <p class="support-card__meta">
+                        Collingwood Professional Firefighters Local 938 ·
+                        <time itemprop="datePublished" datetime="2026-10-14">Oct. 14, 2026</time>
+                      </p>
+                      <p>
+                        Norm is proud to have the support of the Collingwood Professional
+                        Firefighters Local 938. Thank you to the firefighters who keep our
+                        community safe, every day and every night.
+                      </p>
+                      <p>
+                        <a
+                          class="btn btn--navy"
+                          href="https://www.facebook.com/photo?fbid=1089726264034910&amp;set=a.106934428980770"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View the Post on Facebook<span class="sr-only">
+                            (opens in a new tab)</span
+                          ></a
+                        >
+                      </p>
+                    </div>
+                    <div itemprop="author" itemscope itemtype="https://schema.org/Person" hidden>
+                      <meta itemprop="name" content="Norm Sandberg" />
+                      <link itemprop="url" href="https://norm4mayor.ca/" />
+                    </div>
+                    <link itemprop="url" href="https://norm4mayor.ca/news#firefighters-support" />
+                    <meta itemprop="inLanguage" content="en-CA" />
+                  </li>
+                </ul>
               </div>
-            </article>
+            </section>
 
             <article
               class="news-feature"
