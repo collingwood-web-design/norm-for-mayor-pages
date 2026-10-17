@@ -829,6 +829,10 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
+.support-band__quote {
+  font-style: italic;
+}
+
 .support-band__link {
   font-weight: var(--font-weight-semibold);
   color: var(--color-gold);
@@ -3571,6 +3575,14 @@
 
 .page-news .support-card__body p:last-child {
   margin-bottom: 0;
+}
+
+.page-news .support-card__body p:has(+ .support-card__quote) {
+  margin-bottom: 0;
+}
+
+.page-news .support-card__quote span {
+  font-style: italic;
 }
 
 .page-news .support-card__body .support-card__meta {
