@@ -3423,6 +3423,10 @@
   opacity: 0.5;
 }
 
+.page-news .news-press__action {
+  margin: 1.15rem 0 1.75rem;
+}
+
 .page-news .news-feature {
   padding: clamp(2.5rem, 5vw, 4rem) 0;
   background: var(--color-white);
