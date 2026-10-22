@@ -232,6 +232,27 @@
   gap: 0.65rem;
 }
 
+.hero-home__poll {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.15rem;
+  margin: 1.15rem 0 0;
+}
+
+.hero-home__poll-label {
+  font-family: var(--font-heading);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.25;
+  color: var(--color-white);
+}
+
+.hero-home__poll .btn {
+  font-size: 0.9rem;
+  padding: 0.85rem 1.4rem;
+}
+
 /* Full-width tagline strip below hero */
 .hero-tagline {
   width: 100%;
